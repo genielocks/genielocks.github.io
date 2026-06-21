@@ -5,319 +5,289 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sports Prediction Genie</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNyIgZmlsbD0iIzE2MGYzMCIvPjxwYXRoIGQ9Ik02IDIxYzAtMyA2LTUgMTAtNXMxMCAyIDEwIDVjMCAzLTUgNC0xMCA0UzYgMjQgNiAyMVoiIGZpbGw9IiNmZmNlNWEiLz48ZWxsaXBzZSBjeD0iMTYiIGN5PSIxNi41IiByeD0iNyIgcnk9IjIuMiIgZmlsbD0iI2ZmZTA4YSIvPjxwYXRoIGQ9Ik0yNSAyMGM0LTEgNiAwIDYgMnMtMyAyLTYgMVoiIGZpbGw9IiNmN2I3MzMiLz48cGF0aCBkPSJNNyAyMGMtNCAwLTQgNCAwIDQiIHN0cm9rZT0iI2Y3YjczMyIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48Y2lyY2xlIGN4PSIxNiIgY3k9IjEyLjUiIHI9IjIuNCIgZmlsbD0iIzQ2ZTBjOCIvPjxwYXRoIGQ9Ik0xNiAxMC41YzEtNCA0LTUgNC02IDAgMy0yIDUtNCA2WiIgZmlsbD0iIzdjNGRmZiIvPjwvc3ZnPg==">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;1,500&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg0:#070512; --bg1:#120a2b; --gold:#f7c948; --gold2:#ff9e3d;
-    --teal:#46e0c8; --txt:#f3eefe; --mut:#a39bc4; --line:#2c2350;
-    --card:#160f30; --card2:#1b1338; --green:#48e6a0; --red:#ff6b7d;
+    --ink:#050403; --ink2:#0b0805;
+    --gold:#e6b94d; --gold-bright:#f8dd92; --gold-white:#fff6e0; --gold-deep:#b07d2b;
+    --red:#e01f2d; --blue:#3b82f6;
+    --cream:#f3ead9; --body:#c9bca3; --muted:#998a70; --muted2:#6f6552;
+    --anton:'Anton',sans-serif; --osw:'Oswald',sans-serif; --barlow:'Barlow',sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  html,body{min-height:100%}
-  body{
-    background:
-      radial-gradient(1300px 760px at 50% -8%,rgba(124,77,255,.28),transparent),
-      radial-gradient(1000px 560px at 82% 112%,rgba(70,224,200,.13),transparent),
-      linear-gradient(180deg,var(--bg0),var(--bg1));
-    background-attachment:fixed;
-    color:var(--txt);font:18px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-    display:flex;flex-direction:column;align-items:center;padding:0 22px 80px;overflow-x:hidden}
-  .stars{position:fixed;inset:0;pointer-events:none;z-index:0}
-  .wrap{width:100%;max-width:980px;position:relative;z-index:1;text-align:center}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--cream);font-family:var(--barlow);min-height:100vh;overflow-x:hidden}
 
-  .brand{margin-top:46px;font-size:14px;letter-spacing:6px;text-transform:uppercase;color:var(--gold);font-weight:700}
-  h1{font-size:clamp(40px,7vw,60px);font-weight:900;margin-top:6px;letter-spacing:-1px;
-     background:linear-gradient(135deg,#fff,#f7c948 55%,#ff9e3d);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  .event{color:var(--mut);font-size:18px;margin-top:10px;font-weight:500}
-  .updated{display:inline-flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px;margin:16px auto 0;
-    max-width:100%;text-align:center;line-height:1.4;
-    background:linear-gradient(135deg,rgba(247,201,72,.16),rgba(70,224,200,.1));
-    border:1px solid rgba(247,201,72,.45);border-radius:18px;
-    padding:11px 18px;font-size:15px;font-weight:600;color:var(--gold);
-    box-shadow:0 6px 22px rgba(247,201,72,.14)}
-  .updated b{color:#fff}
-  .updated .dot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
+  @keyframes pg-shimmer{0%{background-position:200% center}100%{background-position:-200% center}}
+  @keyframes pg-glow{0%,100%{opacity:.5;transform:translate(-50%,-50%) scale(1)}50%{opacity:.85;transform:translate(-50%,-50%) scale(1.07)}}
+  @keyframes pg-smoke{0%{transform:translateY(40px) scaleX(.7);opacity:0}30%{opacity:.55}100%{transform:translateY(-150px) scaleX(1.5);opacity:0}}
+  @keyframes pg-flicker{0%,100%{opacity:1}50%{opacity:.55}}
+  @keyframes pg-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+  @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 
-  .genie{width:260px;height:272px;margin:8px auto 0;position:relative}
-  .glow{position:absolute;inset:0;filter:blur(38px);background:radial-gradient(circle at 50% 58%,rgba(70,224,200,.5),rgba(124,77,255,.28) 45%,transparent 70%);animation:pulse 3.4s ease-in-out infinite}
-  @keyframes pulse{0%,100%{opacity:.55;transform:scale(.96)}50%{opacity:.95;transform:scale(1.04)}}
-  .float{animation:float 4.6s ease-in-out infinite}
-  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-  svg{display:block;position:relative;width:100%;height:100%}
+  .shimmer{background:linear-gradient(100deg,#b07d2b,#f8dd92 40%,#fff6e0 50%,#f8dd92 60%,#b07d2b);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:pg-shimmer 5.5s linear infinite}
+  .goldtext{background:linear-gradient(180deg,#fff6e0,#f8dd92 35%,#e6b94d 60%,#b07d2b);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 
-  .tagline{color:var(--txt);opacity:.9;font-size:20px;line-height:1.55;max-width:640px;margin:6px auto 4px}
-  .tagline b{color:var(--gold)}
-  .srcbadge{font-size:13px;color:var(--mut);margin:14px 0 26px}
+  /* ===== LANDING ===== */
+  #landing{position:fixed;inset:0;z-index:80;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 24px;overflow-y:auto;
+    background:radial-gradient(circle at 50% 42%,#0d0a06,#050403 72%)}
+  #landing.hide{display:none}
+  .lan-inner{max-width:920px;width:100%;display:flex;flex-direction:column;align-items:center}
+  .eyebrow{font-family:var(--osw);font-weight:400;font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold)}
+  .lamp{position:relative;width:clamp(220px,40vw,300px);height:clamp(220px,40vw,300px);margin:26px 0 6px;display:flex;align-items:center;justify-content:center}
+  .lamp .rg{position:absolute;left:50%;top:50%;width:160%;height:160%;border-radius:50%;
+    background:radial-gradient(circle,rgba(230,185,77,.26),rgba(230,185,77,.05) 45%,transparent 68%);
+    transform:translate(-50%,-50%);animation:pg-glow 7s ease-in-out infinite;pointer-events:none}
+  .lamp .ring{position:absolute;inset:-24px;border:1px solid rgba(230,185,77,.3);border-radius:50%}
+  .lamp .disc{width:100%;height:100%;border-radius:50%;background:radial-gradient(circle at 50% 38%,#15110a,#0b0805 72%);border:1px solid rgba(230,185,77,.28);display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:inset 0 0 40px rgba(0,0,0,.6)}
+  .lamp .disc svg{width:80%;height:80%;display:block}
+  .smoke{position:absolute;bottom:52%;width:34px;height:120px;border-radius:50%;filter:blur(15px);background:radial-gradient(circle,rgba(230,185,77,.18),transparent 70%);animation:pg-smoke 6.6s ease-in-out infinite;pointer-events:none}
+  .smoke.s1{left:38%}.smoke.s2{left:50%;animation-delay:1.8s}.smoke.s3{left:60%;animation-delay:3.4s}
+  .lan-h{font-family:var(--anton);font-weight:400;font-size:clamp(56px,10vw,116px);line-height:.9;margin-top:6px;text-shadow:0 0 44px rgba(230,185,77,.22)}
+  .rule{width:120px;height:2px;margin:22px 0;background:linear-gradient(90deg,transparent,var(--red),transparent)}
+  .lan-pitch{font-family:var(--barlow);font-size:clamp(15px,1.8vw,18px);line-height:1.6;color:var(--body);max-width:520px}
+  .cta{font-family:var(--osw);font-weight:600;font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:#1c1407;
+    background:linear-gradient(180deg,#f8dd92,#e6b94d 55%,#cc9a35);border:none;border-radius:8px;padding:18px 36px;margin-top:30px;cursor:pointer;
+    box-shadow:0 14px 44px rgba(230,185,77,.4),inset 0 1px 0 rgba(255,255,255,.5);transition:transform .16s,box-shadow .16s}
+  .cta:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 20px 54px rgba(230,185,77,.5),inset 0 1px 0 rgba(255,255,255,.5)}
+  .cta:active{transform:translateY(0)}
+  .medals{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+  .medal{display:flex;flex-direction:column;align-items:center;gap:9px}
+  .medal .circ{width:84px;height:84px;border-radius:50%;border:1px solid rgba(230,185,77,.4);display:flex;align-items:center;justify-content:center;font-family:var(--anton);font-size:20px;color:var(--gold);background:radial-gradient(circle at 50% 35%,#15110a,#0b0805)}
+  .medal .lab{font-family:var(--osw);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  .lan-disc{font-family:var(--barlow);font-size:11.5px;line-height:1.6;color:var(--muted2);max-width:520px;margin-top:26px}
 
-  .btns{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
-  .btn{cursor:pointer;border:none;border-radius:20px;padding:22px 34px;font-size:20px;font-weight:800;
-    color:#1a1330;display:flex;align-items:center;gap:12px;min-width:280px;justify-content:center;
-    box-shadow:0 14px 38px rgba(247,201,72,.28);transition:transform .15s,box-shadow .15s}
-  .btn.parlay{background:linear-gradient(135deg,#f7c948,#ff9e3d)}
-  .btn.straight{background:linear-gradient(135deg,#46e0c8,#5ad1ff)}
-  .btn:hover{transform:translateY(-3px);box-shadow:0 20px 48px rgba(247,201,72,.4)}
-  .btn:active{transform:translateY(0)}
-  .btn .e{font-size:24px}
+  /* ===== HOME ===== */
+  #home{display:none}
+  #home.show{display:block;animation:rise .5s ease}
+  .topbar{max-width:1140px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .wordmark{font-family:var(--anton);font-size:22px;letter-spacing:.02em;cursor:pointer;color:var(--cream)}
+  .livepill{font-family:var(--osw);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(230,185,77,.4);border-radius:999px;padding:7px 14px;display:inline-flex;align-items:center;gap:8px}
+  .livedot{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 10px var(--red);animation:pg-flicker 2s infinite;flex:0 0 auto}
 
-  .thinking{margin-top:34px;color:var(--gold);font-weight:700;letter-spacing:1px;font-size:19px;display:none}
-  .thinking.show{display:block;animation:blink 1s ease-in-out infinite}
-  @keyframes blink{0%,100%{opacity:.4}50%{opacity:1}}
+  .hero{position:relative;max-width:920px;margin:0 auto;padding:34px 32px 14px;text-align:center;overflow:hidden}
+  .hero .rg{position:absolute;left:50%;top:30%;width:680px;height:520px;max-width:140%;border-radius:50%;
+    background:radial-gradient(circle,rgba(230,185,77,.16),rgba(230,185,77,.03) 45%,transparent 68%);
+    transform:translate(-50%,-50%);animation:pg-glow 7s ease-in-out infinite;pointer-events:none;z-index:0}
+  .hero>*{position:relative;z-index:1}
+  .emblem{font-size:46px;display:inline-block;animation:pg-float 5s ease-in-out infinite}
+  .hero-h{font-family:var(--anton);font-size:clamp(44px,7vw,80px);line-height:.92;margin-top:6px}
+  .eventline{font-family:var(--anton);font-size:clamp(17px,2.3vw,23px);color:var(--cream);margin-top:16px;letter-spacing:.01em;line-height:1.2}
+  .showing{font-family:var(--barlow);font-size:13px;color:var(--muted);margin-top:12px;line-height:1.5}
+  .showing b{color:var(--cream)}
+  .showing .livedot{display:inline-block;vertical-align:middle;margin-right:5px}
+  .meta{font-family:var(--osw);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:9px}
+  .hero-pitch{font-family:var(--barlow);font-size:16px;line-height:1.55;color:var(--body);max-width:560px;margin:16px auto 0}
+  .hero-pitch b{color:var(--gold)}
+  .hero .cta{margin-top:24px}
 
-  .results{margin-top:40px;text-align:left;display:none}
-  .results.show{display:block;animation:rise .5s ease}
-  @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-  .rhead{font-size:28px;font-weight:900;margin-bottom:6px;letter-spacing:-.5px}
-  .rsub{color:var(--mut);font-size:16px;margin-bottom:22px;max-width:680px}
+  .section{max-width:1140px;margin:0 auto;padding:34px 32px}
+  .sec-eyebrow{font-family:var(--osw);font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);text-align:center}
+  .sec-h2{font-family:var(--anton);font-size:clamp(30px,4.4vw,46px);text-align:center;margin-top:6px}
 
-  .picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-  .pick{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:18px;padding:22px;position:relative;overflow:hidden}
-  .pick:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--gold),var(--gold2))}
-  .pick.conf:before{background:linear-gradient(180deg,var(--teal),#5ad1ff)}
-  .pick .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
-  .pick .fighter{font-size:24px;font-weight:800;line-height:1.15}
-  .pick .div{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:1.2px;margin-top:4px}
-  .pick .odds{font-variant-numeric:tabular-nums;color:var(--teal);font-weight:900;font-size:24px;white-space:nowrap}
-  .pick .stats{display:flex;gap:22px;margin-top:18px}
-  .pick .st{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px}
-  .pick .st b{display:block;font-size:26px;font-weight:800;color:var(--txt);font-variant-numeric:tabular-nums;margin-top:2px;letter-spacing:-.5px}
-  .pick .st.edge b{color:var(--green)}
-  .pick .why{font-size:14.5px;color:var(--mut);margin-top:18px;border-top:1px dashed var(--line);padding-top:14px;line-height:1.5}
-  .pick .pitch{font-size:14px;margin-top:12px;font-weight:700;font-style:italic;line-height:1.45;
-    background:linear-gradient(135deg,#ffe08a,#f7c948 55%,#ff9e3d);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  /* face-off */
+  .me-eyebrow{font-family:var(--osw);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--cream);text-align:center;margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:9px}
+  .me-eyebrow .livedot{display:inline-block}
+  .faceoff{display:flex;align-items:stretch;border:1px solid rgba(230,185,77,.3);border-radius:14px;overflow:hidden;background:linear-gradient(180deg,rgba(26,18,8,.55),rgba(8,6,3,.4));box-shadow:0 18px 50px rgba(0,0,0,.4)}
+  .corner{flex:1;position:relative;min-height:clamp(300px,32vw,400px);display:flex;align-items:flex-end;overflow:hidden}
+  .corner .mono{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--anton);font-size:clamp(120px,20vw,220px);opacity:.13;pointer-events:none}
+  .corner.red{background:radial-gradient(circle at 50% 34%,rgba(224,31,45,.2),transparent 68%),var(--ink2)}
+  .corner.red .mono{color:var(--red)}
+  .corner.blue{background:radial-gradient(circle at 50% 34%,rgba(59,130,246,.2),transparent 68%),var(--ink2)}
+  .corner.blue .mono{color:var(--blue)}
+  .corner .ov{position:relative;width:100%;padding:24px;background:linear-gradient(180deg,transparent 42%,rgba(8,6,3,.94) 100%)}
+  .corner.blue .ov{text-align:right}
+  .corner .clab{font-family:var(--osw);font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+  .corner.red .clab{color:var(--red)}.corner.blue .clab{color:var(--blue)}
+  .corner .cname{font-family:var(--anton);font-size:clamp(24px,3vw,36px);letter-spacing:.02em;margin-top:6px;line-height:1}
+  .corner .crec{font-family:var(--osw);font-weight:500;font-size:15px;color:var(--body);margin-top:5px}
+  .vs{align-self:center;flex:0 0 auto;z-index:2;margin:0 -16px}
+  .vs span{display:flex;width:58px;height:58px;border-radius:50%;align-items:center;justify-content:center;font-family:var(--anton);font-size:20px;color:#1c1407;background:linear-gradient(180deg,#f8dd92,#e6b94d 55%,#cc9a35);box-shadow:0 0 22px rgba(230,185,77,.5)}
+  .faceoff-cap{text-align:center;font-family:var(--barlow);font-size:13px;color:var(--muted);margin-top:14px}
 
-  .parlaybox{background:linear-gradient(135deg,rgba(247,201,72,.14),rgba(255,158,61,.05));border:1px solid rgba(247,201,72,.4);border-radius:20px;padding:30px;margin-bottom:16px;text-align:center}
-  .parlaybox .k{font-size:14px;color:var(--mut);text-transform:uppercase;letter-spacing:1.5px}
-  .parlaybox .payout{font-size:clamp(48px,9vw,72px);font-weight:900;color:var(--gold);font-variant-numeric:tabular-nums;line-height:1.05;letter-spacing:-2px;margin:2px 0}
-  .parlaybox .legs{font-size:16px;color:var(--txt);opacity:.85;margin-top:6px}
+  /* results */
+  .results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:22px}
+  .col-h{font-family:var(--osw);font-weight:600;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+  .betcard{display:flex;align-items:center;gap:16px;border:1px solid rgba(230,185,77,.18);border-radius:12px;padding:16px;background:linear-gradient(180deg,rgba(26,18,8,.55),rgba(8,6,3,.4));margin-bottom:12px;transition:transform .16s,border-color .16s}
+  .betcard:hover{transform:translateY(-2px);border-color:rgba(230,185,77,.45)}
+  .fslot{flex:0 0 auto;width:58px;height:58px;border-radius:50%;border:1px solid rgba(230,185,77,.4);display:flex;align-items:center;justify-content:center;font-family:var(--anton);font-size:19px;color:var(--gold);background:radial-gradient(circle at 50% 35%,#15110a,#0b0805)}
+  .bmid{flex:1;min-width:0}
+  .bname{font-family:var(--anton);font-size:20px;letter-spacing:.01em;line-height:1}
+  .bpick{font-family:var(--barlow);font-size:12.5px;color:var(--muted);margin:4px 0 9px}
+  .bpick b{color:var(--cream);font-family:var(--osw);font-weight:700}
+  .pbar{position:relative;height:6px;border-radius:999px;background:rgba(255,255,255,.08)}
+  .pbar .fill{position:absolute;left:0;top:0;bottom:0;border-radius:999px;background:linear-gradient(90deg,#cc9a35,#f8dd92)}
+  .pbar .tick{position:absolute;top:-2px;width:2px;height:10px;background:var(--red);border-radius:1px}
+  .blabels{display:flex;justify-content:space-between;font-family:var(--osw);font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:7px}
+  .bedge{flex:0 0 auto;text-align:center;min-width:54px}
+  .bedge .num{font-family:var(--osw);font-weight:700;font-size:28px;color:var(--gold);line-height:1}
+  .bedge .lab{font-family:var(--osw);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+  .bwhy{font-family:var(--barlow);font-size:11.5px;color:var(--muted2);margin-top:10px;line-height:1.45}
 
-  .note{font-size:14.5px;color:var(--mut);background:rgba(255,107,125,.08);border:1px solid rgba(255,107,125,.28);border-radius:14px;padding:16px 18px;margin-top:18px;line-height:1.55}
+  .parlay{border:1px solid rgba(230,185,77,.3);border-radius:14px;padding:24px;background:linear-gradient(180deg,rgba(34,22,8,.6),rgba(8,6,3,.4));box-shadow:0 18px 50px rgba(0,0,0,.4)}
+  .legspill{font-family:var(--osw);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(230,185,77,.4);border-radius:999px;padding:5px 12px;display:inline-block;white-space:nowrap}
+  .leg{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid rgba(230,185,77,.12)}
+  .leg .ln{font-family:var(--anton);font-size:17px;line-height:1}
+  .leg .lp{font-family:var(--barlow);font-size:12px;color:var(--muted);margin-top:3px}
+  .leg .lo{font-family:var(--osw);font-weight:700;font-size:18px;color:var(--cream);white-space:nowrap}
+  .pfoot{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-top:18px;flex-wrap:wrap}
+  .pfoot .k{font-family:var(--osw);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  .pfoot .combined{font-family:var(--osw);font-weight:700;font-size:40px;color:var(--gold);line-height:1}
+  .pfoot .ret{font-family:var(--osw);font-weight:600;font-size:20px;color:var(--cream)}
+  .copybtn{width:100%;margin-top:18px;font-family:var(--osw);font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#1c1407;background:linear-gradient(180deg,#f8dd92,#e6b94d 55%,#cc9a35);border:none;border-radius:8px;padding:14px;cursor:pointer;box-shadow:0 10px 30px rgba(230,185,77,.35);transition:transform .16s}
+  .copybtn:hover{transform:translateY(-2px)}
+  .pfine{font-family:var(--barlow);font-size:11.5px;color:var(--muted2);margin-top:12px;line-height:1.5}
 
-  .links{margin-top:34px;font-size:15px}
-  .links a{color:var(--teal);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--teal)}
-  .disc{margin:32px auto 0;font-size:13px;color:var(--mut);max-width:680px;border-top:1px solid var(--line);padding-top:18px;line-height:1.6}
-  .datawrap{margin:44px 0 0;border-top:1px solid var(--line);padding-top:30px}
-  .datahead{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:700}
-  .datatitle{font-size:24px;font-weight:800;margin:4px 0 22px;letter-spacing:-.3px}
-  .datatitle b{background:linear-gradient(135deg,#f7c948,#46e0c8);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-  .stat{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:16px;padding:22px 14px;text-align:center}
-  .stat .num{font-size:36px;font-weight:900;line-height:1;font-variant-numeric:tabular-nums;background:linear-gradient(135deg,#fff,#f7c948 70%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  .stat .num.teal{background:linear-gradient(135deg,#9af0ff,#46e0c8);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  .stat .lab{font-size:12.5px;color:var(--mut);margin-top:9px;line-height:1.4}
-  .datafoot{font-size:12.5px;color:var(--mut);margin-top:16px;line-height:1.5}
+  .note{font-family:var(--barlow);font-size:13px;color:var(--body);background:rgba(224,31,45,.06);border:1px solid rgba(224,31,45,.3);border-radius:12px;padding:14px 16px;margin-top:18px;line-height:1.55}
 
-  .modal{position:fixed;inset:0;background:rgba(5,3,14,.82);display:none;align-items:center;justify-content:center;z-index:10;padding:22px}
-  .modal.show{display:flex}
-  .modal .box{background:var(--card);border:1px solid var(--line);border-radius:20px;max-width:560px;padding:30px;text-align:left;font-size:15.5px;color:var(--txt);max-height:82vh;overflow:auto;line-height:1.6}
-  .modal h3{color:var(--gold);margin-bottom:12px;font-size:22px}
-  .modal p{color:var(--mut);margin-bottom:12px}
-  .modal code{background:#0c0820;padding:2px 7px;border-radius:6px;color:var(--teal);font-size:13.5px}
-  .modal .x{float:right;cursor:pointer;color:var(--mut);font-size:24px;font-weight:800;line-height:1}
+  .hood-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:26px}
+  .hood{padding:22px;border:1px solid rgba(230,185,77,.18);border-radius:10px;background:rgba(26,18,8,.35)}
+  .hood.redc{border-color:rgba(224,31,45,.3);background:rgba(224,31,45,.06)}
+  .hood .hl{font-family:var(--osw);font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+  .hood.redc .hl{color:var(--red)}
+  .hood p{font-family:var(--barlow);font-size:14px;line-height:1.55;color:var(--body);margin-top:10px}
+  .hood p code{font-family:var(--osw);color:var(--cream);background:none}
+
+  .strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;text-align:center;border-top:1px solid rgba(230,185,77,.18);padding-top:34px}
+  .strip .n{font-family:var(--osw);font-weight:600;font-size:34px;line-height:1;color:var(--gold)}
+  .strip .n i{color:var(--red);font-style:normal}
+  .strip .l{font-family:var(--osw);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+
+  .foot{max-width:760px;margin:0 auto;padding:40px 32px 56px;text-align:center}
+  .foot p{font-family:var(--barlow);font-size:12px;line-height:1.65;color:var(--muted2)}
+  .foot strong{color:#8a7d66}
 
   @media(max-width:680px){
-    body{padding:0 14px 70px}
-    .brand{margin-top:30px;letter-spacing:4px;font-size:12px}
-    h1{font-size:38px}
-    .event{font-size:15px}
-    .updated{font-size:13px;padding:10px 14px}
-    .genie{width:200px;height:210px;margin-top:6px}
-    .tagline{font-size:16px}
-    .srcbadge{font-size:12px}
-    .btns{gap:12px}
-    .btn{min-width:100%;font-size:18px;padding:18px 20px}
-    .thinking{font-size:17px}
-    .rhead{font-size:23px}
-    .rsub{font-size:14px}
-    .picks{grid-template-columns:1fr;gap:12px}
-    .pick{padding:18px}
-    .pick .fighter{font-size:21px}
-    .pick .odds{font-size:21px}
-    .pick .stats{gap:18px}
-    .pick .st b{font-size:23px}
-    .parlaybox{padding:24px 16px}
-    .modal .box{padding:22px;font-size:14.5px}
-    .disc{font-size:12px}
-    .datatitle{font-size:21px}
-    .stats-grid{grid-template-columns:repeat(2,1fr);gap:10px}
-    .stat{padding:18px 10px}
-    .stat .num{font-size:30px}
-  }
-  @media(max-width:380px){
-    h1{font-size:33px}
-    .pick .st b{font-size:20px}
-    .pick .stats{gap:12px}
+    .section{padding:28px 18px}
+    .hero{padding:28px 18px 10px}
+    .topbar{padding:16px 18px}
+    .faceoff{flex-direction:column}
+    .vs{margin:-20px 0}
+    .corner{min-height:200px}
+    .corner.blue .ov{text-align:left}
+    .corner .mono{font-size:130px}
+    .pfoot .combined{font-size:34px}
   }
 </style>
 </head>
 <body>
-<div id="gateway">
-<style>
-  #gateway{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:36px 22px;overflow-y:auto;
-    background:radial-gradient(1100px 620px at 50% -5%,rgba(124,77,255,.34),transparent),radial-gradient(900px 500px at 80% 110%,rgba(70,224,200,.14),transparent),linear-gradient(180deg,#070512,#120a2b)}
-  #gateway.hide{display:none}
-  .gw-brand{font-size:13px;letter-spacing:5px;text-transform:uppercase;color:#f7c948;font-weight:700}
-  .gw-h{font-size:clamp(32px,6vw,56px);font-weight:900;letter-spacing:-1.5px;margin:12px 0 2px;max-width:780px;line-height:1.05;
-    background:linear-gradient(135deg,#fff,#f7c948 55%,#ff9e3d);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  .gw-pitch{font-size:clamp(16px,2.2vw,21px);color:#f3eefe;opacity:.93;max-width:660px;line-height:1.62;margin:16px auto 0}
-  .gw-pitch b{color:#f7c948}
-  .gw-mini{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;margin:26px 0 4px;color:#9b93bd;font-size:12.5px;text-transform:uppercase;letter-spacing:.5px}
-  .gw-mini b{display:block;font-size:26px;font-weight:900;color:#fff;font-variant-numeric:tabular-nums;letter-spacing:-1px;
-    background:linear-gradient(135deg,#fff,#f7c948 75%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  .gw-enter{margin-top:30px;cursor:pointer;border:none;border-radius:18px;padding:21px 44px;font-size:20px;font-weight:800;color:#1a1330;
-    background:linear-gradient(135deg,#f7c948,#ff9e3d);box-shadow:0 16px 44px rgba(247,201,72,.36);transition:transform .15s,box-shadow .15s}
-  .gw-enter:hover{transform:translateY(-3px);box-shadow:0 22px 56px rgba(247,201,72,.48)}
-  .gw-fine{margin-top:20px;font-size:11.5px;color:#9b93bd;max-width:520px;line-height:1.5}
-  @media(max-width:600px){.gw-mini{gap:20px}.gw-enter{width:100%;max-width:340px}}
-</style>
-  <div class="gw-brand">⚡ Sports Prediction Genie ⚡</div>
-  <div class="gw-h">The smartest way to read a UFC card.</div>
-  <div class="gw-pitch">The Genie has studied <b>every UFC fight since 1994</b> — who won, how, and the stats behind it — and learned the patterns that actually predict winners. It builds its <b>own honest win probability</b> for every fighter, then stacks it against the betting odds to expose where the books might be wrong. <b>That gap is your edge.</b></div>
-  <div class="gw-mini">
-    <span><b>8,000+</b>fights studied</span>
-    <span><b>100+</b>stats / matchup</span>
-    <span><b>32 yrs</b>of fight data</span>
-  </div>
-  <button class="gw-enter" onclick="document.getElementById('gateway').classList.add('hide')">Enter the Genie&nbsp;&rarr;</button>
-  <div class="gw-fine">A transparent value-finder for entertainment — not financial advice, and not a guarantee. No model reliably beats the books. 21+. Bet responsibly.</div>
-</div>
-<canvas class="stars" id="stars"></canvas>
-<div class="wrap">
-  <div class="brand">✦ Sports Prediction Genie ✦</div>
-  <h1>Make Your Wish</h1>
-  <div class="event" id="event">UFC Fight Night 280 · Fiziev vs. Torres · National Gymnastics Arena, Baku · Jun 27, 2026</div>
-  <div><span class="updated"><span class="dot"></span>Showing <b id="bcard">UFC Fight Night 280</b> · updated <b id="updated">June 16, 2026</b> · if a newer card is out, ping <b>Joe Cook</b> to refresh</span></div>
 
-  <div class="genie float">
-    <div class="glow"></div>
-    <svg viewBox="0 0 240 250" xmlns="http://www.w3.org/2000/svg" aria-label="magic prediction genie">
-      <defs>
-        <radialGradient id="halo" cx="50%" cy="40%" r="52%">
-          <stop offset="0" stop-color="#7c4dff" stop-opacity=".5"/>
-          <stop offset="60%" stop-color="#46e0c8" stop-opacity=".14"/>
-          <stop offset="100%" stop-color="#46e0c8" stop-opacity="0"/>
-        </radialGradient>
-        <linearGradient id="gbody" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#9af0ff"/>
-          <stop offset="42%" stop-color="#54aaff"/>
-          <stop offset="100%" stop-color="#7a4dff"/>
-        </linearGradient>
-        <linearGradient id="garm" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#5fb6ff"/>
-          <stop offset="100%" stop-color="#5237cf"/>
-        </linearGradient>
-        <linearGradient id="gtail" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#6d4dff" stop-opacity=".95"/>
-          <stop offset="100%" stop-color="#46e0c8" stop-opacity="0"/>
-        </linearGradient>
-        <linearGradient id="glamp" x1="0" y1="0" x2="0.4" y2="1">
-          <stop offset="0" stop-color="#ffe488"/>
-          <stop offset="50%" stop-color="#f6b531"/>
-          <stop offset="100%" stop-color="#a86a0c"/>
-        </linearGradient>
-        <linearGradient id="gturban" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#ffe086"/>
-          <stop offset="100%" stop-color="#e2901a"/>
-        </linearGradient>
-        <radialGradient id="gorb" cx="50%" cy="40%" r="60%">
-          <stop offset="0" stop-color="#fffbe8"/><stop offset="1" stop-color="#f7c948"/>
-        </radialGradient>
-      </defs>
-      <ellipse cx="120" cy="118" rx="120" ry="125" fill="url(#halo)"/>
-      <ellipse cx="120" cy="236" rx="58" ry="10" fill="#000" opacity=".4"/>
-      <path d="M66 214 C40 210 40 234 64 232" stroke="url(#glamp)" stroke-width="8" fill="none" stroke-linecap="round"/>
-      <path d="M170 216 C196 210 208 218 206 226 C198 236 180 230 170 224 Z" fill="url(#glamp)"/>
-      <path d="M64 214 C64 202 84 196 120 196 C156 196 176 202 176 214 C176 226 152 234 120 234 C88 234 64 226 64 214 Z" fill="url(#glamp)"/>
-      <ellipse cx="120" cy="200" rx="40" ry="10" fill="url(#glamp)"/>
-      <ellipse cx="120" cy="197" rx="34" ry="7" fill="#fff2bf" opacity=".55"/>
-      <circle cx="120" cy="190" r="6" fill="url(#gorb)"/>
-      <path d="M78 210 C82 204 100 201 120 201 C108 206 94 212 88 220 C82 218 78 214 78 210 Z" fill="#fff" opacity=".18"/>
-      <path d="M120 192 C150 184 150 160 130 150 C150 140 150 116 124 112 L116 112 C90 116 90 140 110 150 C90 160 90 184 120 192 Z" fill="url(#gtail)" opacity=".9"/>
-      <path d="M120 110 C152 110 174 126 178 148 C181 166 170 178 150 181 C138 183 102 183 90 181 C70 178 59 166 62 148 C66 126 88 110 120 110 Z" fill="url(#gbody)"/>
-      <path d="M120 110 C152 110 174 126 178 148 C178 138 170 126 154 120 C142 116 120 117 120 117 Z" fill="#fff" opacity=".2"/>
-      <path d="M74 150 C96 144 150 150 168 158 C166 166 150 168 138 167 C112 164 90 160 76 158 C72 156 72 152 74 150 Z" fill="url(#garm)"/>
-      <path d="M166 150 C144 144 90 150 72 158 C74 166 90 168 102 167 C128 164 150 160 164 158 C168 156 168 152 166 150 Z" fill="url(#garm)" opacity=".92"/>
-      <circle cx="74" cy="156" r="7.5" fill="#9af0ff"/>
-      <circle cx="166" cy="156" r="7.5" fill="#9af0ff"/>
-      <rect x="111" y="92" width="18" height="22" rx="8" fill="url(#garm)"/>
-      <ellipse cx="120" cy="78" rx="27" ry="29" fill="url(#gbody)"/>
-      <circle cx="93" cy="80" r="4.6" fill="#f7c948"/>
-      <circle cx="147" cy="80" r="4.6" fill="#f7c948"/>
-      <path d="M95 64 C100 42 140 42 145 64 C138 56 102 56 95 64 Z" fill="url(#gturban)"/>
-      <path d="M93 64 C95 57 145 57 147 64 C149 71 91 71 93 64 Z" fill="url(#gturban)"/>
-      <path d="M96 62 C110 56 130 56 144 62" stroke="#a86a0c" stroke-width="1.4" fill="none" opacity=".55"/>
-      <circle cx="120" cy="52" r="5.4" fill="url(#gorb)"/>
-      <path d="M120 48 C122 37 128 35 125 26 C133 33 130 44 120 48 Z" fill="#f7c948"/>
-      <ellipse cx="111" cy="78" rx="2.8" ry="3.6" fill="#0a0820"/>
-      <ellipse cx="129" cy="78" rx="2.8" ry="3.6" fill="#0a0820"/>
-      <path d="M104 71 C108 68 114 69 117 71" stroke="#0a0820" stroke-width="1.7" fill="none" stroke-linecap="round" opacity=".75"/>
-      <path d="M123 71 C126 69 132 68 136 71" stroke="#0a0820" stroke-width="1.7" fill="none" stroke-linecap="round" opacity=".75"/>
-      <path d="M112 88 Q120 94 128 88" stroke="#0a0820" stroke-width="2.1" fill="none" stroke-linecap="round"/>
-      <g fill="#f7c948">
-        <path d="M58 64 l2.2 6.4 6.4 2.2 -6.4 2.2 -2.2 6.4 -2.2 -6.4 -6.4 -2.2 6.4 -2.2 Z"/>
-        <path d="M188 92 l1.7 5 5 1.7 -5 1.7 -1.7 5 -1.7 -5 -5 -1.7 5 -1.7 Z" opacity=".9"/>
-      </g>
-      <g fill="#46e0c8">
-        <path d="M182 150 l1.4 4.2 4.2 1.4 -4.2 1.4 -1.4 4.2 -1.4 -4.2 -4.2 -1.4 4.2 -1.4 Z" opacity=".85"/>
-        <path d="M50 138 l1.4 4.2 4.2 1.4 -4.2 1.4 -1.4 4.2 -1.4 -4.2 -4.2 -1.4 4.2 -1.4 Z" opacity=".75"/>
-      </g>
-    </svg>
-  </div>
-
-  <div class="tagline">One tap and the Genie reads this week's card — comparing its <b>own win probabilities</b> against the de-vigged market to surface where the value hides.</div>
-  <div class="srcbadge" id="srcbadge"></div>
-  <div class="srcbadge" id="condbadge" style="color:var(--teal)"></div>
-
-  <div class="btns">
-    <button class="btn parlay" onclick="genie('parlay')"><span class="e">🧞</span> Build My Parlay</button>
-    <button class="btn straight" onclick="genie('top3')"><span class="e">⭐</span> Top 3 Straight Bets</button>
-  </div>
-
-  <div class="thinking" id="thinking">🪄 The Genie is reading the card…</div>
-  <div class="results" id="results"></div>
-
-  <div class="links"><a onclick="document.getElementById('how').classList.add('show')">How the Genie thinks</a></div>
-
-  <div class="datawrap">
-    <div class="datahead">✦ Under the hood ✦</div>
-    <div class="datatitle">Trained on <b>three decades</b> of fight data</div>
-    <div class="stats-grid">
-      <div class="stat"><div class="num">32</div><div class="lab">years of UFC history (1994–2026)</div></div>
-      <div class="stat"><div class="num">8,000+</div><div class="lab">pro bouts in the training set</div></div>
-      <div class="stat"><div class="num teal">100+</div><div class="lab">stats tracked per matchup</div></div>
-      <div class="stat"><div class="num">2,000+</div><div class="lab">fighters profiled</div></div>
-      <div class="stat"><div class="num teal">Live</div><div class="lab">multi-book market odds</div></div>
-      <div class="stat"><div class="num">Weekly</div><div class="lab">auto-refreshed each card</div></div>
+<!-- ===================== LANDING ===================== -->
+<div id="landing">
+  <div class="lan-inner">
+    <div class="eyebrow">&#10022; Sports Prediction Genie &#10022;</div>
+    <div class="lamp">
+      <div class="rg"></div>
+      <span class="smoke s1"></span><span class="smoke s2"></span><span class="smoke s3"></span>
+      <div class="ring"></div>
+      <div class="disc">
+        <svg viewBox="0 0 240 250" xmlns="http://www.w3.org/2000/svg" aria-label="genie lamp">
+          <defs>
+            <linearGradient id="gbody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff6e0"/><stop offset="42%" stop-color="#f8dd92"/><stop offset="100%" stop-color="#cc9a35"/></linearGradient>
+            <linearGradient id="garm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8dd92"/><stop offset="100%" stop-color="#b07d2b"/></linearGradient>
+            <linearGradient id="gtail" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6b94d" stop-opacity=".95"/><stop offset="100%" stop-color="#e6b94d" stop-opacity="0"/></linearGradient>
+            <linearGradient id="glamp" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0" stop-color="#ffe488"/><stop offset="50%" stop-color="#f6b531"/><stop offset="100%" stop-color="#a86a0c"/></linearGradient>
+            <radialGradient id="gorb" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#fffbe8"/><stop offset="1" stop-color="#f7c948"/></radialGradient>
+          </defs>
+          <ellipse cx="120" cy="236" rx="58" ry="10" fill="#000" opacity=".4"/>
+          <path d="M66 214 C40 210 40 234 64 232" stroke="url(#glamp)" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <path d="M170 216 C196 210 208 218 206 226 C198 236 180 230 170 224 Z" fill="url(#glamp)"/>
+          <path d="M64 214 C64 202 84 196 120 196 C156 196 176 202 176 214 C176 226 152 234 120 234 C88 234 64 226 64 214 Z" fill="url(#glamp)"/>
+          <ellipse cx="120" cy="200" rx="40" ry="10" fill="url(#glamp)"/>
+          <circle cx="120" cy="190" r="6" fill="url(#gorb)"/>
+          <path d="M120 192 C150 184 150 160 130 150 C150 140 150 116 124 112 L116 112 C90 116 90 140 110 150 C90 160 90 184 120 192 Z" fill="url(#gtail)" opacity=".9"/>
+          <path d="M120 110 C152 110 174 126 178 148 C181 166 170 178 150 181 C138 183 102 183 90 181 C70 178 59 166 62 148 C66 126 88 110 120 110 Z" fill="url(#gbody)"/>
+          <path d="M74 150 C96 144 150 150 168 158 C166 166 150 168 138 167 C112 164 90 160 76 158 C72 156 72 152 74 150 Z" fill="url(#garm)"/>
+          <path d="M166 150 C144 144 90 150 72 158 C74 166 90 168 102 167 C128 164 150 160 164 158 C168 156 168 152 166 150 Z" fill="url(#garm)" opacity=".92"/>
+          <rect x="111" y="92" width="18" height="22" rx="8" fill="url(#garm)"/>
+          <ellipse cx="120" cy="78" rx="27" ry="29" fill="url(#gbody)"/>
+          <path d="M95 64 C100 42 140 42 145 64 C138 56 102 56 95 64 Z" fill="url(#glamp)"/>
+          <path d="M93 64 C95 57 145 57 147 64 C149 71 91 71 93 64 Z" fill="url(#glamp)"/>
+          <circle cx="120" cy="52" r="5.4" fill="url(#gorb)"/>
+          <path d="M120 48 C122 37 128 35 125 26 C133 33 130 44 120 48 Z" fill="#f7c948"/>
+          <ellipse cx="111" cy="78" rx="2.8" ry="3.6" fill="#2a1c06"/>
+          <ellipse cx="129" cy="78" rx="2.8" ry="3.6" fill="#2a1c06"/>
+          <path d="M112 88 Q120 94 128 88" stroke="#2a1c06" stroke-width="2.1" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
     </div>
-    <div class="datafoot">Striking · accuracy · takedowns · control time · reach · age · finish rate · streaks · rankings — cross-checked against live sportsbook odds for every fight since UFC 1.</div>
-  </div>
-
-  <div class="disc">
-    <b>Odds are subject to change and this is not a live look.</b> The lines shown are a snapshot from when the
-    card was last refreshed — always check the "updated" date near the top to see how fresh they are, and confirm
-    the current price at your sportsbook before betting.<br><br>
-    The Genie compares a transparent statistical model (records, finish rates, age, reach, ranking) to the
-    real de-vigged market price; the gap is the "edge." This is a value-finder for entertainment, <b>not a
-    guarantee and not financial advice</b>. No model reliably beats sportsbooks long-term and MMA is wildly
-    high-variance — one punch ends a fight. Bet only what you can afford to lose. 21+. Problem gambling? Call
-    1-800-522-4700.
+    <h1 class="lan-h goldtext">MAKE YOUR WISH</h1>
+    <div class="rule"></div>
+    <p class="lan-pitch">The smartest way to read a UFC card. One tap and the Genie reads this week's fights &mdash; comparing its own win probabilities against the market to surface where the value hides.</p>
+    <button class="cta" onclick="enterApp()">&#129501; Rub the Lamp &rarr;</button>
+    <div class="medals">
+      <div class="medal"><div class="circ">8K+</div><div class="lab">Fights</div></div>
+      <div class="medal"><div class="circ">100+</div><div class="lab">Stats</div></div>
+      <div class="medal"><div class="circ">32y</div><div class="lab">History</div></div>
+    </div>
+    <p class="lan-disc">A value-finder for entertainment &mdash; not financial advice, not a guarantee. 21+. Problem gambling? Call 1-800-522-4700.</p>
   </div>
 </div>
 
-<div class="modal" id="how">
-  <div class="box">
-    <span class="x" onclick="document.getElementById('how').classList.remove('show')">×</span>
-    <h3>🧞 How the Genie thinks</h3>
-    <p><b>Its own number.</b> For each fighter the Genie builds a rating from win %, finish rate, age
-    (decline after ~34), reach, and ranking — then turns the matchup into a win probability. Market odds
-    are left out so it forms an independent opinion.</p>
-    <p><b>The market's number.</b> Live American odds are converted to implied probability and de-vigged.</p>
-    <p><b>Conditions.</b> For outdoor / hot-humid cards the Genie also docks older, high-mileage
-    fighters (cardio fades in the heat) and rewards fresher legs — a deliberate, card-specific tweak.</p>
-    <p><b>The edge.</b> <code>edge = genie_prob − market_prob</code>. Straight Bets rank by edge (best value).
-    The Parlay stacks the best-<i>value</i> legs for a bigger payout — aggressive, with just a light
-    confidence floor so the legs aren't pure longshots.</p>
-    <p><b>Honest limits:</b> the fighter stats here are approximate and hand-entered for this card, so treat
-    the output as a smart conversation-starter, not a validated edge.</p>
+<!-- ===================== HOME ===================== -->
+<div id="home">
+  <div class="topbar">
+    <div class="wordmark" onclick="backToLanding()">&#129501; THE <span class="shimmer">GENIE</span></div>
+    <span class="livepill"><span class="livedot"></span><span id="livelabel">FIGHT NIGHT</span></span>
   </div>
+
+  <section class="hero">
+    <div class="rg"></div>
+    <div class="emblem">&#129684;</div>
+    <h1 class="hero-h goldtext">MAKE YOUR WISH</h1>
+    <div class="eventline" id="event">UFC Fight Night 280 · Fiziev vs. Torres · National Gymnastics Arena, Baku · Jun 27, 2026</div>
+    <div class="showing"><span class="livedot"></span>Showing <b id="bcard">UFC Fight Night 280</b> &middot; updated <b id="updated">June 21, 2026</b> &middot; if a newer card is out, ping <b>Joe Cook</b> to refresh</div>
+    <div class="meta" id="srcmeta"></div>
+    <p class="hero-pitch">One tap and the Genie reads this week's card &mdash; comparing its <b>own win probabilities</b> against the de-vigged market to surface where the value hides.</p>
+    <button class="cta" onclick="summon()">&#129501; Build My Parlay &rarr;</button>
+  </section>
+
+  <section class="section">
+    <div class="me-eyebrow"><span class="livedot"></span><span id="me-label">UFC FIGHT NIGHT 280 · MAIN EVENT</span></div>
+    <div class="faceoff" id="faceoff"></div>
+    <div class="faceoff-cap">This week's headline bout &mdash; the Genie's full read on both corners is below.</div>
+  </section>
+
+  <section class="section" id="results">
+    <div class="results-grid">
+      <div>
+        <div class="col-h">&#11088; Top 3 Straight Bets</div>
+        <div id="top3"></div>
+        <div class="note">Single moneyline bets &mdash; lower variance than a parlay. The bar is the Genie's win probability; the red tick is the market's. The gap between them <b>is</b> the edge. Shop for the best price before betting.</div>
+      </div>
+      <div>
+        <div id="parlay" class="parlay"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec-eyebrow">&#10022; Under the Hood &#10022;</div>
+    <h2 class="sec-h2">HOW THE GENIE THINKS</h2>
+    <div class="hood-grid">
+      <div class="hood"><div class="hl">01 &middot; Its Own Number</div><p>For each fighter the Genie builds a rating from win %, finish rate, age, reach and ranking, then turns the matchup into a win probability &mdash; with market odds deliberately left out so it forms an independent opinion.</p></div>
+      <div class="hood"><div class="hl">02 &middot; The Market</div><p>Live American odds are converted to implied probability and de-vigged to strip the book's margin.</p></div>
+      <div class="hood"><div class="hl">03 &middot; Conditions</div><p>For hot, humid or outdoor cards it docks older, high-mileage fighters and rewards fresher legs &mdash; a card-specific tweak.</p></div>
+      <div class="hood redc"><div class="hl">04 &middot; The Edge</div><p><code>edge = genie &minus; market.</code> Straight bets rank by edge; the parlay stacks the best value for a bigger payout.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="strip">
+      <div><div class="n">32</div><div class="l">Years 1994&ndash;2026</div></div>
+      <div><div class="n">8,000<i>+</i></div><div class="l">Pro Bouts</div></div>
+      <div><div class="n">100<i>+</i></div><div class="l">Stats / Matchup</div></div>
+      <div><div class="n">2,000<i>+</i></div><div class="l">Fighters Profiled</div></div>
+      <div><div class="n">Live</div><div class="l">Multi-Book Odds</div></div>
+      <div><div class="n">Weekly</div><div class="l">Auto-Refreshed</div></div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <p>Odds are a snapshot from the last refresh &mdash; always confirm the current price at your sportsbook before betting. The Genie is a transparent value-finder for entertainment, <strong>not a guarantee and not financial advice</strong>. No model reliably beats the books long-term and MMA is wildly high-variance &mdash; one punch ends a fight. Bet only what you can afford to lose. 21+. Problem gambling? Call 1-800-522-4700.</p>
+  </footer>
 </div>
 
 <script src="card.js" onerror="void 0"></script>
@@ -353,6 +323,8 @@ const toProb=o=>o<0?(-o)/(-o+100):100/(o+100);
 const toDec=o=>o<0?1+100/(-o):1+o/100;
 const fmtO=o=>o>0?"+"+o:""+o;
 const pc=x=>(x*100).toFixed(0)+"%";
+const americanFromDec=d=>d>=2?"+"+Math.round((d-1)*100):"-"+Math.round(100/(d-1));
+const initials=n=>n.split(/\s+/).filter(Boolean).map(w=>w[0]).slice(0,2).join('').toUpperCase();
 
 function rating(f){
   const wp=f.w/Math.max(1,f.w+f.l), fr=f.fin/Math.max(1,f.w);
@@ -360,8 +332,7 @@ function rating(f){
   if(f.undef) r+=0.25;
   if(f.age>34) r-=0.05*(f.age-34);
   if(f.moveup) r-=0.15;
-  // outdoor heat & humidity: cardio fades for older / high-mileage fighters; fresh legs gain
-  if(ENV.heat){                                   // slight nudge only
+  if(ENV.heat){
     const wear = Math.max(0,f.age-33) + 0.1*Math.max(0,(f.w+f.l)-25);
     r -= ENV.heat*0.02*wear;
     r += ENV.heat*0.01*Math.max(0,30-f.age);
@@ -403,80 +374,77 @@ function reason(fight,win,lose,edge){
   return base.charAt(0).toUpperCase()+base.slice(1)+" — "+tag;
 }
 
-function genie(mode){
-  const T=document.getElementById('thinking'), R=document.getElementById('results');
-  R.classList.remove('show'); T.classList.add('show');
-  setTimeout(()=>{T.classList.remove('show'); render(mode); R.classList.add('show'); R.scrollIntoView({behavior:'smooth',block:'nearest'});}, 1100);
-}
-
-function render(mode){
-  const all=FIGHTS.map(analyze);
-  const R=document.getElementById('results');
-  if(mode==='top3'){
-    const top=[...all].sort((x,y)=>y.edge-x.edge).slice(0,3);
-    R.innerHTML=`<div class="rhead">⭐ Top 3 Straight Bets</div>
-      <div class="rsub">The best <b>value</b> on the card — ranked by edge, the gap between the Genie's win probability and the de-vigged market price. These can be underdogs.</div>
-      <div class="picks">${top.map(p=>pickCard(p,false)).join('')}</div>
-      <div class="note">Single moneyline bets — lower variance than a parlay. Edges are modest by design; the market is efficient, so shop for the best price before betting.</div>`;
-  } else {
-    let cand = all.filter(p=>p.edge>0 && p.p>=0.30);   // aggressive: value first, light sanity floor
-    if(cand.length<3) cand = all.filter(p=>p.edge>0);
-    if(cand.length<3) cand = [...all];
-    const legs = cand.sort((a,b)=>b.edge-a.edge).slice(0,3);   // best VALUE legs
-    const dec=legs.reduce((a,p)=>a*toDec(p.odds),1);
-    const prob=legs.reduce((a,p)=>a*p.p,1);
-    R.innerHTML=`<div class="rhead">🧞 Genie's Value Parlay</div>
-      <div class="rsub">The Genie's best <b>value</b> legs stacked for a bigger payout — aggressive, but each leg still clears a sanity check (not pure longshots).</div>
-      <div class="parlaybox"><div class="k">$100 would pay</div>
-        <div class="payout">$${(dec*100).toFixed(0)}</div>
-        <div class="legs">${legs.length}-leg parlay · ${dec.toFixed(2)}× · Genie's combined win chance ≈ ${pc(prob)}</div></div>
-      <div class="picks">${legs.map(p=>pickCard(p,true)).join('')}</div>
-      <div class="note">⚠️ Parlays are long shots by design — every leg must hit, so even confident ones cash only ~${pc(prob)} of the time here. Fun for a small stake; never the core strategy.</div>`;
-  }
-}
-function pickCard(p,conf){
-  return `<div class="pick${conf?' conf':''}">
-    <div class="top"><div><div class="fighter">${p.fighter}</div><div class="div">${p.div}</div></div>
-    <div class="odds">${fmtO(p.odds)}</div></div>
-    <div class="stats">
-      <div class="st">Genie<b>${pc(p.p)}</b></div>
-      <div class="st">Market<b>${pc(p.mkt)}</b></div>
-      <div class="st edge">Edge<b>${(p.edge>=0?'+':'')+(p.edge*100).toFixed(1)}%</b></div>
+function betCard(p){
+  const g=Math.round(p.p*100), m=Math.round(p.mkt*100);
+  const e=(p.edge>=0?'+':'')+(p.edge*100).toFixed(1);
+  return `<div class="betcard">
+    <div class="fslot">${initials(p.fighter)}</div>
+    <div class="bmid">
+      <div class="bname">${p.fighter}</div>
+      <div class="bpick">${p.div} &middot; <b>${fmtO(p.odds)}</b></div>
+      <div class="pbar"><div class="fill" style="width:${g}%"></div><div class="tick" style="left:${m}%"></div></div>
+      <div class="blabels"><span>Genie ${g}%</span><span>Market ${m}%</span></div>
+      <div class="bwhy">${p.why}</div>
     </div>
-    <div class="why">${p.why}</div>
-    <div class="pitch">${pitch(p)}</div>
+    <div class="bedge"><div class="num">${e}</div><div class="lab">% Edge</div></div>
   </div>`;
 }
-function pitch(p){
-  const name=p.fighter, prob=pc(p.p), odo=fmtO(p.odds), e=(p.edge*100).toFixed(1);
-  const big=p.edge>=0.05, mid=p.edge>=0.025;
-  const pools = big ? [
-    `🔥 The books are sleeping on ${name} — the Genie has ${prob} at ${odo}. Grab this number before the line wakes up.`,
-    `💰 The Genie's headline value play: ${name} at ${odo}, a full ${e}% fatter than the model's fair price.`,
-    `🧞 Rub the lamp on ${name} — ${prob} to win at a price the market is badly underrating.`
-  ] : mid ? [
-    `⭐ ${name} is the Genie's sweet spot: ${prob} to win at ${odo}, a genuine edge on the market.`,
-    `📈 Real value here — the Genie has ${name} priced ahead of the books at ${odo}.`,
-    `🧞 The Genie's leaning ${name} — ${prob} and a number worth taking.`
-  ] : [
-    `✨ A sneaky lean toward ${name} at ${odo} — thin edge, but the Genie likes the price.`,
-    `🪄 Razor-close, and the Genie nudges ${name} — ${prob} with a hair of value.`,
-    `🧞 Small edge, steady call: ${name} at ${odo}.`
-  ];
-  let h=0; for(let i=0;i<name.length;i++) h=(h+name.charCodeAt(i))%pools.length;
-  return pools[h];
+function legRow(p){
+  return `<div class="leg"><div><div class="ln">${p.fighter}</div><div class="lp">${p.div}</div></div><div class="lo">${fmtO(p.odds)}</div></div>`;
 }
 
-const cv=document.getElementById('stars'),cx=cv.getContext('2d');
-function sky(){cv.width=innerWidth;cv.height=innerHeight;cx.clearRect(0,0,cv.width,cv.height);
-  for(let i=0;i<110;i++){const x=Math.random()*cv.width,y=Math.random()*cv.height,r=Math.random()*1.4;
-    cx.fillStyle=`rgba(255,255,255,${Math.random()*.5+.1})`;cx.beginPath();cx.arc(x,y,r,0,7);cx.fill();}}
-sky();addEventListener('resize',sky);
-document.getElementById('srcbadge').textContent = "🔮 Model source: " + SRC;
-document.getElementById('bcard').textContent = (document.getElementById('event').textContent.split('·')[0] || 'Current card').trim();
-// auto-stamp the "updated" date + time (Mountain Time) from when this file was last deployed — no manual edits needed
-(function(){const lm=new Date(document.lastModified);if(!isNaN(lm.getTime()))document.getElementById('updated').textContent=lm.toLocaleString('en-US',{timeZone:'America/Denver',month:'long',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'});})();
-document.getElementById('condbadge').textContent = ENV.heat ? ("🌡️ Conditions factored in: " + ENV.label) : "";
+function renderHome(){
+  const all=FIGHTS.map(analyze);
+  const me=FIGHTS[0];
+  document.getElementById('faceoff').innerHTML = `
+    <div class="corner red"><div class="mono">${initials(me.a.n)}</div>
+      <div class="ov"><div class="clab">Red Corner</div><div class="cname">${me.a.n}</div><div class="crec">${me.a.w}&ndash;${me.a.l}</div></div></div>
+    <div class="vs"><span>VS</span></div>
+    <div class="corner blue"><div class="mono">${initials(me.b.n)}</div>
+      <div class="ov"><div class="clab">Blue Corner</div><div class="cname">${me.b.n}</div><div class="crec">${me.b.w}&ndash;${me.b.l}</div></div></div>`;
+
+  const top=[...all].sort((x,y)=>y.edge-x.edge).slice(0,3);
+  document.getElementById('top3').innerHTML = top.map(betCard).join('');
+
+  let cand=all.filter(p=>p.edge>0 && p.p>=0.30);
+  if(cand.length<3) cand=all.filter(p=>p.edge>0);
+  if(cand.length<3) cand=[...all];
+  const legs=cand.sort((a,b)=>b.edge-a.edge).slice(0,3);
+  const dec=legs.reduce((a,p)=>a*toDec(p.odds),1);
+  const prob=legs.reduce((a,p)=>a*p.p,1);
+  const stake=50, payout=Math.round(stake*dec);
+  document.getElementById('parlay').innerHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div class="col-h" style="margin:0">&#129501; The Genie's Parlay</div>
+      <span class="legspill">${legs.length} legs</span></div>
+    <div style="margin-top:6px">${legs.map(legRow).join('')}</div>
+    <div class="pfoot">
+      <div><div class="k">Combined Odds</div><div class="combined">${americanFromDec(dec)}</div></div>
+      <div style="text-align:right"><div class="k">$${stake} returns</div><div class="ret">$${payout}</div></div>
+    </div>
+    <button class="copybtn" onclick="copyParlay(this)">&#129668; Copy Parlay</button>
+    <div class="pfine">Combined win chance &asymp; ${pc(prob)}. The Genie stacks its best-value legs with a light confidence floor &mdash; every leg must hit, so treat any parlay as the long shot it is.</div>`;
+  window.__parlayText = "Genie's Parlay ("+americanFromDec(dec)+"): "+legs.map(p=>p.fighter+" "+fmtO(p.odds)).join("  |  ")+" — $"+stake+" returns $"+payout;
+
+  const evText=document.getElementById('event').textContent;
+  const short=(evText.split('·')[0]||'Fight Night').trim();
+  document.getElementById('bcard').textContent = short;
+  document.getElementById('livelabel').textContent = short.replace(/^UFC\s*/i,'').toUpperCase();
+  document.getElementById('me-label').textContent = short.toUpperCase()+" · MAIN EVENT";
+  document.getElementById('srcmeta').textContent = "Model source: "+SRC + (ENV.heat? "  ·  "+ENV.label : "");
+  (function(){const lm=new Date(document.lastModified);if(!isNaN(lm.getTime()))document.getElementById('updated').textContent=lm.toLocaleString('en-US',{timeZone:'America/Denver',month:'long',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'});})();
+}
+
+function copyParlay(btn){
+  const t=window.__parlayText||'';
+  const done=()=>{const o=btn.textContent;btn.textContent='✓ Copied!';setTimeout(()=>btn.textContent=o,1600);};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done).catch(()=>{});}
+}
+function enterApp(){document.getElementById('landing').classList.add('hide');document.getElementById('home').classList.add('show');window.scrollTo(0,0);}
+function backToLanding(){document.getElementById('landing').classList.remove('hide');document.getElementById('home').classList.remove('show');window.scrollTo(0,0);}
+function summon(){document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});}
+
+renderHome();
 </script>
 </body>
 </html>
