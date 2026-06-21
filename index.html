@@ -63,6 +63,10 @@
   /* ===== HOME ===== */
   #home{display:none}
   #home.show{display:block;animation:rise .5s ease}
+  #parlay-page{display:none}
+  #parlay-page.show{display:block;animation:rise .5s ease}
+  .backbtn{font-family:var(--osw);font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);background:none;border:1px solid rgba(230,185,77,.4);border-radius:999px;padding:7px 14px;cursor:pointer;transition:border-color .16s}
+  .backbtn:hover{border-color:var(--gold)}
   .topbar{max-width:1140px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .wordmark{font-family:var(--anton);font-size:22px;letter-spacing:.02em;cursor:pointer;color:var(--cream)}
   .livepill{font-family:var(--osw);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(230,185,77,.4);border-radius:999px;padding:7px 14px;display:inline-flex;align-items:center;gap:8px}
@@ -225,19 +229,13 @@
     <div class="showing"><span class="livedot"></span>Showing <b id="bcard">UFC Fight Night 280</b> &middot; updated <b id="updated">June 21, 2026</b> &middot; if a newer card is out, ping <b>Joe Cook</b> to refresh</div>
     <div class="meta" id="srcmeta"></div>
     <p class="hero-pitch">One tap and the Genie reads this week's card &mdash; comparing its <b>own win probabilities</b> against the de-vigged market to surface where the value hides.</p>
-    <button class="cta" onclick="summon()">&#129501; Build My Parlay &rarr;</button>
+    <button class="cta" onclick="goParlay()">&#129501; Build My Parlay &rarr;</button>
   </section>
 
   <section class="section">
     <div class="me-eyebrow"><span class="livedot"></span><span id="me-label">UFC FIGHT NIGHT 280 · MAIN EVENT</span></div>
     <div class="faceoff" id="faceoff"></div>
     <div class="faceoff-cap">This week's headline bout &mdash; the Genie's full read on both corners is below.</div>
-  </section>
-
-  <section class="section" id="results">
-    <div class="parlay-wrap">
-      <div id="parlay" class="parlay"></div>
-    </div>
   </section>
 
   <section class="section">
@@ -262,6 +260,26 @@
     </div>
   </section>
 
+  <footer class="foot">
+    <p>Odds are a snapshot from the last refresh &mdash; always confirm the current price at your sportsbook before betting. The Genie is a transparent value-finder for entertainment, <strong>not a guarantee and not financial advice</strong>. No model reliably beats the books long-term and MMA is wildly high-variance &mdash; one punch ends a fight. Bet only what you can afford to lose. 21+. Problem gambling? Call 1-800-522-4700.</p>
+  </footer>
+</div>
+
+<!-- ===================== PARLAY PAGE ===================== -->
+<div id="parlay-page">
+  <div class="topbar">
+    <button class="backbtn" onclick="backToHome()">&larr; Back</button>
+    <div class="wordmark" onclick="backToLanding()">&#129501; THE <span class="shimmer">GENIE</span></div>
+    <span class="livepill"><span class="livedot"></span><span id="livelabel2">FIGHT NIGHT</span></span>
+  </div>
+  <section class="section" style="padding-top:18px">
+    <div class="sec-eyebrow">&#10022; This Week's Play &#10022;</div>
+    <h2 class="sec-h2">THE GENIE'S PARLAY</h2>
+    <div class="meta" id="parlay-event" style="text-align:center;margin-top:12px"></div>
+    <div class="parlay-wrap" style="margin-top:28px">
+      <div id="parlay" class="parlay"></div>
+    </div>
+  </section>
   <footer class="foot">
     <p>Odds are a snapshot from the last refresh &mdash; always confirm the current price at your sportsbook before betting. The Genie is a transparent value-finder for entertainment, <strong>not a guarantee and not financial advice</strong>. No model reliably beats the books long-term and MMA is wildly high-variance &mdash; one punch ends a fight. Bet only what you can afford to lose. 21+. Problem gambling? Call 1-800-522-4700.</p>
   </footer>
@@ -386,15 +404,19 @@ function renderHome(){
   const evText=document.getElementById('event').textContent;
   const short=(evText.split('·')[0]||'Fight Night').trim();
   document.getElementById('bcard').textContent = short;
-  document.getElementById('livelabel').textContent = short.replace(/^UFC\s*/i,'').toUpperCase();
+  const __lab = short.replace(/^UFC\s*/i,'').toUpperCase();
+  document.getElementById('livelabel').textContent = __lab;
+  const __ll2=document.getElementById('livelabel2'); if(__ll2) __ll2.textContent=__lab;
+  const __pe=document.getElementById('parlay-event'); if(__pe) __pe.textContent=evText;
   document.getElementById('me-label').textContent = short.toUpperCase()+" · MAIN EVENT";
   document.getElementById('srcmeta').textContent = "Model source: "+SRC + (ENV.heat? "  ·  "+ENV.label : "");
   (function(){const lm=new Date(document.lastModified);if(!isNaN(lm.getTime()))document.getElementById('updated').textContent=lm.toLocaleString('en-US',{timeZone:'America/Denver',month:'long',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'});})();
 }
 
-function enterApp(){document.getElementById('landing').classList.add('hide');document.getElementById('home').classList.add('show');window.scrollTo(0,0);}
-function backToLanding(){document.getElementById('landing').classList.remove('hide');document.getElementById('home').classList.remove('show');window.scrollTo(0,0);}
-function summon(){document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});}
+function enterApp(){document.getElementById('landing').classList.add('hide');document.getElementById('parlay-page').classList.remove('show');document.getElementById('home').classList.add('show');window.scrollTo(0,0);}
+function backToLanding(){document.getElementById('landing').classList.remove('hide');document.getElementById('home').classList.remove('show');document.getElementById('parlay-page').classList.remove('show');window.scrollTo(0,0);}
+function goParlay(){document.getElementById('home').classList.remove('show');document.getElementById('parlay-page').classList.add('show');window.scrollTo(0,0);}
+function backToHome(){document.getElementById('parlay-page').classList.remove('show');document.getElementById('home').classList.add('show');window.scrollTo(0,0);}
 
 renderHome();
 </script>
