@@ -109,23 +109,8 @@
   .faceoff-cap{text-align:center;font-family:var(--barlow);font-size:13px;color:var(--muted);margin-top:14px}
 
   /* results */
-  .results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:22px}
+  .parlay-wrap{max-width:600px;margin:0 auto}
   .col-h{font-family:var(--osw);font-weight:600;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;gap:8px}
-  .betcard{display:flex;align-items:center;gap:16px;border:1px solid rgba(230,185,77,.18);border-radius:12px;padding:16px;background:linear-gradient(180deg,rgba(26,18,8,.55),rgba(8,6,3,.4));margin-bottom:12px;transition:transform .16s,border-color .16s}
-  .betcard:hover{transform:translateY(-2px);border-color:rgba(230,185,77,.45)}
-  .fslot{flex:0 0 auto;width:58px;height:58px;border-radius:50%;border:1px solid rgba(230,185,77,.4);display:flex;align-items:center;justify-content:center;font-family:var(--anton);font-size:19px;color:var(--gold);background:radial-gradient(circle at 50% 35%,#15110a,#0b0805)}
-  .bmid{flex:1;min-width:0}
-  .bname{font-family:var(--anton);font-size:20px;letter-spacing:.01em;line-height:1}
-  .bpick{font-family:var(--barlow);font-size:12.5px;color:var(--muted);margin:4px 0 9px}
-  .bpick b{color:var(--cream);font-family:var(--osw);font-weight:700}
-  .pbar{position:relative;height:6px;border-radius:999px;background:rgba(255,255,255,.08)}
-  .pbar .fill{position:absolute;left:0;top:0;bottom:0;border-radius:999px;background:linear-gradient(90deg,#cc9a35,#f8dd92)}
-  .pbar .tick{position:absolute;top:-2px;width:2px;height:10px;background:var(--red);border-radius:1px}
-  .blabels{display:flex;justify-content:space-between;font-family:var(--osw);font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:7px}
-  .bedge{flex:0 0 auto;text-align:center;min-width:54px}
-  .bedge .num{font-family:var(--osw);font-weight:700;font-size:28px;color:var(--gold);line-height:1}
-  .bedge .lab{font-family:var(--osw);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:3px}
-  .bwhy{font-family:var(--barlow);font-size:11.5px;color:var(--muted2);margin-top:10px;line-height:1.45}
 
   .parlay{border:1px solid rgba(230,185,77,.3);border-radius:14px;padding:24px;background:linear-gradient(180deg,rgba(34,22,8,.6),rgba(8,6,3,.4));box-shadow:0 18px 50px rgba(0,0,0,.4)}
   .legspill{font-family:var(--osw);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(230,185,77,.4);border-radius:999px;padding:5px 12px;display:inline-block;white-space:nowrap}
@@ -140,8 +125,6 @@
   .copybtn{width:100%;margin-top:18px;font-family:var(--osw);font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#1c1407;background:linear-gradient(180deg,#f8dd92,#e6b94d 55%,#cc9a35);border:none;border-radius:8px;padding:14px;cursor:pointer;box-shadow:0 10px 30px rgba(230,185,77,.35);transition:transform .16s}
   .copybtn:hover{transform:translateY(-2px)}
   .pfine{font-family:var(--barlow);font-size:11.5px;color:var(--muted2);margin-top:12px;line-height:1.5}
-
-  .note{font-family:var(--barlow);font-size:13px;color:var(--body);background:rgba(224,31,45,.06);border:1px solid rgba(224,31,45,.3);border-radius:12px;padding:14px 16px;margin-top:18px;line-height:1.55}
 
   .hood-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:26px}
   .hood{padding:22px;border:1px solid rgba(230,185,77,.18);border-radius:10px;background:rgba(26,18,8,.35)}
@@ -252,15 +235,8 @@
   </section>
 
   <section class="section" id="results">
-    <div class="results-grid">
-      <div>
-        <div class="col-h">&#11088; Top 3 Straight Bets</div>
-        <div id="top3"></div>
-        <div class="note">Single moneyline bets &mdash; lower variance than a parlay. The bar is the Genie's win probability; the red tick is the market's. The gap between them <b>is</b> the edge. Shop for the best price before betting.</div>
-      </div>
-      <div>
-        <div id="parlay" class="parlay"></div>
-      </div>
+    <div class="parlay-wrap">
+      <div id="parlay" class="parlay"></div>
     </div>
   </section>
 
@@ -271,7 +247,7 @@
       <div class="hood"><div class="hl">01 &middot; Its Own Number</div><p>For each fighter the Genie builds a rating from win %, finish rate, age, reach and ranking, then turns the matchup into a win probability &mdash; with market odds deliberately left out so it forms an independent opinion.</p></div>
       <div class="hood"><div class="hl">02 &middot; The Market</div><p>Live American odds are converted to implied probability and de-vigged to strip the book's margin.</p></div>
       <div class="hood"><div class="hl">03 &middot; Conditions</div><p>For hot, humid or outdoor cards it docks older, high-mileage fighters and rewards fresher legs &mdash; a card-specific tweak.</p></div>
-      <div class="hood redc"><div class="hl">04 &middot; The Edge</div><p><code>edge = genie &minus; market.</code> Straight bets rank by edge; the parlay stacks the best value for a bigger payout.</p></div>
+      <div class="hood redc"><div class="hl">04 &middot; The Edge</div><p><code>edge = genie &minus; market.</code> The Genie stacks the legs with the most value into one parlay for a bigger payout.</p></div>
     </div>
   </section>
 
@@ -375,21 +351,6 @@ function reason(fight,win,lose,edge){
   return base.charAt(0).toUpperCase()+base.slice(1)+" — "+tag;
 }
 
-function betCard(p){
-  const g=Math.round(p.p*100), m=Math.round(p.mkt*100);
-  const e=(p.edge>=0?'+':'')+(p.edge*100).toFixed(1);
-  return `<div class="betcard">
-    <div class="fslot">${initials(p.fighter)}</div>
-    <div class="bmid">
-      <div class="bname">${p.fighter}</div>
-      <div class="bpick">${p.div} &middot; <b>${fmtO(p.odds)}</b></div>
-      <div class="pbar"><div class="fill" style="width:${g}%"></div><div class="tick" style="left:${m}%"></div></div>
-      <div class="blabels"><span>Genie ${g}%</span><span>Market ${m}%</span></div>
-      <div class="bwhy">${p.why}</div>
-    </div>
-    <div class="bedge"><div class="num">${e}</div><div class="lab">% Edge</div></div>
-  </div>`;
-}
 function legRow(p){
   return `<div class="leg"><div><div class="ln">${p.fighter}</div><div class="lp">${p.div}</div></div><div class="lo">${fmtO(p.odds)}</div></div>`;
 }
@@ -403,9 +364,6 @@ function renderHome(){
     <div class="vs"><span>VS</span></div>
     <div class="corner blue"><div class="mono">${initials(me.b.n)}</div>
       <div class="ov"><div class="clab">Blue Corner</div><div class="cname">${me.b.n}</div><div class="crec">${me.b.w}&ndash;${me.b.l}</div></div></div>`;
-
-  const top=[...all].sort((x,y)=>y.edge-x.edge).slice(0,3);
-  document.getElementById('top3').innerHTML = top.map(betCard).join('');
 
   let cand=all.filter(p=>p.edge>0 && p.p>=0.30);
   if(cand.length<3) cand=all.filter(p=>p.edge>0);
@@ -423,9 +381,7 @@ function renderHome(){
       <div><div class="k">Combined Odds</div><div class="combined">${americanFromDec(dec)}</div></div>
       <div style="text-align:right"><div class="k">$${stake} returns</div><div class="ret">$${payout}</div></div>
     </div>
-    <button class="copybtn" onclick="copyParlay(this)">&#129668; Copy Parlay</button>
     <div class="pfine">Combined win chance &asymp; ${pc(prob)}. The Genie stacks its best-value legs with a light confidence floor &mdash; every leg must hit, so treat any parlay as the long shot it is.</div>`;
-  window.__parlayText = "Genie's Parlay ("+americanFromDec(dec)+"): "+legs.map(p=>p.fighter+" "+fmtO(p.odds)).join("  |  ")+" — $"+stake+" returns $"+payout;
 
   const evText=document.getElementById('event').textContent;
   const short=(evText.split('·')[0]||'Fight Night').trim();
@@ -436,11 +392,6 @@ function renderHome(){
   (function(){const lm=new Date(document.lastModified);if(!isNaN(lm.getTime()))document.getElementById('updated').textContent=lm.toLocaleString('en-US',{timeZone:'America/Denver',month:'long',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'});})();
 }
 
-function copyParlay(btn){
-  const t=window.__parlayText||'';
-  const done=()=>{const o=btn.textContent;btn.textContent='✓ Copied!';setTimeout(()=>btn.textContent=o,1600);};
-  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done).catch(()=>{});}
-}
 function enterApp(){document.getElementById('landing').classList.add('hide');document.getElementById('home').classList.add('show');window.scrollTo(0,0);}
 function backToLanding(){document.getElementById('landing').classList.remove('hide');document.getElementById('home').classList.remove('show');window.scrollTo(0,0);}
 function summon(){document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});}
