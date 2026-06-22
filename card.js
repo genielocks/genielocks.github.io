@@ -6,7 +6,7 @@ window.CARD = {
       "div": "Lightweight (Main Event)",
       "a": {
         "n": "Rafael Fiziev",
-        "o": -120,
+        "o": -135,
         "w": 13,
         "l": 5,
         "fin": 7,
@@ -16,7 +16,7 @@ window.CARD = {
       },
       "b": {
         "n": "Manuel Torres",
-        "o": 100,
+        "o": 115,
         "w": 17,
         "l": 3,
         "fin": 16,
@@ -64,7 +64,7 @@ window.CARD = {
       },
       "b": {
         "n": "Brunno Ferreira",
-        "o": 190,
+        "o": 185,
         "w": 12,
         "l": 2,
         "fin": 11,
@@ -78,7 +78,7 @@ window.CARD = {
       "div": "Flyweight",
       "a": {
         "n": "Asu Almabayev",
-        "o": -218,
+        "o": -210,
         "w": 22,
         "l": 2,
         "fin": 13,
