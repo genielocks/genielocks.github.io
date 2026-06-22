@@ -199,6 +199,15 @@
   .kalshi-row .ke{font-weight:600;letter-spacing:.04em}
   .kalshi-row .ke.pos{color:#46c98a}.kalshi-row .ke.mid{color:var(--muted)}.kalshi-row .ke.neg{color:var(--red)}
   .kalshi-row .kf{color:var(--muted);font-weight:400;font-size:11px}
+  .kalshi-block{margin-top:14px}
+  .kalshi-block .kalshi-row{margin-top:0}
+  .kalshi-plain{font-family:var(--barlow);font-size:12.5px;line-height:1.55;color:var(--muted);margin-top:9px;padding:0 2px}
+  .kalshi-plain b{color:var(--cream)}
+  .klive{display:inline-flex;align-items:center;gap:5px;font-family:var(--osw);font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:#46c98a;border:1px solid rgba(70,201,138,.45);border-radius:999px;padding:2px 8px;margin-right:7px;vertical-align:middle}
+  .kdot{width:6px;height:6px;border-radius:50%;background:#46c98a;box-shadow:0 0 8px #46c98a;animation:pg-flicker 2s infinite}
+  .lp-kalshi{margin:18px 0 0;font-family:var(--barlow);font-size:14px;line-height:1.55;color:var(--body);max-width:470px}
+  .lp-kalshi b{color:#5fe6cf}
+  .lp-kalshi i{color:var(--cream);font-style:normal}
 
   /* track record */
   #record-page{display:none}
@@ -277,6 +286,8 @@
     .lp-h{font-size:clamp(44px,16vw,62px)}
     .hero-h{font-size:clamp(40px,14vw,56px)}
     .lp-grid{grid-template-columns:1fr 1fr}
+    .lp-tile{height:150px}
+    .lp-kalshi{font-size:13px}
     .lp-brand{font-size:17px}
     .strip{grid-template-columns:1fr 1fr}
     .herobtns .cta{width:100%;max-width:320px}
@@ -309,6 +320,7 @@
         <div class="lp-eyebrow" id="lp-eyebrow">UFC Fight Night 280 · Baku</div>
         <h1 class="lp-h">FIND<br>THE <span class="shimmer">EDGE.</span></h1>
         <p class="lp-pitch">The Genie has studied <b>every UFC fight since 1994</b> &mdash; who won, how, and the stats behind it &mdash; and learned the patterns that actually predict winners. It builds its <b>own honest win probability</b> for every fighter, then stacks it against the betting odds. <strong>That gap is your edge.</strong></p>
+        <div class="lp-kalshi"><span class="klive"><span class="kdot"></span>Live</span> Now wired to <b>Kalshi</b> &mdash; we read the real exchange price and show your <i>true edge after fees</i>, so the number you see is the number you can actually bet.</div>
         <button class="cta" onclick="enterApp()" style="display:inline-flex;align-items:center;gap:10px">Enter the Genie <span style="font-size:18px">&rarr;</span></button>
       </div>
       <div class="lp-panel">
@@ -322,12 +334,11 @@
       </div>
     </div>
     <div class="lp-roster">
-      <div class="lp-roster-h">Reading the whole room</div>
       <div class="lp-grid">
-        <div><div class="lp-tile"><img src="rogan.jpg" alt="Joe Rogan" loading="lazy"></div><div class="lp-name">Joe Rogan</div></div>
-        <div><div class="lp-tile"><img src="dana.jpg" alt="Dana White" loading="lazy"></div><div class="lp-name">Dana White</div></div>
-        <div><div class="lp-tile"><img src="strickland.jpg" alt="Sean Strickland" loading="lazy"></div><div class="lp-name">Sean Strickland</div></div>
-        <div><div class="lp-tile"><img src="tuf.jpg" alt="The Ultimate Fighter" loading="lazy"></div><div class="lp-name">The Ultimate Fighter</div></div>
+        <div class="lp-tile"><img src="rogan.jpg" alt="" loading="lazy"></div>
+        <div class="lp-tile"><img src="dana.jpg" alt="" loading="lazy"></div>
+        <div class="lp-tile"><img src="strickland.jpg" alt="" loading="lazy"></div>
+        <div class="lp-tile"><img src="tuf.jpg" alt="" loading="lazy"></div>
       </div>
     </div>
     <p class="lp-disc">A value-finder for entertainment &mdash; not financial advice, not a guarantee. Odds are a snapshot from the last refresh &mdash; confirm the current price at your sportsbook. 21+. Problem gambling? Call 1-800-522-4700.</p>
@@ -345,7 +356,7 @@
   <section class="hero">
     <div class="rg"></div>
     <div class="genie-emblem"><img src="genie.png" alt="The Genie" loading="eager"></div>
-    <h1 class="hero-h goldtext">MAKE YOUR WISH</h1>
+    <h1 class="hero-h goldtext">READ THE CARD</h1>
     <div class="eventline" id="event">UFC Fight Night 280 · Fiziev vs. Torres · National Gymnastics Arena, Baku · Jun 27, 2026</div>
     <div class="showing"><span class="livedot"></span>Showing <b id="bcard">UFC Fight Night 280</b> &middot; updated <b id="updated">June 21, 2026</b> &middot; if a newer card is out, ping <b>Joe Cook</b> to refresh</div>
     <div class="meta" id="srcmeta"></div>
@@ -560,7 +571,7 @@ function pickCard(p){
   const v=valueVerdict(p.edge);
   const k=kalshiInfo(p.fighter,p.p);
   const kb = k
-    ? `<div class="kalshi-row"><span class="kl">On Kalshi: <b>${k.cents}&cent;</b></span><span class="ke ${k.net>0.01?'pos':(k.net>-0.005?'mid':'neg')}">${(k.net>=0?'+':'')+(k.net*100).toFixed(1)}% net edge<span class="kf"> after fee</span></span></div>`
+    ? `<div class="kalshi-block"><div class="kalshi-row"><span class="kl"><span class="klive"><span class="kdot"></span>Live</span>On Kalshi: <b>${k.cents}&cent;</b></span><span class="ke ${k.net>0.01?'pos':(k.net>-0.005?'mid':'neg')}">${(k.net>=0?'+':'')+(k.net*100).toFixed(1)}% net edge<span class="kf"> after fee</span></span></div><div class="kalshi-plain">In plain English: <b>${k.cents}&cent;</b> = the market giving ${p.fighter.split(' ').slice(-1)[0]} a ~${k.cents}% chance to win. The Genie says <b>${pc(p.p)}</b> &mdash; so the contract looks ${k.net>0.01?'underpriced':'about fair'}, and that gap (minus Kalshi's tiny fee) is your edge.</div></div>`
     : `<div class="kalshi-row muted">Kalshi price not synced yet &mdash; the nightly job pulls live cents pricing when the fight is listed.</div>`;
   return `<div class="pick-top"><div class="fimg pick-big" data-name="${p.fighter}">${initials(p.fighter)}</div>
     <div><div class="pick-name">${p.fighter}</div><div class="pick-div">${p.div}</div><div class="pick-odds">${fmtO(p.odds)}</div></div></div>
