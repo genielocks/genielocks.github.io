@@ -446,8 +446,10 @@ function pickCard(p){
    (UFC.com images aren't reliably hot-linkable cross-origin; pin exact photos in
    IMG_OVERRIDES below for anyone Wikipedia misses or gets wrong.) ---- */
 const IMG_OVERRIDES = {
-  // "Manuel Torres":"https://upload.wikimedia.org/.../file.jpg"   // override wins over the lookup
+  // "Manuel Torres":"https://upload.wikimedia.org/.../file.jpg"   // manual pin (wins over every lookup)
 };
+// The nightly task bakes official UFC.com headshots here via card.js: window.CARD.photos = {"Fighter Name":"url", ...}
+if (window.CARD && window.CARD.photos) Object.assign(IMG_OVERRIDES, window.CARD.photos);
 const _imgCache = {};
 async function _thumb(title){
   try{
@@ -474,9 +476,19 @@ async function wikiThumb(name){
   if(!src) src=await _searchThumb(name+" UFC");       // catch fighters whose exact page title we didn't guess
   _imgCache[name]=src; return src;
 }
+async function tsdbThumb(name){              // TheSportsDB: MMA-aware free photo API, filtered to fighters
+  try{
+    const u="https://www.thesportsdb.com/api/v1/json/3/searchplayers.php?p="+encodeURIComponent(name);
+    const j=await (await fetch(u)).json();
+    const hit=(j.player||[]).filter(p=>/Fighting/i.test(p.strSport||"")||/UFC|MMA/i.test(p.strTeam||""))[0];
+    if(hit) return hit.strThumb || hit.strCutout || null;
+  }catch(e){}
+  return null;
+}
 async function fillPhoto(el){
   const name=el.getAttribute('data-name'); if(!name) return;
-  let src = IMG_OVERRIDES[name] || await wikiThumb(name) || await wikiThumb('Joe Biden');
+  // official (baked UFC) / manual override -> Wikipedia -> TheSportsDB (MMA) -> Joe Biden gag
+  let src = IMG_OVERRIDES[name] || await wikiThumb(name) || await tsdbThumb(name) || await wikiThumb('Joe Biden');
   if(!src) return;                          // truly nothing -> keep the initials medallion
   const probe=new Image();                  // confirm it actually loads before injecting
   probe.onload=()=>{ if(!el.querySelector('img')){ el.classList.add('has-img'); el.insertAdjacentHTML('beforeend','<img alt="" src="'+src+'">'); } };
