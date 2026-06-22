@@ -159,3 +159,12 @@ window.CARD.photos = {
   "Michel Pereira": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-02/PEREIRA_MICHEL_02-21.png?itok=0__YLQ0A"
 };
 window.CARD.updated = "2026-06-22T01:05:53Z";
+// Live Kalshi "Yes" ask prices (cents = implied %). KXUFCFIGHT-26JUN27 series. Refreshed nightly by the task.
+window.CARD.kalshi = {
+  "Rafael Fiziev": 52,
+  "Manuel Torres": 50,
+  "Asu Almabayev": 69,
+  "Charles Johnson": 33,
+  "Abdul-Rakhman Yakhyaev": 82,
+  "Julius Walker": 19
+};
