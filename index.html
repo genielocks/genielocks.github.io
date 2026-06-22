@@ -127,6 +127,14 @@
   .section{max-width:1140px;margin:0 auto;padding:56px 32px}
   .sec-eyebrow{font-family:var(--osw);font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);text-align:center}
   .sec-h2{font-family:var(--anton);font-size:clamp(36px,5.2vw,58px);text-align:center;margin-top:8px}
+  .subnav{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+  .subnav a,.subnav span{font-family:var(--osw);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;padding:7px 13px;border-radius:999px;border:1px solid rgba(230,185,77,.3)}
+  .subnav a{color:var(--gold);text-decoration:none;cursor:pointer}
+  .subnav a:hover{background:rgba(230,185,77,.08)}
+  .subnav .cur{color:var(--cream);border-color:rgba(230,185,77,.65);background:rgba(230,185,77,.07)}
+  .ufcfoot{margin-top:14px}
+  .ufclink{font-family:var(--osw);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px dotted rgba(230,185,77,.5)}
+  .ufclink:hover{color:var(--gold-bright);border-color:var(--gold-bright)}
 
   /* main-event face-off (home) */
   .mefo-div{text-align:center;font-family:var(--osw);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:40px}
@@ -312,6 +320,7 @@
       </div>
     </div>
     <p class="lp-disc">A value-finder for entertainment &mdash; not financial advice, not a guarantee. Odds are a snapshot from the last refresh &mdash; confirm the current price at your sportsbook. 21+. Problem gambling? Call 1-800-522-4700.</p>
+    <p class="lp-disc" style="margin-top:14px"><a class="ufclink" href="https://www.ufc.com/events" target="_blank" rel="noopener">Official UFC.com &#8599;</a></p>
   </div>
 </div>
 
@@ -361,6 +370,7 @@
 
   <footer class="foot">
     <p>Odds are a snapshot from the last refresh &mdash; always confirm the current price at your sportsbook before betting. The Genie is a transparent value-finder for entertainment, <strong>not a guarantee and not financial advice</strong>. No model reliably beats the books long-term and MMA is wildly high-variance &mdash; one punch ends a fight. Bet only what you can afford to lose. 21+. Problem gambling? Call 1-800-522-4700.</p>
+    <div class="ufcfoot"><a class="ufclink" href="https://www.ufc.com/events" target="_blank" rel="noopener">Official UFC.com &#8599;</a></div>
   </footer>
 </div>
 
@@ -375,12 +385,14 @@
     <div class="sec-eyebrow">&#10022; This Week's Play &#10022;</div>
     <h2 class="sec-h2">THE GENIE'S PARLAY</h2>
     <div class="meta" id="parlay-event" style="text-align:center;margin-top:12px"></div>
+    <div class="subnav"><span class="cur">Parlay</span><a onclick="goPick()">Top Pick</a><a onclick="goRecord()">Track Record</a></div>
     <div class="parlay-wrap" style="margin-top:28px">
       <div id="parlay" class="parlay"></div>
     </div>
   </section>
   <footer class="foot">
     <p>Odds are a snapshot from the last refresh &mdash; always confirm the current price at your sportsbook before betting. The Genie is a transparent value-finder for entertainment, <strong>not a guarantee and not financial advice</strong>. No model reliably beats the books long-term and MMA is wildly high-variance &mdash; one punch ends a fight. Bet only what you can afford to lose. 21+. Problem gambling? Call 1-800-522-4700.</p>
+    <div class="ufcfoot"><a class="ufclink" href="https://www.ufc.com/events" target="_blank" rel="noopener">Official UFC.com &#8599;</a></div>
   </footer>
 </div>
 
@@ -395,10 +407,12 @@
     <div class="sec-eyebrow">&#10022; Sharpest Edge &#10022;</div>
     <h2 class="sec-h2">TOP VALUE PICK</h2>
     <div class="meta" id="pick-event" style="text-align:center;margin-top:12px"></div>
+    <div class="subnav"><a onclick="goParlay()">Parlay</a><span class="cur">Top Pick</span><a onclick="goRecord()">Track Record</a></div>
     <div class="pick-wrap" style="margin-top:28px"><div id="pick" class="pickcard"></div></div>
   </section>
   <footer class="foot">
     <p>Odds are a snapshot from the last refresh &mdash; always confirm the current price at your sportsbook before betting. The Genie is a transparent value-finder for entertainment, <strong>not a guarantee and not financial advice</strong>. No model reliably beats the books long-term and MMA is wildly high-variance &mdash; one punch ends a fight. Bet only what you can afford to lose. 21+. Problem gambling? Call 1-800-522-4700.</p>
+    <div class="ufcfoot"><a class="ufclink" href="https://www.ufc.com/events" target="_blank" rel="noopener">Official UFC.com &#8599;</a></div>
   </footer>
 </div>
 
@@ -413,10 +427,12 @@
     <div class="sec-eyebrow">&#10022; Receipts &#10022;</div>
     <h2 class="sec-h2">TRACK RECORD</h2>
     <div class="meta" style="text-align:center;margin-top:12px">Every pick logged &middot; Closing Line Value is the real test &middot; shown warts and all</div>
+    <div class="subnav"><a onclick="goParlay()">Parlay</a><a onclick="goPick()">Top Pick</a><span class="cur">Track Record</span></div>
     <div class="record-wrap" style="margin-top:24px"><div id="record"></div></div>
   </section>
   <footer class="foot">
     <p>Closing Line Value (CLV) = how the price we posted compares to where the line closed; positive CLV over a real sample is the only thing that proves an edge. Results and CLV fill in as each card completes. A transparent value-finder for entertainment, <strong>not a guarantee and not financial advice</strong>. 21+. Problem gambling? Call 1-800-522-4700.</p>
+    <div class="ufcfoot"><a class="ufclink" href="https://www.ufc.com/events" target="_blank" rel="noopener">Official UFC.com &#8599;</a></div>
   </footer>
 </div>
 
