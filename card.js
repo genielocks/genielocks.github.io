@@ -152,3 +152,9 @@ window.CARD = {
     "heat": 0
   }
 };
+window.CARD.photos = {
+  "Rafael Fiziev": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-01/FIZIEV_RAFAEL_01-31.png?itok=E8M3DOkI",
+  "Manuel Torres": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2025-12/TORRES_MANUEL_12-06.png?itok=2Hs7qxOL",
+  "Charles Johnson": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-03/JOHNSON_CHARLES_03-14.png?itok=0qReEG7Z",
+  "Michel Pereira": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-02/PEREIRA_MICHEL_02-21.png?itok=0__YLQ0A"
+};
