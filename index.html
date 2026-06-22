@@ -163,15 +163,31 @@
   .foot strong{color:#8a7d66}
 
   @media(max-width:680px){
-    .section{padding:28px 18px}
-    .hero{padding:28px 18px 10px}
+    .section{padding:38px 20px}
     .topbar{padding:16px 18px}
-    .faceoff{flex-direction:column}
-    .vs{margin:-20px 0}
-    .corner{min-height:200px}
-    .corner.blue .ov{text-align:left}
-    .corner .mono{font-size:130px}
+    .lp-wrap{padding:26px 20px 44px}
+    .lp-nav{margin-bottom:42px}
+    .lp-h{font-size:clamp(54px,15vw,90px)}
+    .lp-pitch{font-size:16px;max-width:none}
+    .lp-panel{padding:24px}
+    .edge-fig{font-size:clamp(58px,17vw,82px)}
+    .lp-roster{margin-top:42px}
+    .hero{padding:46px 20px 30px}
+    .hero-h{font-size:clamp(46px,13vw,74px)}
+    .hero-pitch{font-size:18px}
+    .eventline{font-size:clamp(18px,5vw,24px)}
+    .sec-h2{font-size:clamp(32px,8vw,46px)}
+    .hood{padding:24px}
+    .hood p{font-size:16px}
+    .parlay{padding:20px}
     .pfoot .combined{font-size:34px}
+  }
+  @media(max-width:430px){
+    .lp-h{font-size:clamp(44px,16vw,62px)}
+    .hero-h{font-size:clamp(40px,14vw,56px)}
+    .lp-grid{grid-template-columns:1fr 1fr}
+    .lp-brand{font-size:17px}
+    .strip{grid-template-columns:1fr 1fr}
   }
 </style>
 </head>
@@ -284,13 +300,13 @@
 <script src="card.js" onerror="void 0"></script>
 <script>
 const FIGHTS = [
-  {div:"Lightweight (Main Event)", a:{n:"Rafael Fiziev",o:-120,w:13,l:5,fin:7,age:33,reach:72,rank:.6},
-                                b:{n:"Manuel Torres",o:100,w:17,l:3,fin:16,age:31,reach:73,rank:.45}},
+  {div:"Lightweight (Main Event)", a:{n:"Rafael Fiziev",o:-135,w:13,l:5,fin:7,age:33,reach:72,rank:.6},
+                                b:{n:"Manuel Torres",o:115,w:17,l:3,fin:16,age:31,reach:73,rank:.45}},
   {div:"Middleweight (Co-Main)", a:{n:"Shara Magomedov",o:-340,w:16,l:1,fin:10,age:32,reach:73,rank:.55},
                             b:{n:"Michel Pereira",o:270,w:32,l:14,fin:22,age:32,reach:73,rank:.5}},
   {div:"Middleweight", a:{n:"Ikram Aliskerov",o:-225,w:16,l:2,fin:14,age:33,reach:75,rank:.55},
-                        b:{n:"Brunno Ferreira",o:190,w:12,l:2,fin:11,age:31,reach:73,rank:.4}},
-  {div:"Flyweight", a:{n:"Asu Almabayev",o:-218,w:22,l:2,fin:13,age:31,reach:66,rank:.55},
+                        b:{n:"Brunno Ferreira",o:185,w:12,l:2,fin:11,age:31,reach:73,rank:.4}},
+  {div:"Flyweight", a:{n:"Asu Almabayev",o:-210,w:22,l:2,fin:13,age:31,reach:66,rank:.55},
                         b:{n:"Charles Johnson",o:180,w:16,l:6,fin:6,age:33,reach:70,rank:.4}},
   {div:"Light Heavyweight", a:{n:"Abdul-Rakhman Yakhyaev",o:-400,w:10,l:0,fin:7,age:28,reach:76,rank:.4,undef:true},
                     b:{n:"Julius Walker",o:320,w:9,l:1,fin:7,age:29,reach:78,rank:.4}},
