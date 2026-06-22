@@ -17,8 +17,8 @@
     --anton:'Anton',sans-serif; --osw:'Oswald',sans-serif; --barlow:'Barlow',sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{background:var(--ink);color:var(--cream);font-family:var(--barlow);min-height:100vh;overflow-x:hidden}
+  html{scroll-behavior:smooth;overflow-x:hidden}
+  body{background:var(--ink);color:var(--cream);font-family:var(--barlow);min-height:100vh;overflow-x:hidden;max-width:100%}
 
   @keyframes pg-shimmer{0%{background-position:200% center}100%{background-position:-200% center}}
   @keyframes pg-glow{0%,100%{opacity:.5;transform:translate(-50%,-50%) scale(1)}50%{opacity:.85;transform:translate(-50%,-50%) scale(1.07)}}
@@ -31,7 +31,7 @@
   .goldtext{background:linear-gradient(180deg,#fff6e0,#f8dd92 35%,#e6b94d 60%,#b07d2b);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 
   /* ===== LANDING (The Edge) ===== */
-  #landing{position:fixed;inset:0;z-index:80;overflow-y:auto;background:#070605;
+  #landing{position:fixed;inset:0;z-index:80;overflow-y:auto;overflow-x:hidden;background:#070605;
     background-image:linear-gradient(rgba(230,185,77,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(230,185,77,.04) 1px,transparent 1px);background-size:64px 64px}
   #landing.hide{display:none}
   .lp-glow1{position:absolute;top:-10%;right:-5%;width:560px;height:560px;max-width:92vw;background:radial-gradient(closest-side,rgba(230,185,77,.12),transparent 70%);pointer-events:none}
