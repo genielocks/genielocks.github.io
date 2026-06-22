@@ -158,3 +158,4 @@ window.CARD.photos = {
   "Charles Johnson": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-03/JOHNSON_CHARLES_03-14.png?itok=0qReEG7Z",
   "Michel Pereira": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-02/PEREIRA_MICHEL_02-21.png?itok=0__YLQ0A"
 };
+window.CARD.updated = "2026-06-22T01:05:53Z";

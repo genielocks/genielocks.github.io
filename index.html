@@ -539,7 +539,8 @@ function renderHome(){
   const __pk=document.getElementById('pick'); if(__pk && __top) __pk.innerHTML=pickCard(__top);
   loadFighterPhotos();
   document.getElementById('srcmeta').textContent = "Model source: "+SRC + (ENV.heat? "  ·  "+ENV.label : "");
-  (function(){const lm=new Date(document.lastModified);if(!isNaN(lm.getTime()))document.getElementById('updated').textContent=lm.toLocaleString('en-US',{timeZone:'America/Denver',month:'long',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'});})();
+  // "updated" reflects the last MODEL RUN / daily sync (window.CARD.updated from card.js), not arbitrary site edits
+  (function(){var t=(window.CARD&&window.CARD.updated)?new Date(window.CARD.updated):new Date(document.lastModified);if(!isNaN(t.getTime()))document.getElementById('updated').textContent=t.toLocaleString('en-US',{timeZone:'America/Denver',month:'long',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'});})();
 }
 
 function applyView(v){
