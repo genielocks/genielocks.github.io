@@ -458,10 +458,20 @@ async function _thumb(title){
   }catch(e){}
   return null;
 }
+async function _searchThumb(query){
+  try{
+    const u="https://en.wikipedia.org/w/api.php?origin=*&format=json&action=query&generator=search&gsrlimit=1&gsrsearch="+encodeURIComponent(query)+"&prop=pageimages&piprop=thumbnail&pithumbsize=400";
+    const j=await (await fetch(u)).json();
+    const pg=(j.query&&j.query.pages)||{};
+    for(const k in pg){ const th=pg[k].thumbnail; if(th&&th.source) return th.source; }
+  }catch(e){}
+  return null;
+}
 async function wikiThumb(name){
   if(name in _imgCache) return _imgCache[name];
   let src=null;
   for(const t of [name+" (mixed martial artist)", name+" (fighter)", name]){ src=await _thumb(t); if(src) break; }
+  if(!src) src=await _searchThumb(name+" UFC");       // catch fighters whose exact page title we didn't guess
   _imgCache[name]=src; return src;
 }
 async function fillPhoto(el){
