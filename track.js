@@ -13,6 +13,7 @@ window.TRACK = {
   "picks": [
     {"date":"2026-06-27","event":"UFC Fight Night 280","fighter":"Manuel Torres","div":"Lightweight (Main Event)","odds":115,"modelP":0.642,"mktP":0.45,"edge":0.192,"kind":"value pick + parlay leg","result":null,"clv":null},
     {"date":"2026-06-27","event":"UFC Fight Night 280","fighter":"Charles Johnson","div":"Flyweight","odds":180,"modelP":0.425,"mktP":0.345,"edge":0.08,"kind":"parlay leg","result":null,"clv":null},
-    {"date":"2026-06-27","event":"UFC Fight Night 280","fighter":"Michel Pereira","div":"Middleweight (Co-Main)","odds":270,"modelP":0.329,"mktP":0.26,"edge":0.069,"kind":"parlay leg","result":null,"clv":null}
+    {"date":"2026-06-27","event":"UFC Fight Night 280","fighter":"Michel Pereira","div":"Middleweight (Co-Main)","odds":270,"modelP":0.329,"mktP":0.26,"edge":0.069,"kind":"parlay leg","result":null,"clv":null},
+    {"date":"2026-06-27","event":"UFC Fight Night 280","fighter":"Matheus Camilo","div":"Lightweight","odds":217,"modelP":0.419,"mktP":0.314,"edge":0.105,"kind":"parlay leg","result":null,"clv":null}
   ]
 };

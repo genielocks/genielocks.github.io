@@ -1,12 +1,12 @@
 window.CARD = {
   "event": "UFC Fight Night 280 \u00b7 Fiziev vs. Torres \u00b7 National Gymnastics Arena, Baku \u00b7 Jun 27, 2026",
-  "source": "trained Python model (5/6 bouts; baseline fallback for 1)",
+  "source": "trained Python model (6/6 bouts; baseline fallback for 0)",
   "fights": [
     {
       "div": "Lightweight (Main Event)",
       "a": {
         "n": "Rafael Fiziev",
-        "o": -135,
+        "o": -108,
         "w": 13,
         "l": 5,
         "fin": 7,
@@ -16,7 +16,7 @@ window.CARD = {
       },
       "b": {
         "n": "Manuel Torres",
-        "o": 115,
+        "o": 104,
         "w": 17,
         "l": 3,
         "fin": 16,
@@ -30,7 +30,7 @@ window.CARD = {
       "div": "Middleweight (Co-Main)",
       "a": {
         "n": "Shara Magomedov",
-        "o": -340,
+        "o": -300,
         "w": 16,
         "l": 1,
         "fin": 10,
@@ -40,7 +40,7 @@ window.CARD = {
       },
       "b": {
         "n": "Michel Pereira",
-        "o": 270,
+        "o": 285,
         "w": 32,
         "l": 14,
         "fin": 22,
@@ -51,34 +51,34 @@ window.CARD = {
       "modelA": 0.6708
     },
     {
-      "div": "Middleweight",
+      "div": "Lightweight",
       "a": {
-        "n": "Ikram Aliskerov",
-        "o": -225,
-        "w": 16,
+        "n": "Nazim Sadykhov",
+        "o": -223,
+        "w": 11,
         "l": 2,
-        "fin": 14,
-        "age": 33,
-        "reach": 75,
-        "rank": 0.55
-      },
-      "b": {
-        "n": "Brunno Ferreira",
-        "o": 185,
-        "w": 12,
-        "l": 2,
-        "fin": 11,
-        "age": 31,
-        "reach": 73,
+        "fin": 7,
+        "age": 32,
+        "reach": 72,
         "rank": 0.4
       },
-      "modelA": 0.6609
+      "b": {
+        "n": "Matheus Camilo",
+        "o": 217,
+        "w": 10,
+        "l": 3,
+        "fin": 7,
+        "age": 30,
+        "reach": 71,
+        "rank": 0.3
+      },
+      "modelA": 0.5807
     },
     {
       "div": "Flyweight",
       "a": {
         "n": "Asu Almabayev",
-        "o": -210,
+        "o": -233,
         "w": 22,
         "l": 2,
         "fin": 13,
@@ -88,7 +88,7 @@ window.CARD = {
       },
       "b": {
         "n": "Charles Johnson",
-        "o": 180,
+        "o": 223,
         "w": 16,
         "l": 6,
         "fin": 6,
@@ -99,34 +99,34 @@ window.CARD = {
       "modelA": 0.5754
     },
     {
-      "div": "Light Heavyweight",
+      "div": "Middleweight",
       "a": {
-        "n": "Abdul-Rakhman Yakhyaev",
-        "o": -400,
-        "w": 10,
-        "l": 0,
-        "fin": 7,
-        "age": 28,
-        "reach": 76,
-        "rank": 0.4,
-        "undef": true
+        "n": "Ikram Aliskerov",
+        "o": -257,
+        "w": 16,
+        "l": 2,
+        "fin": 14,
+        "age": 33,
+        "reach": 75,
+        "rank": 0.55
       },
       "b": {
-        "n": "Julius Walker",
-        "o": 320,
-        "w": 9,
-        "l": 1,
-        "fin": 7,
-        "age": 29,
-        "reach": 78,
+        "n": "Brunno Ferreira",
+        "o": 245,
+        "w": 12,
+        "l": 2,
+        "fin": 11,
+        "age": 31,
+        "reach": 73,
         "rank": 0.4
-      }
+      },
+      "modelA": 0.6609
     },
     {
       "div": "Middleweight",
       "a": {
         "n": "Abus Magomedov",
-        "o": -142,
+        "o": -117,
         "w": 27,
         "l": 6,
         "fin": 18,
@@ -136,7 +136,7 @@ window.CARD = {
       },
       "b": {
         "n": "Michal Oleksiejczuk",
-        "o": 120,
+        "o": 113,
         "w": 19,
         "l": 9,
         "fin": 14,
@@ -147,6 +147,7 @@ window.CARD = {
       "modelA": 0.5256
     }
   ],
+  "updated": 1782444044099,
   "env": {
     "label": "Indoor \u00b7 climate-controlled (National Gymnastics Arena, Baku)",
     "heat": 0
@@ -155,16 +156,29 @@ window.CARD = {
 window.CARD.photos = {
   "Rafael Fiziev": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-01/FIZIEV_RAFAEL_01-31.png?itok=E8M3DOkI",
   "Manuel Torres": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2025-12/TORRES_MANUEL_12-06.png?itok=2Hs7qxOL",
+  "Shara Magomedov": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-06/MAGOMEDOV_SHARA_06-27.png?itok=G0P2Z4ak",
+  "Michel Pereira": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-02/PEREIRA_MICHEL_02-21.png?itok=0__YLQ0A",
+  "Nazim Sadykhov": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2025-12/SADYKHOV_NAZIM_12-06.png?itok=KOjsbD2M",
+  "Matheus Camilo": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-06/CAMILO_MATHEUS_06-27.png?itok=b4Q0urPf",
+  "Asu Almabayev": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-06/ALMABAYEV_ASU_06-27.png?itok=pbKGHDVS",
   "Charles Johnson": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-03/JOHNSON_CHARLES_03-14.png?itok=0qReEG7Z",
-  "Michel Pereira": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-02/PEREIRA_MICHEL_02-21.png?itok=0__YLQ0A"
+  "Ikram Aliskerov": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-06/ALISKEROV_IKRAM_06-27.png?itok=NQ6WOnPd",
+  "Brunno Ferreira": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-06/FERREIRA_BRUNNO_06-27.png?itok=hoCVyuay",
+  "Abus Magomedov": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-06/MAGOMEDOV_ABUS_06-27.png?itok=L-lbZx1p",
+  "Michal Oleksiejczuk": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-06/OLEKSIEJCZUK_MICHAL_06-27.png?itok=pbTlX7Y3"
 };
-window.CARD.updated = "2026-06-22T01:05:53Z";
 // Live Kalshi "Yes" ask prices (cents = implied %). KXUFCFIGHT-26JUN27 series. Refreshed nightly by the task.
 window.CARD.kalshi = {
-  "Rafael Fiziev": 52,
-  "Manuel Torres": 50,
-  "Asu Almabayev": 69,
-  "Charles Johnson": 33,
-  "Abdul-Rakhman Yakhyaev": 82,
-  "Julius Walker": 19
+  "Rafael Fiziev": 49,
+  "Manuel Torres": 51,
+  "Shara Magomedov": 76,
+  "Michel Pereira": 25,
+  "Nazim Sadykhov": 66,
+  "Matheus Camilo": 36,
+  "Asu Almabayev": 73,
+  "Charles Johnson": 28,
+  "Ikram Aliskerov": 72,
+  "Brunno Ferreira": 29,
+  "Abus Magomedov": 50,
+  "Michal Oleksiejczuk": 50
 };
