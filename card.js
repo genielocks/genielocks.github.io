@@ -147,7 +147,7 @@ window.CARD = {
       "modelA": 0.5256
     }
   ],
-  "updated": 1782444044099,
+  "updated": 1782525002215,
   "env": {
     "label": "Indoor \u00b7 climate-controlled (National Gymnastics Arena, Baku)",
     "heat": 0
@@ -167,7 +167,7 @@ window.CARD.photos = {
   "Abus Magomedov": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-06/MAGOMEDOV_ABUS_06-27.png?itok=L-lbZx1p",
   "Michal Oleksiejczuk": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-06/OLEKSIEJCZUK_MICHAL_06-27.png?itok=pbTlX7Y3"
 };
-// Live Kalshi "Yes" ask prices (cents = implied %). KXUFCFIGHT-26JUN27 series. Refreshed nightly by the task.
+// Live Kalshi "Yes" ask prices (cents = implied %). KXUFCFIGHT-26JUN27 series. Carried over from earlier today's pull (API not reachable this run).
 window.CARD.kalshi = {
   "Rafael Fiziev": 49,
   "Manuel Torres": 51,
