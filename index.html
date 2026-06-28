@@ -381,7 +381,7 @@
     <div class="rg"></div>
     <div class="genie-emblem"><img src="genie.png" alt="The Genie" loading="eager"></div>
     <h1 class="hero-h goldtext">READ THE CARD</h1>
-    <div class="eventline" id="event">UFC Fight Night 280 · Fiziev vs. Torres · National Gymnastics Arena, Baku · Jun 27, 2026</div>
+    <div class="eventline" id="event">UFC 329 · McGregor vs. Holloway 2 · T-Mobile Arena, Las Vegas · Jul 11, 2026</div>
     <div class="showing"><span class="livedot"></span>Showing <b id="bcard">UFC Fight Night 280</b> &middot; updated <b id="updated">June 21, 2026</b> &middot; if a newer card is out, ping <b>Joe Cook</b> to refresh</div>
     <div class="meta" id="srcmeta"></div>
     <p class="hero-pitch">One tap and the Genie reads this week's card &mdash; comparing its <b>own win probabilities</b> against the de-vigged market to surface where the value hides.</p>
@@ -486,18 +486,18 @@
 <script>document.write('<scr'+'ipt src="card.js?_='+Date.now()+'" onerror="void 0"><\/scr'+'ipt>');</script>
 <script>
 const FIGHTS = [
-  {div:"Lightweight (Main Event)", a:{n:"Rafael Fiziev",o:-108,w:13,l:5,fin:7,age:33,reach:72,rank:.6},
-                                b:{n:"Manuel Torres",o:104,w:17,l:3,fin:16,age:31,reach:73,rank:.45}},
-  {div:"Middleweight (Co-Main)", a:{n:"Shara Magomedov",o:-300,w:16,l:1,fin:10,age:32,reach:73,rank:.55},
-                            b:{n:"Michel Pereira",o:285,w:32,l:14,fin:22,age:32,reach:73,rank:.5}},
-  {div:"Lightweight", a:{n:"Nazim Sadykhov",o:-223,w:11,l:2,fin:7,age:32,reach:72,rank:.4},
-                        b:{n:"Matheus Camilo",o:217,w:10,l:3,fin:7,age:30,reach:71,rank:.3}},
-  {div:"Flyweight", a:{n:"Asu Almabayev",o:-233,w:22,l:2,fin:13,age:31,reach:66,rank:.55},
-                        b:{n:"Charles Johnson",o:223,w:16,l:6,fin:6,age:33,reach:70,rank:.4}},
-  {div:"Middleweight", a:{n:"Ikram Aliskerov",o:-257,w:16,l:2,fin:14,age:33,reach:75,rank:.55},
-                        b:{n:"Brunno Ferreira",o:245,w:12,l:2,fin:11,age:31,reach:73,rank:.4}},
-  {div:"Middleweight", a:{n:"Abus Magomedov",o:-117,w:27,l:6,fin:18,age:35,reach:75,rank:.4},
-                        b:{n:"Michal Oleksiejczuk",o:113,w:19,l:9,fin:14,age:31,reach:74,rank:.4}},
+  {div:"Welterweight (Main Event)", a:{n:"Max Holloway",o:-450,w:27,l:9,fin:12,age:34,reach:69,rank:.8},
+                                b:{n:"Conor McGregor",o:350,w:22,l:6,fin:19,age:37,reach:74,rank:.25,moveup:1}},
+  {div:"Lightweight (Co-Main)", a:{n:"Benoit Saint Denis",o:-200,w:14,l:2,fin:11,age:30,reach:72,rank:.55},
+                            b:{n:"Paddy Pimblett",o:170,w:22,l:3,fin:16,age:31,reach:73,rank:.6}},
+  {div:"Bantamweight", a:{n:"Mario Bautista",o:-150,w:16,l:2,fin:8,age:32,reach:71,rank:.5},
+                        b:{n:"Cory Sandhagen",o:130,w:18,l:5,fin:10,age:34,reach:70,rank:.7}},
+  {div:"Flyweight", a:{n:"Lone'er Kavanagh",o:-170,w:9,l:0,fin:5,age:26,reach:66,rank:.5,undef:1},
+                        b:{n:"Brandon Royval",o:145,w:17,l:7,fin:11,age:33,reach:68,rank:.65}},
+  {div:"Welterweight", a:{n:"Leon Edwards",o:-360,w:22,l:4,fin:9,age:34,reach:74,rank:.75},
+                        b:{n:"Daniel Rodriguez",o:290,w:18,l:5,fin:11,age:39,reach:71,rank:.35}},
+  {div:"Heavyweight", a:{n:"Gable Steveson",o:-1800,w:1,l:0,fin:1,age:26,reach:73,rank:.2},
+                        b:{n:"Elisha Ellison",o:900,w:9,l:4,fin:6,age:31,reach:75,rank:.15}},
 ];
 
 let SRC = "in-browser baseline (approx. stats)";
@@ -509,7 +509,7 @@ if (window.CARD && Array.isArray(window.CARD.fights) && window.CARD.fights.lengt
 }
 
 // Card conditions. heat 0-1: outdoor/hot-humid cards tax older, high-mileage fighters.
-let ENV = { label:"Indoor · climate-controlled (National Gymnastics Arena, Baku)", heat:0 };
+let ENV = { label:"Indoor · climate-controlled (T-Mobile Arena, Las Vegas)", heat:0 };
 if (window.CARD && window.CARD.env) ENV = window.CARD.env;
 
 const toProb=o=>o<0?(-o)/(-o+100):100/(o+100);
