@@ -1,12 +1,12 @@
 window.CARD = {
   "event": "UFC 329 \u00b7 McGregor vs. Holloway 2 \u00b7 T-Mobile Arena, Las Vegas \u00b7 Jul 11, 2026",
-  "source": "trained Python model (5/6 bouts; baseline fallback for 1)",
+  "source": "trained Python model (5/5 bouts; baseline fallback for 0)",
   "fights": [
     {
       "div": "Welterweight (Main Event)",
       "a": {
         "n": "Max Holloway",
-        "o": -450,
+        "o": -240,
         "w": 27,
         "l": 9,
         "fin": 12,
@@ -16,7 +16,7 @@ window.CARD = {
       },
       "b": {
         "n": "Conor McGregor",
-        "o": 350,
+        "o": 180,
         "w": 22,
         "l": 6,
         "fin": 19,
@@ -31,7 +31,7 @@ window.CARD = {
       "div": "Lightweight (Co-Main)",
       "a": {
         "n": "Benoit Saint Denis",
-        "o": -200,
+        "o": -180,
         "w": 14,
         "l": 2,
         "fin": 11,
@@ -41,7 +41,7 @@ window.CARD = {
       },
       "b": {
         "n": "Paddy Pimblett",
-        "o": 170,
+        "o": 155,
         "w": 22,
         "l": 3,
         "fin": 16,
@@ -101,73 +101,49 @@ window.CARD = {
       "modelA": 0.6457
     },
     {
-      "div": "Welterweight",
+      "div": "Lightweight",
       "a": {
-        "n": "Leon Edwards",
-        "o": -360,
-        "w": 22,
-        "l": 4,
-        "fin": 9,
-        "age": 34,
-        "reach": 74,
-        "rank": 0.75
+        "n": "Terrance McKinney",
+        "o": -190,
+        "w": 18,
+        "l": 8,
+        "fin": 16,
+        "age": 31,
+        "reach": 73,
+        "rank": 0.25
       },
       "b": {
-        "n": "Daniel Rodriguez",
-        "o": 290,
-        "w": 18,
-        "l": 5,
-        "fin": 11,
+        "n": "King Green",
+        "o": 160,
+        "w": 35,
+        "l": 17,
+        "fin": 22,
         "age": 39,
         "reach": 71,
-        "rank": 0.35
+        "rank": 0.3
       },
-      "modelA": 0.6256
-    },
-    {
-      "div": "Heavyweight",
-      "a": {
-        "n": "Gable Steveson",
-        "o": -1800,
-        "w": 1,
-        "l": 0,
-        "fin": 1,
-        "age": 26,
-        "reach": 73,
-        "rank": 0.2
-      },
-      "b": {
-        "n": "Elisha Ellison",
-        "o": 900,
-        "w": 9,
-        "l": 4,
-        "fin": 6,
-        "age": 31,
-        "reach": 75,
-        "rank": 0.15
-      }
+      "modelA": 0.7682
     }
   ],
-  "updated": 1782609056889,
+  "updated": 1782695326296,
   "env": {
     "label": "Indoor \u00b7 climate-controlled (T-Mobile Arena, Las Vegas)",
     "heat": 0
   }
 };
 
-// Kalshi live API unreachable this run (sandbox 403). Prices below are de-vigged
-// market implied %% as a stand-in so the row renders; treat as estimate, not live Kalshi.
+// Kalshi live API unreachable this run (sandbox network blocked). Prices below are
+// de-vigged market implied %% as a stand-in so the row renders; treat as estimate,
+// not live Kalshi.
 window.CARD.kalshi = {
-  "Max Holloway": 79,
-  "Conor McGregor": 21,
-  "Benoit Saint Denis": 64,
-  "Paddy Pimblett": 36,
+  "Max Holloway": 66,
+  "Conor McGregor": 34,
+  "Benoit Saint Denis": 62,
+  "Paddy Pimblett": 38,
   "Mario Bautista": 58,
   "Cory Sandhagen": 42,
   "Lone'er Kavanagh": 61,
   "Brandon Royval": 39,
-  "Leon Edwards": 75,
-  "Daniel Rodriguez": 25,
-  "Gable Steveson": 90,
-  "Elisha Ellison": 10
+  "Terrance McKinney": 63,
+  "King Green": 37
 };
