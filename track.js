@@ -15,9 +15,8 @@ window.TRACK = {
     {"date":"2026-06-27","event":"UFC Fight Night 280","fighter":"Charles Johnson","div":"Flyweight","odds":180,"modelP":0.425,"mktP":0.345,"edge":0.08,"kind":"parlay leg","result":"loss","clv":-18.8},
     {"date":"2026-06-27","event":"UFC Fight Night 280","fighter":"Michel Pereira","div":"Middleweight (Co-Main)","odds":270,"modelP":0.329,"mktP":0.26,"edge":0.069,"kind":"parlay leg","result":"loss","clv":-3.9},
     {"date":"2026-06-27","event":"UFC Fight Night 280","fighter":"Matheus Camilo","div":"Lightweight","odds":217,"modelP":0.419,"mktP":0.314,"edge":0.105,"kind":"parlay leg","result":"win","clv":11.2},
-    {"date":"2026-07-11","event":"UFC 329","fighter":"Conor McGregor","div":"Welterweight (Main Event)","odds":350,"modelP":0.504,"mktP":0.214,"edge":0.291,"kind":"value pick + parlay leg","result":null,"clv":null},
-    {"date":"2026-07-11","event":"UFC 329","fighter":"Daniel Rodriguez","div":"Welterweight","odds":290,"modelP":0.374,"mktP":0.247,"edge":0.128,"kind":"parlay leg","result":null,"clv":null},
-    {"date":"2026-07-11","event":"UFC 329","fighter":"Lone'er Kavanagh","div":"Flyweight","odds":-170,"modelP":0.646,"mktP":0.607,"edge":0.039,"kind":"parlay leg","result":null,"clv":null},
-    {"date":"2026-07-11","event":"UFC 329","fighter":"Terrance McKinney","div":"Lightweight","odds":-190,"modelP":0.768,"mktP":0.630,"edge":0.138,"kind":"parlay leg","result":null,"clv":null}
+    {"date":"2026-07-11","event":"UFC 329","fighter":"Conor McGregor","div":"Welterweight (Main Event)","odds":180,"modelP":0.504,"mktP":0.336,"edge":0.168,"kind":"value pick + parlay leg","result":null,"clv":null},
+    {"date":"2026-07-11","event":"UFC 329","fighter":"Terrance McKinney","div":"Lightweight","odds":-190,"modelP":0.768,"mktP":0.630,"edge":0.138,"kind":"parlay leg","result":null,"clv":null},
+    {"date":"2026-07-11","event":"UFC 329","fighter":"Lone'er Kavanagh","div":"Flyweight","odds":-170,"modelP":0.646,"mktP":0.607,"edge":0.039,"kind":"parlay leg","result":null,"clv":null}
   ]
 };
