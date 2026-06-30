@@ -147,3 +147,17 @@ window.CARD.kalshi = {
   "Terrance McKinney": 63,
   "King Green": 37
 };
+
+// Official UFC.com headshots baked this run (event_results_athlete_headshot style).
+window.CARD.photos = {
+  "Max Holloway": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2024-04/HOLLOWAY_MAX_04-13.png?itok=e3UJ9I_-",
+  "Conor McGregor": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2021-07/67667%252Fprofile-galery%252Fprofile-picture%252FMCGREGOR_CONOR_07-10.png?itok=gkJxt2OA",
+  "Benoit Saint Denis": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-01/SAINT_DENIS_BENOIT_01-31.png?itok=DdQlmp7O",
+  "Paddy Pimblett": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-01/PIMBLETT_PADDY_01-24.png?itok=bvzdUmCh",
+  "Mario Bautista": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-02/BAUTISTA_MARIO_02-07.png?itok=309CCrBc",
+  "Cory Sandhagen": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2025-10/SANDHAGEN_CORY_10-04.png?itok=fGySGH1e",
+  "Lone'er Kavanagh": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-02/KAVANAGH_LONEER_02-28.png?itok=BNHMDX_k",
+  "Brandon Royval": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2025-12/ROYVAL_BRANDON_12-13.png?itok=EYT1vAg8",
+  "Terrance McKinney": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-03/MCKINNEY_TERRANCE_03-28.png?itok=XaH_e6I8",
+  "King Green": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-05/GREEN_KING_05-09.png?itok=zxOvSxLW"
+};
