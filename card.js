@@ -31,7 +31,7 @@ window.CARD = {
       "div": "Lightweight (Co-Main)",
       "a": {
         "n": "Benoit Saint Denis",
-        "o": -180,
+        "o": -160,
         "w": 14,
         "l": 2,
         "fin": 11,
@@ -41,7 +41,7 @@ window.CARD = {
       },
       "b": {
         "n": "Paddy Pimblett",
-        "o": 155,
+        "o": 135,
         "w": 22,
         "l": 3,
         "fin": 16,
@@ -54,18 +54,8 @@ window.CARD = {
     {
       "div": "Bantamweight",
       "a": {
-        "n": "Mario Bautista",
-        "o": -150,
-        "w": 16,
-        "l": 2,
-        "fin": 8,
-        "age": 32,
-        "reach": 71,
-        "rank": 0.5
-      },
-      "b": {
         "n": "Cory Sandhagen",
-        "o": 130,
+        "o": -150,
         "w": 18,
         "l": 5,
         "fin": 10,
@@ -73,7 +63,17 @@ window.CARD = {
         "reach": 70,
         "rank": 0.7
       },
-      "modelA": 0.6087
+      "b": {
+        "n": "Mario Bautista",
+        "o": 125,
+        "w": 16,
+        "l": 2,
+        "fin": 8,
+        "age": 32,
+        "reach": 71,
+        "rank": 0.5
+      },
+      "modelA": 0.4727
     },
     {
       "div": "Flyweight",
@@ -125,30 +125,22 @@ window.CARD = {
       "modelA": 0.7682
     }
   ],
-  "updated": 1782695326296,
+  "updated": 1782875197989,
   "env": {
     "label": "Indoor \u00b7 climate-controlled (T-Mobile Arena, Las Vegas)",
     "heat": 0
   }
 };
 
-// Kalshi live API unreachable this run (sandbox network blocked). Prices below are
-// de-vigged market implied %% as a stand-in so the row renders; treat as estimate,
-// not live Kalshi.
+// Live Kalshi prices (cents) pulled this run via browser from
+// api.elections.kalshi.com KXUFCFIGHT-26JUL11MCGHOL. Only the UFC 329 MAIN EVENT
+// is listed on Kalshi; undercard bouts are not synced.
 window.CARD.kalshi = {
-  "Max Holloway": 66,
-  "Conor McGregor": 34,
-  "Benoit Saint Denis": 62,
-  "Paddy Pimblett": 38,
-  "Mario Bautista": 58,
-  "Cory Sandhagen": 42,
-  "Lone'er Kavanagh": 61,
-  "Brandon Royval": 39,
-  "Terrance McKinney": 63,
-  "King Green": 37
+  "Max Holloway": 65,
+  "Conor McGregor": 36
 };
 
-// Official UFC.com headshots baked this run (event_results_athlete_headshot style).
+// Official UFC.com headshots (carried over — same fighters as prior build).
 window.CARD.photos = {
   "Max Holloway": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2024-04/HOLLOWAY_MAX_04-13.png?itok=e3UJ9I_-",
   "Conor McGregor": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2021-07/67667%252Fprofile-galery%252Fprofile-picture%252FMCGREGOR_CONOR_07-10.png?itok=gkJxt2OA",
@@ -159,5 +151,8 @@ window.CARD.photos = {
   "Lone'er Kavanagh": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-02/KAVANAGH_LONEER_02-28.png?itok=BNHMDX_k",
   "Brandon Royval": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2025-12/ROYVAL_BRANDON_12-13.png?itok=EYT1vAg8",
   "Terrance McKinney": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-03/MCKINNEY_TERRANCE_03-28.png?itok=XaH_e6I8",
+  "King Green": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-05/GREEN_KING_05-09.png?itok=zxOvSxLW"
+};
+m/images/styles/event_results_athlete_headshot/s3/2026-03/MCKINNEY_TERRANCE_03-28.png?itok=XaH_e6I8",
   "King Green": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2026-05/GREEN_KING_05-09.png?itok=zxOvSxLW"
 };
