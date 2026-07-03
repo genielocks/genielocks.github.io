@@ -6,7 +6,7 @@ window.CARD = {
       "div": "Welterweight (Main Event)",
       "a": {
         "n": "Max Holloway",
-        "o": -250,
+        "o": -240,
         "w": 27,
         "l": 9,
         "fin": 12,
@@ -16,7 +16,7 @@ window.CARD = {
       },
       "b": {
         "n": "Conor McGregor",
-        "o": 195,
+        "o": 180,
         "w": 22,
         "l": 6,
         "fin": 19,
@@ -31,23 +31,23 @@ window.CARD = {
       "div": "Lightweight (Co-Main)",
       "a": {
         "n": "Benoit Saint Denis",
-        "o": -157,
-        "w": 14,
-        "l": 2,
-        "fin": 11,
+        "o": -150,
+        "w": 17,
+        "l": 3,
+        "fin": 13,
         "age": 30,
         "reach": 72,
-        "rank": 0.55
+        "rank": 0.65
       },
       "b": {
         "n": "Paddy Pimblett",
-        "o": 125,
-        "w": 22,
-        "l": 3,
-        "fin": 16,
+        "o": 130,
+        "w": 23,
+        "l": 4,
+        "fin": 17,
         "age": 31,
         "reach": 73,
-        "rank": 0.6
+        "rank": 0.55
       },
       "modelA": 0.6317
     },
@@ -55,9 +55,9 @@ window.CARD = {
       "div": "Bantamweight",
       "a": {
         "n": "Cory Sandhagen",
-        "o": -155,
+        "o": -150,
         "w": 18,
-        "l": 5,
+        "l": 6,
         "fin": 10,
         "age": 34,
         "reach": 70,
@@ -65,13 +65,13 @@ window.CARD = {
       },
       "b": {
         "n": "Mario Bautista",
-        "o": 123,
-        "w": 16,
-        "l": 2,
+        "o": 125,
+        "w": 17,
+        "l": 3,
         "fin": 8,
         "age": 32,
         "reach": 71,
-        "rank": 0.5
+        "rank": 0.55
       },
       "modelA": 0.4727
     },
@@ -79,24 +79,23 @@ window.CARD = {
       "div": "Flyweight",
       "a": {
         "n": "Lone'er Kavanagh",
-        "o": -225,
-        "w": 9,
-        "l": 0,
+        "o": -205,
+        "w": 10,
+        "l": 1,
         "fin": 5,
-        "age": 26,
+        "age": 27,
         "reach": 66,
-        "rank": 0.5,
-        "undef": 1
+        "rank": 0.6
       },
       "b": {
         "n": "Brandon Royval",
-        "o": 175,
+        "o": 170,
         "w": 17,
-        "l": 7,
+        "l": 9,
         "fin": 11,
         "age": 33,
         "reach": 68,
-        "rank": 0.65
+        "rank": 0.6
       },
       "modelA": 0.6457
     },
@@ -104,7 +103,7 @@ window.CARD = {
       "div": "Lightweight",
       "a": {
         "n": "Terrance McKinney",
-        "o": -157,
+        "o": -160,
         "w": 18,
         "l": 8,
         "fin": 16,
@@ -114,7 +113,7 @@ window.CARD = {
       },
       "b": {
         "n": "King Green",
-        "o": 125,
+        "o": 135,
         "w": 35,
         "l": 17,
         "fin": 22,
@@ -125,21 +124,16 @@ window.CARD = {
       "modelA": 0.7682
     }
   ],
-  "updated": 1782958954572,
+  "updated": 1783040995922,
   "env": {
     "label": "Indoor \u00b7 climate-controlled (T-Mobile Arena, Las Vegas)",
     "heat": 0
   }
 };
-
-// Live Kalshi prices (yes_ask cents) pulled this run. Only the headline bout is listed
-// on Kalshi for UFC 329 — other fights show "not synced" on the page.
 window.CARD.kalshi = {
   "Max Holloway": 65,
   "Conor McGregor": 36
 };
-
-// Official UFC.com headshots (verified working; carried over — same 10 fighters as last run).
 window.CARD.photos = {
   "Max Holloway": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2024-04/HOLLOWAY_MAX_04-13.png?itok=e3UJ9I_-",
   "Conor McGregor": "https://ufc.com/images/styles/event_results_athlete_headshot/s3/2021-07/67667%252Fprofile-galery%252Fprofile-picture%252FMCGREGOR_CONOR_07-10.png?itok=gkJxt2OA",
