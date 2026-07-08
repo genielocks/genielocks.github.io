@@ -124,7 +124,7 @@ window.CARD = {
       "modelA": 0.7682
     }
   ],
-  "updated": 1783391234963,
+  "updated": 1783472814433,
   "env": {
     "label": "Indoor \u00b7 climate-controlled (T-Mobile Arena, Las Vegas)",
     "heat": 0
