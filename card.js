@@ -31,7 +31,7 @@ window.CARD = {
       "div": "Lightweight (Co-Main)",
       "a": {
         "n": "Benoit Saint Denis",
-        "o": -140,
+        "o": -142,
         "w": 17,
         "l": 3,
         "fin": 13,
@@ -41,7 +41,7 @@ window.CARD = {
       },
       "b": {
         "n": "Paddy Pimblett",
-        "o": 110,
+        "o": 120,
         "w": 23,
         "l": 4,
         "fin": 17,
@@ -55,7 +55,7 @@ window.CARD = {
       "div": "Bantamweight",
       "a": {
         "n": "Cory Sandhagen",
-        "o": -145,
+        "o": -148,
         "w": 18,
         "l": 6,
         "fin": 10,
@@ -65,7 +65,7 @@ window.CARD = {
       },
       "b": {
         "n": "Mario Bautista",
-        "o": 115,
+        "o": 124,
         "w": 17,
         "l": 3,
         "fin": 8,
@@ -79,7 +79,7 @@ window.CARD = {
       "div": "Flyweight",
       "a": {
         "n": "Lone'er Kavanagh",
-        "o": -230,
+        "o": -220,
         "w": 10,
         "l": 1,
         "fin": 5,
@@ -89,7 +89,7 @@ window.CARD = {
       },
       "b": {
         "n": "Brandon Royval",
-        "o": 175,
+        "o": 180,
         "w": 17,
         "l": 9,
         "fin": 11,
@@ -103,7 +103,7 @@ window.CARD = {
       "div": "Lightweight",
       "a": {
         "n": "Terrance McKinney",
-        "o": -145,
+        "o": -140,
         "w": 18,
         "l": 8,
         "fin": 16,
@@ -113,7 +113,7 @@ window.CARD = {
       },
       "b": {
         "n": "King Green",
-        "o": 115,
+        "o": 118,
         "w": 35,
         "l": 17,
         "fin": 22,
@@ -124,7 +124,7 @@ window.CARD = {
       "modelA": 0.7682
     }
   ],
-  "updated": 1783642562916,
+  "updated": 1783645665320,
   "env": {
     "label": "Indoor \u00b7 climate-controlled (T-Mobile Arena, Las Vegas)",
     "heat": 0
@@ -132,13 +132,10 @@ window.CARD = {
 };
 window.CARD.photos = {
   "Max Holloway": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-04/HOLLOWAY_MAX_L_04-13.png?itok=mcRfmIq0",
-  "Conor McGregor": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2021-07/MCGREGOR_CONOR_L_07-10.png?itok=_5KLfnX6",
+  "Conor McGregor": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/MCGREGOR_CONOR_L_07-11.png?itok=oPFhXwIA",
   "Terrance McKinney": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/MCKINNEY_TERRANCE_L_03-28.png?itok=xOcN-WHP",
   "Mario Bautista": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/BAUTISTA_MARIO_L_02-07.png?itok=Wpsbk8fU",
-  "King Green": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/GREEN_KING_L_05-09.png?itok=8VMeSq2i",
-  "Cory Sandhagen": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-05/SANDHAGEN_CORY_L_05-03.png?itok=Z49cdggj"
+  "King Green": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/GREEN_KING_L_07-11.png?itok=VfpfdCUg",
+  "Cory Sandhagen": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/SANDHAGEN_CORY_L_07-11.png?itok=js9SxyWU"
 };
-window.CARD.kalshi = {
-  "Conor McGregor": 35,
-  "Max Holloway": 65
-};
+window.CARD.kalshi = {"Max Holloway":65,"Conor McGregor":35};
