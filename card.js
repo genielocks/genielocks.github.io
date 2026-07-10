@@ -124,7 +124,7 @@ window.CARD = {
       "modelA": 0.7682
     }
   ],
-  "updated": 1783472814433,
+  "updated": 1783642562916,
   "env": {
     "label": "Indoor \u00b7 climate-controlled (T-Mobile Arena, Las Vegas)",
     "heat": 0
@@ -139,6 +139,6 @@ window.CARD.photos = {
   "Cory Sandhagen": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-05/SANDHAGEN_CORY_L_05-03.png?itok=Z49cdggj"
 };
 window.CARD.kalshi = {
-  "Conor McGregor": 36,
+  "Conor McGregor": 35,
   "Max Holloway": 65
 };
