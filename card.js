@@ -31,7 +31,7 @@ window.CARD = {
       "div": "Lightweight (Co-Main)",
       "a": {
         "n": "Benoit Saint Denis",
-        "o": -142,
+        "o": -140,
         "w": 17,
         "l": 3,
         "fin": 13,
@@ -41,7 +41,7 @@ window.CARD = {
       },
       "b": {
         "n": "Paddy Pimblett",
-        "o": 120,
+        "o": 110,
         "w": 23,
         "l": 4,
         "fin": 17,
@@ -55,7 +55,7 @@ window.CARD = {
       "div": "Bantamweight",
       "a": {
         "n": "Cory Sandhagen",
-        "o": -148,
+        "o": -145,
         "w": 18,
         "l": 6,
         "fin": 10,
@@ -65,7 +65,7 @@ window.CARD = {
       },
       "b": {
         "n": "Mario Bautista",
-        "o": 124,
+        "o": 115,
         "w": 17,
         "l": 3,
         "fin": 8,
@@ -79,7 +79,7 @@ window.CARD = {
       "div": "Flyweight",
       "a": {
         "n": "Lone'er Kavanagh",
-        "o": -220,
+        "o": -230,
         "w": 10,
         "l": 1,
         "fin": 5,
@@ -89,7 +89,7 @@ window.CARD = {
       },
       "b": {
         "n": "Brandon Royval",
-        "o": 180,
+        "o": 175,
         "w": 17,
         "l": 9,
         "fin": 11,
@@ -103,7 +103,7 @@ window.CARD = {
       "div": "Lightweight",
       "a": {
         "n": "Terrance McKinney",
-        "o": -140,
+        "o": -145,
         "w": 18,
         "l": 8,
         "fin": 16,
@@ -113,7 +113,7 @@ window.CARD = {
       },
       "b": {
         "n": "King Green",
-        "o": 118,
+        "o": 115,
         "w": 35,
         "l": 17,
         "fin": 22,
@@ -124,7 +124,7 @@ window.CARD = {
       "modelA": 0.7682
     }
   ],
-  "updated": 1783645665320,
+  "updated": 1783732176439,
   "env": {
     "label": "Indoor \u00b7 climate-controlled (T-Mobile Arena, Las Vegas)",
     "heat": 0
@@ -138,4 +138,4 @@ window.CARD.photos = {
   "King Green": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/GREEN_KING_L_07-11.png?itok=VfpfdCUg",
   "Cory Sandhagen": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/SANDHAGEN_CORY_L_07-11.png?itok=js9SxyWU"
 };
-window.CARD.kalshi = {"Max Holloway":65,"Conor McGregor":35};
+window.CARD.kalshi = {"Max Holloway":70,"Conor McGregor":31};
