@@ -21,6 +21,7 @@ window.TRACK = {
     {"date":"2026-07-11","event":"UFC 329","fighter":"Benoit Saint Denis","div":"Lightweight (Co-Main)","odds":-148,"modelP":0.632,"mktP":0.572,"edge":0.060,"kind":"parlay leg","result":"loss","clv":-7.9},
     {"date":"2026-07-18","event":"UFC Fight Night: Du Plessis vs. Usman","fighter":"Kamaru Usman","div":"Middleweight (Main Event)","odds":225,"modelP":0.437,"mktP":0.292,"edge":0.146,"kind":"value pick + parlay leg","result":null,"clv":null},
     {"date":"2026-07-18","event":"UFC Fight Night: Du Plessis vs. Usman","fighter":"Jared Cannonier","div":"Middleweight (Co-Main)","odds":240,"modelP":0.336,"mktP":0.281,"edge":0.055,"kind":"parlay leg","result":null,"clv":null},
-    {"date":"2026-07-18","event":"UFC Fight Night: Du Plessis vs. Usman","fighter":"Mitch Ramirez","div":"Lightweight","odds":240,"modelP":0.307,"mktP":0.281,"edge":0.026,"kind":"parlay leg","result":null,"clv":null}
+    {"date":"2026-07-18","event":"UFC Fight Night: Du Plessis vs. Usman","fighter":"Mitch Ramirez","div":"Lightweight","odds":240,"modelP":0.307,"mktP":0.281,"edge":0.026,"kind":"parlay leg","result":null,"clv":null},
+    {"date":"2026-07-18","event":"UFC Fight Night: Du Plessis vs. Usman","fighter":"Tommy McMillen","div":"Featherweight","odds":-112,"modelP":0.590,"mktP":0.500,"edge":0.090,"kind":"parlay leg","result":null,"clv":null}
   ]
 };
