@@ -1,141 +1,140 @@
 window.CARD = {
-  "event": "UFC 329 \u00b7 McGregor vs. Holloway 2 \u00b7 T-Mobile Arena, Las Vegas \u00b7 Jul 11, 2026",
-  "source": "trained Python model (5/5 bouts; baseline fallback for 0)",
+  "event": "UFC Fight Night \u00b7 Du Plessis vs. Usman \u00b7 Paycom Center, Oklahoma City \u00b7 Jul 18, 2026",
+  "source": "trained Python model (4/5 bouts; baseline fallback for 1)",
   "fights": [
     {
-      "div": "Welterweight (Main Event)",
+      "div": "Middleweight (Main Event)",
       "a": {
-        "n": "Max Holloway",
-        "o": -240,
-        "w": 27,
-        "l": 9,
-        "fin": 12,
-        "age": 34,
-        "reach": 69,
-        "rank": 0.8
+        "n": "Dricus Du Plessis",
+        "o": -295,
+        "w": 23,
+        "l": 3,
+        "fin": 19,
+        "age": 32,
+        "reach": 76,
+        "rank": 0.85
       },
       "b": {
-        "n": "Conor McGregor",
-        "o": 180,
-        "w": 22,
-        "l": 6,
-        "fin": 19,
-        "age": 37,
-        "reach": 74,
-        "rank": 0.25,
+        "n": "Kamaru Usman",
+        "o": 225,
+        "w": 21,
+        "l": 4,
+        "fin": 10,
+        "age": 39,
+        "reach": 76,
+        "rank": 0.6,
         "moveup": 1
       },
-      "modelA": 0.4959
+      "modelA": 0.5626
     },
     {
-      "div": "Lightweight (Co-Main)",
+      "div": "Middleweight (Co-Main)",
       "a": {
-        "n": "Benoit Saint Denis",
-        "o": -140,
-        "w": 17,
-        "l": 3,
-        "fin": 13,
-        "age": 30,
-        "reach": 72,
-        "rank": 0.65
-      },
-      "b": {
-        "n": "Paddy Pimblett",
-        "o": 110,
-        "w": 23,
-        "l": 4,
-        "fin": 17,
-        "age": 31,
-        "reach": 73,
-        "rank": 0.55
-      },
-      "modelA": 0.6317
-    },
-    {
-      "div": "Bantamweight",
-      "a": {
-        "n": "Cory Sandhagen",
-        "o": -145,
-        "w": 18,
-        "l": 6,
+        "n": "Christian Leroy Duncan",
+        "o": -305,
+        "w": 14,
+        "l": 2,
         "fin": 10,
-        "age": 34,
-        "reach": 70,
-        "rank": 0.7
+        "age": 31,
+        "reach": 75,
+        "rank": 0.35
       },
       "b": {
-        "n": "Mario Bautista",
-        "o": 115,
-        "w": 17,
-        "l": 3,
-        "fin": 8,
-        "age": 32,
-        "reach": 71,
-        "rank": 0.55
-      },
-      "modelA": 0.4727
-    },
-    {
-      "div": "Flyweight",
-      "a": {
-        "n": "Lone'er Kavanagh",
-        "o": -230,
-        "w": 10,
-        "l": 1,
-        "fin": 5,
-        "age": 27,
-        "reach": 66,
-        "rank": 0.6
-      },
-      "b": {
-        "n": "Brandon Royval",
-        "o": 175,
-        "w": 17,
+        "n": "Jared Cannonier",
+        "o": 240,
+        "w": 18,
         "l": 9,
-        "fin": 11,
-        "age": 33,
-        "reach": 68,
-        "rank": 0.6
+        "fin": 13,
+        "age": 42,
+        "reach": 77,
+        "rank": 0.45
       },
-      "modelA": 0.6457
+      "modelA": 0.6638
     },
     {
       "div": "Lightweight",
       "a": {
-        "n": "Terrance McKinney",
-        "o": -145,
-        "w": 18,
-        "l": 8,
-        "fin": 16,
-        "age": 31,
-        "reach": 73,
-        "rank": 0.25
+        "n": "Chase Hooper",
+        "o": -305,
+        "w": 16,
+        "l": 5,
+        "fin": 12,
+        "age": 26,
+        "reach": 71,
+        "rank": 0.2
       },
       "b": {
-        "n": "King Green",
-        "o": 115,
-        "w": 35,
-        "l": 17,
-        "fin": 22,
-        "age": 39,
+        "n": "Mitch Ramirez",
+        "o": 240,
+        "w": 8,
+        "l": 3,
+        "fin": 6,
+        "age": 28,
         "reach": 71,
-        "rank": 0.3
+        "rank": 0.1
       },
-      "modelA": 0.7682
+      "modelA": 0.6933
+    },
+    {
+      "div": "Women's Strawweight",
+      "a": {
+        "n": "Fatima Kline",
+        "o": -420,
+        "w": 9,
+        "l": 1,
+        "fin": 5,
+        "age": 26,
+        "reach": 65,
+        "rank": 0.35
+      },
+      "b": {
+        "n": "Tabatha Ricci",
+        "o": 310,
+        "w": 12,
+        "l": 4,
+        "fin": 4,
+        "age": 32,
+        "reach": 62,
+        "rank": 0.55
+      },
+      "modelA": 0.7178
+    },
+    {
+      "div": "Featherweight",
+      "a": {
+        "n": "Alberto Montes",
+        "o": -112,
+        "w": 11,
+        "l": 1,
+        "fin": 9,
+        "age": 26,
+        "reach": 73,
+        "rank": 0.15
+      },
+      "b": {
+        "n": "Tommy McMillen",
+        "o": -112,
+        "w": 10,
+        "l": 0,
+        "fin": 8,
+        "age": 27,
+        "reach": 74,
+        "rank": 0.15,
+        "undef": 1
+      }
     }
   ],
-  "updated": 1783732176439,
+  "updated": 1783830575639,
   "env": {
-    "label": "Indoor \u00b7 climate-controlled (T-Mobile Arena, Las Vegas)",
+    "label": "Indoor \u00b7 climate-controlled (Paycom Center, Oklahoma City)",
     "heat": 0
   }
 };
 window.CARD.photos = {
-  "Max Holloway": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-04/HOLLOWAY_MAX_L_04-13.png?itok=mcRfmIq0",
-  "Conor McGregor": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/MCGREGOR_CONOR_L_07-11.png?itok=oPFhXwIA",
-  "Terrance McKinney": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/MCKINNEY_TERRANCE_L_03-28.png?itok=xOcN-WHP",
-  "Mario Bautista": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/BAUTISTA_MARIO_L_02-07.png?itok=Wpsbk8fU",
-  "King Green": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/GREEN_KING_L_07-11.png?itok=VfpfdCUg",
-  "Cory Sandhagen": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/SANDHAGEN_CORY_L_07-11.png?itok=js9SxyWU"
+  "Dricus Du Plessis": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/DU_PLESSIS_DRICUS_L_01-20.png?itok=1rEdw7uR",
+  "Kamaru Usman": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-06/USMAN_KAMARU_L_06-14.png?itok=_E2PDHo4",
+  "Jared Cannonier": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/CANNONIER_JARED_L_08-16.png?itok=fI-AmOEF",
+  "Mitch Ramirez": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/RAMIREZ_MITCH_L_07-12.png?itok=yQWmeGob",
+  "Christian Leroy Duncan": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-11/DUNCAN_CHRISTIAN_LEROY_L_11-08.png?itok=YYD6jKSM",
+  "Chase Hooper": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/HOOPER_CHASE_L_03-28.png?itok=kKgPb3_n"
 };
-window.CARD.kalshi = {"Max Holloway":70,"Conor McGregor":31};

@@ -381,7 +381,7 @@
     <div class="rg"></div>
     <div class="genie-emblem"><img src="genie.png" alt="The Genie" loading="eager"></div>
     <h1 class="hero-h goldtext">READ THE CARD</h1>
-    <div class="eventline" id="event">UFC 329 · McGregor vs. Holloway 2 · T-Mobile Arena, Las Vegas · Jul 11, 2026</div>
+    <div class="eventline" id="event">UFC Fight Night · Du Plessis vs. Usman · Paycom Center, Oklahoma City · Jul 18, 2026</div>
     <div class="showing"><span class="livedot"></span>Showing <b id="bcard">UFC Fight Night 280</b> &middot; updated <b id="updated">June 21, 2026</b> &middot; if a newer card is out, ping <b>Joe Cook</b> to refresh</div>
     <div class="meta" id="srcmeta"></div>
     <p class="hero-pitch">One tap and the Genie reads this week's card &mdash; comparing its <b>own win probabilities</b> against the de-vigged market to surface where the value hides.</p>
@@ -486,16 +486,16 @@
 <script>document.write('<scr'+'ipt src="card.js?_='+Date.now()+'" onerror="void 0"><\/scr'+'ipt>');</script>
 <script>
 const FIGHTS = [
-  {div:"Welterweight (Main Event)", a:{n:"Max Holloway",o:-240,w:27,l:9,fin:12,age:34,reach:69,rank:.8},
-                                b:{n:"Conor McGregor",o:180,w:22,l:6,fin:19,age:37,reach:74,rank:.25,moveup:1}},
-  {div:"Lightweight (Co-Main)", a:{n:"Benoit Saint Denis",o:-140,w:17,l:3,fin:13,age:30,reach:72,rank:.65},
-                            b:{n:"Paddy Pimblett",o:110,w:23,l:4,fin:17,age:31,reach:73,rank:.55}},
-  {div:"Bantamweight", a:{n:"Cory Sandhagen",o:-145,w:18,l:6,fin:10,age:34,reach:70,rank:.7},
-                        b:{n:"Mario Bautista",o:115,w:17,l:3,fin:8,age:32,reach:71,rank:.55}},
-  {div:"Flyweight", a:{n:"Lone'er Kavanagh",o:-230,w:10,l:1,fin:5,age:27,reach:66,rank:.6},
-                        b:{n:"Brandon Royval",o:175,w:17,l:9,fin:11,age:33,reach:68,rank:.6}},
-  {div:"Lightweight", a:{n:"Terrance McKinney",o:-145,w:18,l:8,fin:16,age:31,reach:73,rank:.25},
-                        b:{n:"King Green",o:115,w:35,l:17,fin:22,age:39,reach:71,rank:.3}},
+  {div:"Middleweight (Main Event)", a:{n:"Dricus Du Plessis",o:-295,w:23,l:3,fin:19,age:32,reach:76,rank:.85},
+                                b:{n:"Kamaru Usman",o:225,w:21,l:4,fin:10,age:39,reach:76,rank:.6,moveup:1}},
+  {div:"Middleweight (Co-Main)", a:{n:"Christian Leroy Duncan",o:-305,w:14,l:2,fin:10,age:31,reach:75,rank:.35},
+                            b:{n:"Jared Cannonier",o:240,w:18,l:9,fin:13,age:42,reach:77,rank:.45}},
+  {div:"Lightweight", a:{n:"Chase Hooper",o:-305,w:16,l:5,fin:12,age:26,reach:71,rank:.2},
+                        b:{n:"Mitch Ramirez",o:240,w:8,l:3,fin:6,age:28,reach:71,rank:.1}},
+  {div:"Women's Strawweight", a:{n:"Fatima Kline",o:-420,w:9,l:1,fin:5,age:26,reach:65,rank:.35},
+                        b:{n:"Tabatha Ricci",o:310,w:12,l:4,fin:4,age:32,reach:62,rank:.55}},
+  {div:"Featherweight", a:{n:"Alberto Montes",o:-112,w:11,l:1,fin:9,age:26,reach:73,rank:.15},
+                        b:{n:"Tommy McMillen",o:-112,w:10,l:0,fin:8,age:27,reach:74,rank:.15,undef:1}},
 ];
 
 let SRC = "in-browser baseline (approx. stats)";
@@ -507,7 +507,7 @@ if (window.CARD && Array.isArray(window.CARD.fights) && window.CARD.fights.lengt
 }
 
 // Card conditions. heat 0-1: outdoor/hot-humid cards tax older, high-mileage fighters.
-let ENV = { label:"Indoor · climate-controlled (T-Mobile Arena, Las Vegas)", heat:0 };
+let ENV = { label:"Indoor · climate-controlled (Paycom Center, Oklahoma City)", heat:0 };
 if (window.CARD && window.CARD.env) ENV = window.CARD.env;
 
 const toProb=o=>o<0?(-o)/(-o+100):100/(o+100);
