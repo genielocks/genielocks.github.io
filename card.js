@@ -6,7 +6,7 @@ window.CARD = {
       "div": "Middleweight (Main Event)",
       "a": {
         "n": "Dricus Du Plessis",
-        "o": -295,
+        "o": -260,
         "w": 23,
         "l": 3,
         "fin": 19,
@@ -16,7 +16,7 @@ window.CARD = {
       },
       "b": {
         "n": "Kamaru Usman",
-        "o": 225,
+        "o": 210,
         "w": 21,
         "l": 4,
         "fin": 10,
@@ -31,7 +31,7 @@ window.CARD = {
       "div": "Middleweight (Co-Main)",
       "a": {
         "n": "Christian Leroy Duncan",
-        "o": -305,
+        "o": -330,
         "w": 14,
         "l": 2,
         "fin": 10,
@@ -41,7 +41,7 @@ window.CARD = {
       },
       "b": {
         "n": "Jared Cannonier",
-        "o": 240,
+        "o": 260,
         "w": 18,
         "l": 9,
         "fin": 13,
@@ -55,21 +55,21 @@ window.CARD = {
       "div": "Lightweight",
       "a": {
         "n": "Chase Hooper",
-        "o": -305,
+        "o": -340,
         "w": 16,
         "l": 5,
         "fin": 12,
         "age": 26,
-        "reach": 71,
+        "reach": 74,
         "rank": 0.2
       },
       "b": {
         "n": "Mitch Ramirez",
-        "o": 240,
+        "o": 280,
         "w": 8,
         "l": 3,
         "fin": 6,
-        "age": 28,
+        "age": 33,
         "reach": 71,
         "rank": 0.1
       },
@@ -79,7 +79,7 @@ window.CARD = {
       "div": "Women's Strawweight",
       "a": {
         "n": "Fatima Kline",
-        "o": -420,
+        "o": -350,
         "w": 9,
         "l": 1,
         "fin": 5,
@@ -89,7 +89,7 @@ window.CARD = {
       },
       "b": {
         "n": "Tabatha Ricci",
-        "o": 310,
+        "o": 280,
         "w": 12,
         "l": 4,
         "fin": 4,
@@ -103,7 +103,7 @@ window.CARD = {
       "div": "Featherweight",
       "a": {
         "n": "Alberto Montes",
-        "o": -112,
+        "o": -110,
         "w": 11,
         "l": 1,
         "fin": 9,
@@ -113,7 +113,7 @@ window.CARD = {
       },
       "b": {
         "n": "Tommy McMillen",
-        "o": -112,
+        "o": -110,
         "w": 10,
         "l": 0,
         "fin": 8,
@@ -124,7 +124,7 @@ window.CARD = {
       }
     }
   ],
-  "updated": 1783830575639,
+  "updated": 1783958761287,
   "env": {
     "label": "Indoor \u00b7 climate-controlled (Paycom Center, Oklahoma City)",
     "heat": 0
