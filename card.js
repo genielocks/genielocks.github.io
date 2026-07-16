@@ -6,7 +6,7 @@ window.CARD = {
       "div": "Middleweight (Main Event)",
       "a": {
         "n": "Dricus Du Plessis",
-        "o": -260,
+        "o": -230,
         "w": 23,
         "l": 3,
         "fin": 19,
@@ -16,7 +16,7 @@ window.CARD = {
       },
       "b": {
         "n": "Kamaru Usman",
-        "o": 210,
+        "o": 190,
         "w": 21,
         "l": 4,
         "fin": 10,
@@ -31,7 +31,7 @@ window.CARD = {
       "div": "Middleweight (Co-Main)",
       "a": {
         "n": "Christian Leroy Duncan",
-        "o": -330,
+        "o": -370,
         "w": 14,
         "l": 2,
         "fin": 10,
@@ -41,7 +41,7 @@ window.CARD = {
       },
       "b": {
         "n": "Jared Cannonier",
-        "o": 260,
+        "o": 290,
         "w": 18,
         "l": 9,
         "fin": 13,
@@ -55,7 +55,7 @@ window.CARD = {
       "div": "Lightweight",
       "a": {
         "n": "Chase Hooper",
-        "o": -340,
+        "o": -350,
         "w": 16,
         "l": 5,
         "fin": 12,
@@ -65,7 +65,7 @@ window.CARD = {
       },
       "b": {
         "n": "Mitch Ramirez",
-        "o": 280,
+        "o": 275,
         "w": 8,
         "l": 3,
         "fin": 6,
@@ -79,7 +79,7 @@ window.CARD = {
       "div": "Women's Strawweight",
       "a": {
         "n": "Fatima Kline",
-        "o": -350,
+        "o": -450,
         "w": 9,
         "l": 1,
         "fin": 5,
@@ -89,7 +89,7 @@ window.CARD = {
       },
       "b": {
         "n": "Tabatha Ricci",
-        "o": 280,
+        "o": 350,
         "w": 12,
         "l": 4,
         "fin": 4,
@@ -102,18 +102,8 @@ window.CARD = {
     {
       "div": "Featherweight",
       "a": {
-        "n": "Alberto Montes",
-        "o": -110,
-        "w": 11,
-        "l": 1,
-        "fin": 9,
-        "age": 26,
-        "reach": 73,
-        "rank": 0.15
-      },
-      "b": {
         "n": "Tommy McMillen",
-        "o": -110,
+        "o": -135,
         "w": 10,
         "l": 0,
         "fin": 8,
@@ -121,10 +111,20 @@ window.CARD = {
         "reach": 74,
         "rank": 0.15,
         "undef": 1
+      },
+      "b": {
+        "n": "Alberto Montes",
+        "o": 115,
+        "w": 11,
+        "l": 1,
+        "fin": 9,
+        "age": 26,
+        "reach": 73,
+        "rank": 0.15
       }
     }
   ],
-  "updated": 1783958761287,
+  "updated": 1784167226767,
   "env": {
     "label": "Indoor \u00b7 climate-controlled (Paycom Center, Oklahoma City)",
     "heat": 0
@@ -136,5 +136,9 @@ window.CARD.photos = {
   "Jared Cannonier": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/CANNONIER_JARED_L_08-16.png?itok=fI-AmOEF",
   "Mitch Ramirez": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/RAMIREZ_MITCH_L_07-12.png?itok=yQWmeGob",
   "Christian Leroy Duncan": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-11/DUNCAN_CHRISTIAN_LEROY_L_11-08.png?itok=YYD6jKSM",
-  "Chase Hooper": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/HOOPER_CHASE_L_03-28.png?itok=kKgPb3_n"
+  "Chase Hooper": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/HOOPER_CHASE_L_03-28.png?itok=kKgPb3_n",
+  "Tommy McMillen": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-04/MCMILLEN_TOMMY_L_04-04.png?itok=M1oyrDvQ",
+  "Alberto Montes": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-03/MONTES_ALBERTO_R_03-07.png?itok=1xed_q94",
+  "Fatima Kline": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-11/KLINE_FATIMA_R_11-15.png?itok=5CSQcSTY",
+  "Tabatha Ricci": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-01/5/RICCI_TABATHA_L_08-24.png?itok=pVtd8H0O"
 };
