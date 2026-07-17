@@ -675,7 +675,7 @@ function renderRecord(){
   const clvs=picks.filter(p=>typeof p.clv==='number').map(p=>p.clv);
   const avgClv=clvs.length?clvs.reduce((a,b)=>a+b,0)/clvs.length:null;
   let staked=0,ret=0;
-  settled.forEach(p=>{staked+=1; if(p.result==='win') ret+=(p.odds>0?p.odds/100:100/(-p.odds));});
+  settled.forEach(p=>{staked+=1; if(p.result==='win') ret+=(p.odds>0?p.odds/100:100/(-p.odds)); else ret-=1;});
   const roi=staked?ret/staked*100:null;
   const pend='<span class="rec-pend">&mdash;</span>';
   const wl=settled.length?(wins+'-'+(settled.length-wins)):pend;
