@@ -142,3 +142,15 @@ window.CARD.photos = {
   "Fatima Kline": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-11/KLINE_FATIMA_R_11-15.png?itok=5CSQcSTY",
   "Tabatha Ricci": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-01/5/RICCI_TABATHA_L_08-24.png?itok=pVtd8H0O"
 };
+window.CARD.kalshi = {
+  "Dricus Du Plessis": 69,
+  "Kamaru Usman": 33,
+  "Christian Leroy Duncan": 76,
+  "Jared Cannonier": 25,
+  "Chase Hooper": 77,
+  "Mitch Ramirez": 25,
+  "Fatima Kline": 81,
+  "Tabatha Ricci": 21,
+  "Tommy McMillen": 61,
+  "Alberto Montes": 41
+};
