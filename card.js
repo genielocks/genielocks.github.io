@@ -25,7 +25,7 @@ window.CARD = {
         "rank": 0.6,
         "moveup": 1
       },
-      "modelA": 0.5626
+      "modelA": 0.5568
     },
     {
       "div": "Middleweight (Co-Main)",
@@ -49,7 +49,7 @@ window.CARD = {
         "reach": 77,
         "rank": 0.45
       },
-      "modelA": 0.6638
+      "modelA": 0.5903
     },
     {
       "div": "Lightweight",
@@ -73,7 +73,7 @@ window.CARD = {
         "reach": 71,
         "rank": 0.1
       },
-      "modelA": 0.6933
+      "modelA": 0.7133
     },
     {
       "div": "Women's Strawweight",
@@ -97,7 +97,7 @@ window.CARD = {
         "reach": 62,
         "rank": 0.55
       },
-      "modelA": 0.7178
+      "modelA": 0.5629
     },
     {
       "div": "Featherweight",
@@ -124,7 +124,7 @@ window.CARD = {
       }
     }
   ],
-  "updated": 1784167226767,
+  "updated": 1784307032191,
   "env": {
     "label": "Indoor \u00b7 climate-controlled (Paycom Center, Oklahoma City)",
     "heat": 0
