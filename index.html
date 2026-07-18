@@ -709,8 +709,10 @@ function renderRecord(){
 function renderHome(){
   const all=FIGHTS.map(analyze);
 
-  let cand=all.filter(p=>p.edge>0 && p.p>=0.30);
-  if(cand.length<3) cand=all.filter(p=>p.edge>0);
+  // Confident-value rules: no lottery-ticket legs — underdogs longer than +250 never make the parlay.
+  let cand=all.filter(p=>p.edge>0 && p.p>=0.30 && p.odds<=250);
+  if(cand.length<3) cand=all.filter(p=>p.edge>0 && p.odds<=250);
+  if(cand.length<3) cand=all.filter(p=>p.odds<=250);
   if(cand.length<3) cand=[...all];
   const legs=cand.sort((a,b)=>b.edge-a.edge).slice(0,3);
   const dec=legs.reduce((a,p)=>a*toDec(p.odds),1);
@@ -743,8 +745,11 @@ function renderHome(){
   const __eb=document.getElementById('lp-eyebrow'); if(__eb) __eb.textContent=(__parts[0]+(__city?' · '+__city:'')).toUpperCase();
   // main-event face-off (home)
   const __fo=document.getElementById('faceoff'); if(__fo && FIGHTS[0]) __fo.innerHTML=faceoffCard(FIGHTS[0]);
-  // top value pick = single biggest edge on the card
-  const __top=[...all].sort((a,b)=>b.edge-a.edge)[0];
+  // top value pick = CONFIDENT value: the model must actually favor the fighter (55%+ to win)
+  // AND see positive edge vs the de-vigged market. Best edge among those. Falls back gracefully
+  // so the page never renders empty, but big-underdog "edges" no longer headline the card.
+  const __sorted=[...all].sort((a,b)=>b.edge-a.edge);
+  const __top=__sorted.find(p=>p.p>=0.55 && p.edge>0) || __sorted.find(p=>p.p>=0.55) || __sorted[0];
   const __pk=document.getElementById('pick'); if(__pk && __top) __pk.innerHTML=pickCard(__top);
   loadFighterPhotos();
   document.getElementById('srcmeta').textContent = "Model source: "+SRC + (ENV.heat? "  ·  "+ENV.label : "");
