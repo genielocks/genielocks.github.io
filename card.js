@@ -1,6 +1,6 @@
 window.CARD = {
   "event": "UFC Fight Night \u00b7 Du Plessis vs. Usman \u00b7 Paycom Center, Oklahoma City \u00b7 Jul 18, 2026",
-  "source": "trained Python model (4/5 bouts; baseline fallback for 1)",
+  "source": "trained Python model (7/8 bouts; baseline fallback for 1)",
   "fights": [
     {
       "div": "Middleweight (Main Event)",
@@ -122,9 +122,81 @@ window.CARD = {
         "reach": 73,
         "rank": 0.15
       }
+    },
+    {
+      "div": "Featherweight (Prelim)",
+      "a": {
+        "n": "Austin Bashi",
+        "o": -110,
+        "w": 15,
+        "l": 1,
+        "fin": 8,
+        "age": 24,
+        "reach": 70,
+        "rank": 0.1
+      },
+      "b": {
+        "n": "Jose Delgado",
+        "o": -110,
+        "w": 11,
+        "l": 2,
+        "fin": 9,
+        "age": 27,
+        "reach": 74,
+        "rank": 0.1
+      },
+      "modelA": 0.5795
+    },
+    {
+      "div": "Welterweight (Prelim)",
+      "a": {
+        "n": "Seokhyeon Ko",
+        "o": -210,
+        "w": 13,
+        "l": 2,
+        "fin": 10,
+        "age": 32,
+        "reach": 71,
+        "rank": 0.1
+      },
+      "b": {
+        "n": "Jean-Paul Lebosnoyani",
+        "o": 175,
+        "w": 10,
+        "l": 2,
+        "fin": 7,
+        "age": 27,
+        "reach": 72,
+        "rank": 0.1
+      },
+      "modelA": 0.4817
+    },
+    {
+      "div": "Flyweight (Prelim)",
+      "a": {
+        "n": "Alden Coria",
+        "o": -1100,
+        "w": 12,
+        "l": 3,
+        "fin": 5,
+        "age": 27,
+        "reach": 67,
+        "rank": 0.1
+      },
+      "b": {
+        "n": "Stewart Nicoll",
+        "o": 700,
+        "w": 8,
+        "l": 3,
+        "fin": 4,
+        "age": 30,
+        "reach": 65,
+        "rank": 0.1
+      },
+      "modelA": 0.6416
     }
   ],
-  "updated": 1784347683131,
+  "updated": 1784410394975,
   "env": {
     "label": "Indoor \u00b7 climate-controlled (Paycom Center, Oklahoma City)",
     "heat": 0
@@ -140,7 +212,13 @@ window.CARD.photos = {
   "Tommy McMillen": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-04/MCMILLEN_TOMMY_L_04-04.png?itok=M1oyrDvQ",
   "Alberto Montes": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-03/MONTES_ALBERTO_R_03-07.png?itok=1xed_q94",
   "Fatima Kline": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-11/KLINE_FATIMA_R_11-15.png?itok=5CSQcSTY",
-  "Tabatha Ricci": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-01/5/RICCI_TABATHA_L_08-24.png?itok=pVtd8H0O"
+  "Tabatha Ricci": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-01/5/RICCI_TABATHA_L_08-24.png?itok=pVtd8H0O",
+  "Austin Bashi": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-07/BASHI_AUSTIN_L_07-18.png?itok=KkXEfLJ5",
+  "Jose Delgado": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-10/DELGADO_JOSE_R_10-25.png?itok=49Z7-lqK",
+  "Seokhyeon Ko": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-07/KO_SEOKHYEON_R_07-18.png?itok=3Ast7Ggf",
+  "Jean-Paul Lebosnoyani": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-02/LEBOSNOYANI_JEAN-PAUL_R_02-21.png?itok=HLkdmAjo",
+  "Alden Coria": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-07/CORIA_ALDEN_L_07-18.png?itok=XmjEbYZR",
+  "Stewart Nicoll": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-07/NICOLL_STEWART_R_07-18.png?itok=jaK9INbL"
 };
 window.CARD.kalshi = {
   "Dricus Du Plessis": 67,
@@ -152,5 +230,11 @@ window.CARD.kalshi = {
   "Fatima Kline": 81,
   "Tabatha Ricci": 21,
   "Tommy McMillen": 60,
-  "Alberto Montes": 41
+  "Alberto Montes": 41,
+  "Austin Bashi": 56,
+  "Jose Delgado": 46,
+  "Seokhyeon Ko": 63,
+  "Jean-Paul Lebosnoyani": 38,
+  "Alden Coria": 90,
+  "Stewart Nicoll": 12
 };

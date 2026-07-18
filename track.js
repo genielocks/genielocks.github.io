@@ -23,6 +23,8 @@ window.TRACK = {
     {"date":"2026-07-18","event":"UFC Fight Night: Du Plessis vs. Usman","fighter":"Jared Cannonier","div":"Middleweight (Co-Main)","odds":240,"modelP":0.336,"mktP":0.281,"edge":0.055,"kind":"parlay leg","result":null,"clv":null},
     {"date":"2026-07-18","event":"UFC Fight Night: Du Plessis vs. Usman","fighter":"Mitch Ramirez","div":"Lightweight","odds":240,"modelP":0.307,"mktP":0.281,"edge":0.026,"kind":"parlay leg","result":null,"clv":null},
     {"date":"2026-07-18","event":"UFC Fight Night: Du Plessis vs. Usman","fighter":"Tommy McMillen","div":"Featherweight","odds":-112,"modelP":0.590,"mktP":0.500,"edge":0.090,"kind":"parlay leg","result":null,"clv":null},
-    {"date":"2026-07-18","event":"UFC Fight Night: Du Plessis vs. Usman","fighter":"Tabatha Ricci","div":"Women's Strawweight","odds":350,"modelP":0.437,"mktP":0.214,"edge":0.224,"kind":"value pick + parlay leg","result":null,"clv":null}
+    {"date":"2026-07-18","event":"UFC Fight Night: Du Plessis vs. Usman","fighter":"Tabatha Ricci","div":"Women's Strawweight","odds":350,"modelP":0.437,"mktP":0.214,"edge":0.224,"kind":"value pick + parlay leg","result":null,"clv":null},
+    {"date":"2026-07-18","event":"UFC Fight Night: Du Plessis vs. Usman","fighter":"Stewart Nicoll","div":"Flyweight (Prelim)","odds":700,"modelP":0.358,"mktP":0.120,"edge":0.238,"kind":"value pick + parlay leg","result":null,"clv":null},
+    {"date":"2026-07-18","event":"UFC Fight Night: Du Plessis vs. Usman","fighter":"Jean-Paul Lebosnoyani","div":"Welterweight (Prelim)","odds":175,"modelP":0.518,"mktP":0.349,"edge":0.169,"kind":"parlay leg","result":null,"clv":null}
   ]
 };
