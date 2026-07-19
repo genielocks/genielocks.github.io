@@ -6,7 +6,7 @@ window.CARD = {
       "div": "Middleweight (Main Event)",
       "a": {
         "n": "Dricus Du Plessis",
-        "o": -245,
+        "o": -205,
         "w": 23,
         "l": 3,
         "fin": 19,
@@ -16,7 +16,7 @@ window.CARD = {
       },
       "b": {
         "n": "Kamaru Usman",
-        "o": 200,
+        "o": 170,
         "w": 21,
         "l": 4,
         "fin": 10,
@@ -31,7 +31,7 @@ window.CARD = {
       "div": "Middleweight (Co-Main)",
       "a": {
         "n": "Christian Leroy Duncan",
-        "o": -350,
+        "o": -395,
         "w": 14,
         "l": 2,
         "fin": 10,
@@ -41,7 +41,7 @@ window.CARD = {
       },
       "b": {
         "n": "Jared Cannonier",
-        "o": 275,
+        "o": 310,
         "w": 18,
         "l": 9,
         "fin": 13,
@@ -55,7 +55,7 @@ window.CARD = {
       "div": "Lightweight",
       "a": {
         "n": "Chase Hooper",
-        "o": -360,
+        "o": -375,
         "w": 16,
         "l": 5,
         "fin": 12,
@@ -65,7 +65,7 @@ window.CARD = {
       },
       "b": {
         "n": "Mitch Ramirez",
-        "o": 280,
+        "o": 295,
         "w": 8,
         "l": 3,
         "fin": 6,
@@ -79,7 +79,7 @@ window.CARD = {
       "div": "Women's Strawweight",
       "a": {
         "n": "Fatima Kline",
-        "o": -450,
+        "o": -470,
         "w": 9,
         "l": 1,
         "fin": 5,
@@ -89,7 +89,7 @@ window.CARD = {
       },
       "b": {
         "n": "Tabatha Ricci",
-        "o": 350,
+        "o": 360,
         "w": 12,
         "l": 4,
         "fin": 4,
@@ -103,7 +103,7 @@ window.CARD = {
       "div": "Featherweight",
       "a": {
         "n": "Tommy McMillen",
-        "o": -165,
+        "o": -175,
         "w": 10,
         "l": 0,
         "fin": 8,
@@ -114,7 +114,7 @@ window.CARD = {
       },
       "b": {
         "n": "Alberto Montes",
-        "o": 140,
+        "o": 145,
         "w": 11,
         "l": 1,
         "fin": 9,
@@ -127,7 +127,7 @@ window.CARD = {
       "div": "Featherweight (Prelim)",
       "a": {
         "n": "Austin Bashi",
-        "o": -110,
+        "o": -125,
         "w": 15,
         "l": 1,
         "fin": 8,
@@ -137,7 +137,7 @@ window.CARD = {
       },
       "b": {
         "n": "Jose Delgado",
-        "o": -110,
+        "o": 105,
         "w": 11,
         "l": 2,
         "fin": 9,
@@ -151,7 +151,7 @@ window.CARD = {
       "div": "Welterweight (Prelim)",
       "a": {
         "n": "Seokhyeon Ko",
-        "o": -210,
+        "o": -180,
         "w": 13,
         "l": 2,
         "fin": 10,
@@ -161,7 +161,7 @@ window.CARD = {
       },
       "b": {
         "n": "Jean-Paul Lebosnoyani",
-        "o": 175,
+        "o": 150,
         "w": 10,
         "l": 2,
         "fin": 7,
@@ -175,7 +175,7 @@ window.CARD = {
       "div": "Flyweight (Prelim)",
       "a": {
         "n": "Alden Coria",
-        "o": -1100,
+        "o": -1050,
         "w": 12,
         "l": 3,
         "fin": 5,
@@ -185,7 +185,7 @@ window.CARD = {
       },
       "b": {
         "n": "Stewart Nicoll",
-        "o": 700,
+        "o": 675,
         "w": 8,
         "l": 3,
         "fin": 4,
@@ -196,7 +196,7 @@ window.CARD = {
       "modelA": 0.6416
     }
   ],
-  "updated": 1784410394975,
+  "updated": 1784423427681,
   "env": {
     "label": "Indoor \u00b7 climate-controlled (Paycom Center, Oklahoma City)",
     "heat": 0
@@ -221,20 +221,10 @@ window.CARD.photos = {
   "Stewart Nicoll": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-07/NICOLL_STEWART_R_07-18.png?itok=jaK9INbL"
 };
 window.CARD.kalshi = {
-  "Dricus Du Plessis": 67,
-  "Kamaru Usman": 34,
-  "Christian Leroy Duncan": 78,
-  "Jared Cannonier": 24,
+  "Dricus Du Plessis": 66,
+  "Kamaru Usman": 35,
+  "Christian Leroy Duncan": 74,
+  "Jared Cannonier": 27,
   "Chase Hooper": 76,
-  "Mitch Ramirez": 25,
-  "Fatima Kline": 81,
-  "Tabatha Ricci": 21,
-  "Tommy McMillen": 60,
-  "Alberto Montes": 41,
-  "Austin Bashi": 56,
-  "Jose Delgado": 46,
-  "Seokhyeon Ko": 63,
-  "Jean-Paul Lebosnoyani": 38,
-  "Alden Coria": 90,
-  "Stewart Nicoll": 12
+  "Mitch Ramirez": 25
 };
