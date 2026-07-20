@@ -711,8 +711,11 @@ function renderRecord(){
 function renderHome(){
   const all=FIGHTS.map(analyze);
 
-  // Confident-value rules: no lottery-ticket legs — underdogs longer than +250 never make the parlay.
-  let cand=all.filter(p=>p.edge>0 && p.p>=0.30 && p.odds<=250);
+  // Confident-value rules v2: no lottery-ticket legs (max +250); legs must be near coin-flip or
+  // better (45%+); and edges above 15% are treated as likely model noise — they never make the
+  // parlay (they still show honestly in the fight rows). Looser tiers only as graceful fallback.
+  let cand=all.filter(p=>p.edge>0 && p.edge<0.15 && p.p>=0.45 && p.odds<=250);
+  if(cand.length<3) cand=all.filter(p=>p.edge>0 && p.edge<0.15 && p.p>=0.30 && p.odds<=250);
   if(cand.length<3) cand=all.filter(p=>p.edge>0 && p.odds<=250);
   if(cand.length<3) cand=all.filter(p=>p.odds<=250);
   if(cand.length<3) cand=[...all];
