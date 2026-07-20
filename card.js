@@ -1,230 +1,250 @@
 window.CARD = {
-  "event": "UFC Fight Night \u00b7 Du Plessis vs. Usman \u00b7 Paycom Center, Oklahoma City \u00b7 Jul 18, 2026",
-  "source": "trained Python model (7/8 bouts; baseline fallback for 1)",
+  "event": "UFC Fight Night \u00b7 Ankalaev vs Guskov \u00b7 Etihad Arena, Abu Dhabi \u00b7 Jul 25, 2026",
+  "source": "trained Python model (8/9 bouts; baseline fallback for 1)",
   "fights": [
     {
-      "div": "Middleweight (Main Event)",
+      "div": "Light Heavyweight (Main Event)",
       "a": {
-        "n": "Dricus Du Plessis",
-        "o": -205,
-        "w": 23,
-        "l": 3,
-        "fin": 19,
-        "age": 32,
-        "reach": 76,
-        "rank": 0.85
+        "n": "Magomed Ankalaev",
+        "o": -530,
+        "w": 21,
+        "l": 2,
+        "fin": 11,
+        "age": 34,
+        "reach": 75,
+        "rank": 0.9
       },
       "b": {
-        "n": "Kamaru Usman",
-        "o": 170,
-        "w": 21,
-        "l": 4,
-        "fin": 10,
-        "age": 39,
+        "n": "Bogdan Guskov",
+        "o": 390,
+        "w": 18,
+        "l": 3,
+        "fin": 18,
+        "age": 33,
         "reach": 76,
-        "rank": 0.6,
-        "moveup": 1
+        "rank": 0.55
       },
-      "modelA": 0.5568
+      "modelA": 0.7929
     },
     {
-      "div": "Middleweight (Co-Main)",
+      "div": "Flyweight",
       "a": {
-        "n": "Christian Leroy Duncan",
-        "o": -395,
+        "n": "Steve Erceg",
+        "o": -118,
         "w": 14,
-        "l": 2,
-        "fin": 10,
-        "age": 31,
-        "reach": 75,
-        "rank": 0.35
+        "l": 4,
+        "fin": 6,
+        "age": 30,
+        "reach": 68,
+        "rank": 0.6
       },
       "b": {
-        "n": "Jared Cannonier",
-        "o": 310,
-        "w": 18,
-        "l": 9,
-        "fin": 13,
-        "age": 42,
-        "reach": 77,
-        "rank": 0.45
+        "n": "Ramazan Temirov",
+        "o": -105,
+        "w": 19,
+        "l": 3,
+        "fin": 11,
+        "age": 29,
+        "reach": 63,
+        "rank": 0.35
       },
-      "modelA": 0.5903
+      "modelA": 0.4926
+    },
+    {
+      "div": "Heavyweight",
+      "a": {
+        "n": "Rizvan Kuniev",
+        "o": -278,
+        "w": 13,
+        "l": 3,
+        "fin": 9,
+        "age": 33,
+        "reach": 76,
+        "rank": 0.6
+      },
+      "b": {
+        "n": "Tyrell Fortune",
+        "o": 215,
+        "w": 18,
+        "l": 3,
+        "fin": 10,
+        "age": 35,
+        "reach": 75,
+        "rank": 0.55
+      },
+      "modelA": 0.5762
+    },
+    {
+      "div": "Welterweight",
+      "a": {
+        "n": "Islam Dulatov",
+        "o": -715,
+        "w": 12,
+        "l": 1,
+        "fin": 11,
+        "age": 27,
+        "reach": 75,
+        "rank": 0.2
+      },
+      "b": {
+        "n": "Wellington Turman",
+        "o": 510,
+        "w": 18,
+        "l": 8,
+        "fin": 12,
+        "age": 30,
+        "reach": 72,
+        "rank": 0.1
+      },
+      "modelA": 0.651
     },
     {
       "div": "Lightweight",
       "a": {
-        "n": "Chase Hooper",
-        "o": -375,
-        "w": 16,
-        "l": 5,
-        "fin": 12,
-        "age": 26,
-        "reach": 74,
-        "rank": 0.2
-      },
-      "b": {
-        "n": "Mitch Ramirez",
-        "o": 295,
+        "n": "Magomed Zaynukov",
+        "o": -400,
         "w": 8,
-        "l": 3,
-        "fin": 6,
-        "age": 33,
-        "reach": 71,
-        "rank": 0.1
-      },
-      "modelA": 0.7133
-    },
-    {
-      "div": "Women's Strawweight",
-      "a": {
-        "n": "Fatima Kline",
-        "o": -470,
-        "w": 9,
-        "l": 1,
+        "l": 0,
         "fin": 5,
         "age": 26,
-        "reach": 65,
-        "rank": 0.35
-      },
-      "b": {
-        "n": "Tabatha Ricci",
-        "o": 360,
-        "w": 12,
-        "l": 4,
-        "fin": 4,
-        "age": 32,
-        "reach": 62,
-        "rank": 0.55
-      },
-      "modelA": 0.5629
-    },
-    {
-      "div": "Featherweight",
-      "a": {
-        "n": "Tommy McMillen",
-        "o": -175,
-        "w": 10,
-        "l": 0,
-        "fin": 8,
-        "age": 27,
-        "reach": 74,
-        "rank": 0.15,
+        "reach": 71,
+        "rank": 0.1,
         "undef": 1
       },
       "b": {
-        "n": "Alberto Montes",
-        "o": 145,
-        "w": 11,
-        "l": 1,
-        "fin": 9,
+        "n": "Damian Rzepecki",
+        "o": 310,
+        "w": 10,
+        "l": 0,
+        "fin": 8,
         "age": 26,
-        "reach": 73,
-        "rank": 0.15
+        "reach": 74,
+        "rank": 0.1,
+        "undef": 1
       }
     },
     {
-      "div": "Featherweight (Prelim)",
+      "div": "Lightweight",
       "a": {
-        "n": "Austin Bashi",
-        "o": -125,
-        "w": 15,
-        "l": 1,
-        "fin": 8,
-        "age": 24,
-        "reach": 70,
-        "rank": 0.1
-      },
-      "b": {
-        "n": "Jose Delgado",
-        "o": 105,
+        "n": "Axel Sola",
+        "o": -182,
         "w": 11,
-        "l": 2,
-        "fin": 9,
-        "age": 27,
+        "l": 1,
+        "fin": 7,
+        "age": 28,
         "reach": 74,
         "rank": 0.1
       },
-      "modelA": 0.5795
+      "b": {
+        "n": "Ismael Bonfim",
+        "o": 145,
+        "w": 20,
+        "l": 6,
+        "fin": 13,
+        "age": 30,
+        "reach": 71,
+        "rank": 0.1
+      },
+      "modelA": 0.5189
+    },
+    {
+      "div": "Heavyweight (Prelim)",
+      "a": {
+        "n": "Valter Walker",
+        "o": -200,
+        "w": 15,
+        "l": 1,
+        "fin": 12,
+        "age": 28,
+        "reach": 78,
+        "rank": 0.3
+      },
+      "b": {
+        "n": "Thomas Petersen",
+        "o": 160,
+        "w": 11,
+        "l": 4,
+        "fin": 8,
+        "age": 31,
+        "reach": 74,
+        "rank": 0.1
+      },
+      "modelA": 0.5937
     },
     {
       "div": "Welterweight (Prelim)",
       "a": {
-        "n": "Seokhyeon Ko",
-        "o": -180,
-        "w": 13,
-        "l": 2,
-        "fin": 10,
-        "age": 32,
-        "reach": 71,
+        "n": "Sam Patterson",
+        "o": -420,
+        "w": 14,
+        "l": 3,
+        "fin": 11,
+        "age": 30,
+        "reach": 78,
         "rank": 0.1
       },
       "b": {
-        "n": "Jean-Paul Lebosnoyani",
-        "o": 150,
-        "w": 10,
-        "l": 2,
-        "fin": 7,
-        "age": 27,
+        "n": "Santiago Ponzinibbio",
+        "o": 320,
+        "w": 30,
+        "l": 9,
+        "fin": 24,
+        "age": 39,
+        "reach": 73,
+        "rank": 0.1
+      },
+      "modelA": 0.5002
+    },
+    {
+      "div": "Lightweight (Prelim)",
+      "a": {
+        "n": "Nurullo Aliev",
+        "o": -159,
+        "w": 11,
+        "l": 0,
+        "fin": 4,
+        "age": 25,
+        "reach": 72,
+        "rank": 0.1,
+        "undef": 1
+      },
+      "b": {
+        "n": "Mike Davis",
+        "o": 128,
+        "w": 12,
+        "l": 3,
+        "fin": 9,
+        "age": 33,
         "reach": 72,
         "rank": 0.1
       },
-      "modelA": 0.4817
-    },
-    {
-      "div": "Flyweight (Prelim)",
-      "a": {
-        "n": "Alden Coria",
-        "o": -1050,
-        "w": 12,
-        "l": 3,
-        "fin": 5,
-        "age": 27,
-        "reach": 67,
-        "rank": 0.1
-      },
-      "b": {
-        "n": "Stewart Nicoll",
-        "o": 675,
-        "w": 8,
-        "l": 3,
-        "fin": 4,
-        "age": 30,
-        "reach": 65,
-        "rank": 0.1
-      },
-      "modelA": 0.6416
+      "modelA": 0.6362
     }
   ],
-  "updated": 1784423427681,
+  "updated": 1784513113588,
   "env": {
-    "label": "Indoor \u00b7 climate-controlled (Paycom Center, Oklahoma City)",
+    "label": "Indoor \u00b7 climate-controlled (Etihad Arena, Abu Dhabi)",
     "heat": 0
   }
 };
+
 window.CARD.photos = {
-  "Dricus Du Plessis": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/DU_PLESSIS_DRICUS_L_01-20.png?itok=1rEdw7uR",
-  "Kamaru Usman": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-06/USMAN_KAMARU_L_06-14.png?itok=_E2PDHo4",
-  "Jared Cannonier": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/CANNONIER_JARED_L_08-16.png?itok=fI-AmOEF",
-  "Mitch Ramirez": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/RAMIREZ_MITCH_L_07-12.png?itok=yQWmeGob",
-  "Christian Leroy Duncan": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-11/DUNCAN_CHRISTIAN_LEROY_L_11-08.png?itok=YYD6jKSM",
-  "Chase Hooper": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/HOOPER_CHASE_L_03-28.png?itok=kKgPb3_n",
-  "Tommy McMillen": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-04/MCMILLEN_TOMMY_L_04-04.png?itok=M1oyrDvQ",
-  "Alberto Montes": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-03/MONTES_ALBERTO_R_03-07.png?itok=1xed_q94",
-  "Fatima Kline": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-11/KLINE_FATIMA_R_11-15.png?itok=5CSQcSTY",
-  "Tabatha Ricci": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-01/5/RICCI_TABATHA_L_08-24.png?itok=pVtd8H0O",
-  "Austin Bashi": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-07/BASHI_AUSTIN_L_07-18.png?itok=KkXEfLJ5",
-  "Jose Delgado": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-10/DELGADO_JOSE_R_10-25.png?itok=49Z7-lqK",
-  "Seokhyeon Ko": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-07/KO_SEOKHYEON_R_07-18.png?itok=3Ast7Ggf",
-  "Jean-Paul Lebosnoyani": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-02/LEBOSNOYANI_JEAN-PAUL_R_02-21.png?itok=HLkdmAjo",
-  "Alden Coria": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-07/CORIA_ALDEN_L_07-18.png?itok=XmjEbYZR",
-  "Stewart Nicoll": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-07/NICOLL_STEWART_R_07-18.png?itok=jaK9INbL"
+ "Magomed Ankalaev": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2024-10/ANKALAEV_MAGOMED_L_10-26.png?itok=wQcWmzOW",
+ "Bogdan Guskov": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-12/GUSKOV_BOGDAN_R_12-06.png?itok=Fo67VZtH",
+ "Steve Erceg": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-08/ERCEG_STEVE_L_08-09.png?itok=sR4wmnK-",
+ "Ramazan Temirov": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-02/TEMIROV_RAMAZAN_R_03-01.png?itok=D1-FIeCS",
+ "Rizvan Kuniev": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-06/KUNIEV_RIZVAN_R_06-21.png?itok=Rlqf6h4M",
+ "Tyrell Fortune": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-03/FORTUNE_TYRELL_R_03-28.png?itok=4HR5PQ3I",
+ "Islam Dulatov": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-07/DULATOV_ISLAM_R_07-19.png?itok=I-VdUGuM",
+ "Wellington Turman": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2023-06/TURMAN_WELLINGTON_R_06-24.png?itok=Bz9yXqUF",
+ "Magomed Zaynukov": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-10/ZAYNUKOV_MAGOMED_R_10-07.png?itok=PpLzcRRK",
+ "Axel Sola": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-03/SOLA_AXEL_R_03-21.png?itok=LCpoaB7t",
+ "Ismael Bonfim": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-02/BONFIM_ISMAEL_L_02-15.png?itok=qJaFZotr",
+ "Valter Walker": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-10/WALKER_VALTER_L_10-25.png?itok=vc7nMoT2",
+ "Thomas Petersen": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-04/PETERSEN_THOMAS_R_04-04.png?itok=jkrAJNjc",
+ "Sam Patterson": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-03/PATTERSON_SAM_R_03-21.png?itok=F9UPSMmY",
+ "Santiago Ponzinibbio": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-05/PONZINIBBIO_SANTIAGO_L_05-03.png?itok=11sMx2MX",
+ "Nurullo Aliev": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-11/ALIEV_NURULLO_L_11-22.png?itok=hieYl7aP",
+ "Mike Davis": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-07/DAVIS_MIKE_R_07-12.png?itok=rPmvuzCc"
 };
-window.CARD.kalshi = {
-  "Dricus Du Plessis": 66,
-  "Kamaru Usman": 35,
-  "Christian Leroy Duncan": 74,
-  "Jared Cannonier": 27,
-  "Chase Hooper": 76,
-  "Mitch Ramirez": 25
-};
+window.CARD.kalshi = {"Magomed Ankalaev": 82, "Bogdan Guskov": 21, "Steve Erceg": 52, "Ramazan Temirov": 50, "Islam Dulatov": 87, "Wellington Turman": 13, "Magomed Zaynukov": 77, "Damian Rzepecki": 26, "Rizvan Kuniev": 74, "Tyrell Fortune": 31, "Axel Sola": 62, "Ismael Bonfim": 39, "Valter Walker": 66, "Thomas Petersen": 36, "Nurullo Aliev": 62, "Mike Davis": 40, "Sam Patterson": 79, "Santiago Ponzinibbio": 23};

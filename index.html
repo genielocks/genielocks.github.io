@@ -381,7 +381,7 @@
     <div class="rg"></div>
     <div class="genie-emblem"><img src="genie.png" alt="The Genie" loading="eager"></div>
     <h1 class="hero-h goldtext">READ THE CARD</h1>
-    <div class="eventline" id="event">UFC Fight Night · Du Plessis vs. Usman · Paycom Center, Oklahoma City · Jul 18, 2026</div>
+    <div class="eventline" id="event">UFC Fight Night · Ankalaev vs Guskov · Etihad Arena, Abu Dhabi · Jul 25, 2026</div>
     <div class="showing"><span class="livedot"></span>Showing <b id="bcard">UFC Fight Night 280</b> &middot; updated <b id="updated">June 21, 2026</b> &middot; if a newer card is out, ping <b>Joe Cook</b> to refresh</div>
     <div class="meta" id="srcmeta"></div>
     <p class="hero-pitch">One tap and the Genie reads this week's card &mdash; it works out each fighter's <b>real chance of winning</b>, then compares that to what the betting odds say. When the Genie's number is higher than the market's, that's a possible bargain.</p>
@@ -486,22 +486,24 @@
 <script>document.write('<scr'+'ipt src="card.js?_='+Date.now()+'" onerror="void 0"><\/scr'+'ipt>');</script>
 <script>
 const FIGHTS = [
-  {div:"Middleweight (Main Event)", a:{n:"Dricus Du Plessis",o:-205,w:23,l:3,fin:19,age:32,reach:76,rank:.85},
-                                b:{n:"Kamaru Usman",o:170,w:21,l:4,fin:10,age:39,reach:76,rank:.6,moveup:1}},
-  {div:"Middleweight (Co-Main)", a:{n:"Christian Leroy Duncan",o:-395,w:14,l:2,fin:10,age:31,reach:75,rank:.35},
-                            b:{n:"Jared Cannonier",o:310,w:18,l:9,fin:13,age:42,reach:77,rank:.45}},
-  {div:"Lightweight", a:{n:"Chase Hooper",o:-375,w:16,l:5,fin:12,age:26,reach:74,rank:.2},
-                        b:{n:"Mitch Ramirez",o:295,w:8,l:3,fin:6,age:33,reach:71,rank:.1}},
-  {div:"Women's Strawweight", a:{n:"Fatima Kline",o:-470,w:9,l:1,fin:5,age:26,reach:65,rank:.35},
-                        b:{n:"Tabatha Ricci",o:360,w:12,l:4,fin:4,age:32,reach:62,rank:.55}},
-  {div:"Featherweight", a:{n:"Tommy McMillen",o:-175,w:10,l:0,fin:8,age:27,reach:74,rank:.15,undef:1},
-                        b:{n:"Alberto Montes",o:145,w:11,l:1,fin:9,age:26,reach:73,rank:.15}},
-  {div:"Featherweight (Prelim)", a:{n:"Austin Bashi",o:-125,w:15,l:1,fin:8,age:24,reach:70,rank:.1},
-                        b:{n:"Jose Delgado",o:105,w:11,l:2,fin:9,age:27,reach:74,rank:.1}},
-  {div:"Welterweight (Prelim)", a:{n:"Seokhyeon Ko",o:-180,w:13,l:2,fin:10,age:32,reach:71,rank:.1},
-                        b:{n:"Jean-Paul Lebosnoyani",o:150,w:10,l:2,fin:7,age:27,reach:72,rank:.1}},
-  {div:"Flyweight (Prelim)", a:{n:"Alden Coria",o:-1050,w:12,l:3,fin:5,age:27,reach:67,rank:.1},
-                        b:{n:"Stewart Nicoll",o:675,w:8,l:3,fin:4,age:30,reach:65,rank:.1}},
+  {div:"Light Heavyweight (Main Event)", a:{n:"Magomed Ankalaev",o:-530,w:21,l:2,fin:11,age:34,reach:75,rank:.9},
+                                b:{n:"Bogdan Guskov",o:390,w:18,l:3,fin:18,age:33,reach:76,rank:.55}},
+  {div:"Flyweight", a:{n:"Steve Erceg",o:-118,w:14,l:4,fin:6,age:30,reach:68,rank:.6},
+                        b:{n:"Ramazan Temirov",o:-105,w:19,l:3,fin:11,age:29,reach:63,rank:.35}},
+  {div:"Heavyweight", a:{n:"Rizvan Kuniev",o:-278,w:13,l:3,fin:9,age:33,reach:76,rank:.6},
+                        b:{n:"Tyrell Fortune",o:215,w:18,l:3,fin:10,age:35,reach:75,rank:.55}},
+  {div:"Welterweight", a:{n:"Islam Dulatov",o:-715,w:12,l:1,fin:11,age:27,reach:75,rank:.2},
+                        b:{n:"Wellington Turman",o:510,w:18,l:8,fin:12,age:30,reach:72,rank:.1}},
+  {div:"Lightweight", a:{n:"Magomed Zaynukov",o:-400,w:8,l:0,fin:5,age:26,reach:71,rank:.1,undef:1},
+                        b:{n:"Damian Rzepecki",o:310,w:10,l:0,fin:8,age:26,reach:74,rank:.1,undef:1}},
+  {div:"Lightweight", a:{n:"Axel Sola",o:-182,w:11,l:1,fin:7,age:28,reach:74,rank:.1},
+                        b:{n:"Ismael Bonfim",o:145,w:20,l:6,fin:13,age:30,reach:71,rank:.1}},
+  {div:"Heavyweight (Prelim)", a:{n:"Valter Walker",o:-200,w:15,l:1,fin:12,age:28,reach:78,rank:.3},
+                        b:{n:"Thomas Petersen",o:160,w:11,l:4,fin:8,age:31,reach:74,rank:.1}},
+  {div:"Welterweight (Prelim)", a:{n:"Sam Patterson",o:-420,w:14,l:3,fin:11,age:30,reach:78,rank:.1},
+                        b:{n:"Santiago Ponzinibbio",o:320,w:30,l:9,fin:24,age:39,reach:73,rank:.1}},
+  {div:"Lightweight (Prelim)", a:{n:"Nurullo Aliev",o:-159,w:11,l:0,fin:4,age:25,reach:72,rank:.1,undef:1},
+                        b:{n:"Mike Davis",o:128,w:12,l:3,fin:9,age:33,reach:72,rank:.1}},
 ];
 
 let SRC = "in-browser baseline (approx. stats)";
@@ -513,7 +515,7 @@ if (window.CARD && Array.isArray(window.CARD.fights) && window.CARD.fights.lengt
 }
 
 // Card conditions. heat 0-1: outdoor/hot-humid cards tax older, high-mileage fighters.
-let ENV = { label:"Indoor · climate-controlled (Paycom Center, Oklahoma City)", heat:0 };
+let ENV = { label:"Indoor · climate-controlled (Etihad Arena, Abu Dhabi)", heat:0 };
 if (window.CARD && window.CARD.env) ENV = window.CARD.env;
 
 const toProb=o=>o<0?(-o)/(-o+100):100/(o+100);
