@@ -29,6 +29,8 @@ window.TRACK = {
     {"date": "2026-07-18", "event": "UFC Fight Night: Du Plessis vs. Usman", "fighter": "Austin Bashi", "div": "Featherweight (Prelim)", "odds": -110, "modelP": 0.58, "mktP": 0.5, "edge": 0.08, "kind": "value pick + parlay leg", "result": "loss", "clv": 12.3},
     {"date": "2026-07-19", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Nurullo Aliev", "div": "Lightweight (Prelim)", "odds": -159, "modelP": 0.636, "mktP": 0.583, "edge": 0.053, "kind": "value pick + parlay leg", "result": null, "clv": null},
     {"date": "2026-07-19", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Ismael Bonfim", "div": "Lightweight", "odds": 145, "modelP": 0.481, "mktP": 0.387, "edge": 0.094, "kind": "parlay leg", "result": null, "clv": null},
-    {"date": "2026-07-19", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Ramazan Temirov", "div": "Flyweight", "odds": -105, "modelP": 0.507, "mktP": 0.486, "edge": 0.021, "kind": "parlay leg", "result": null, "clv": null}
+    {"date": "2026-07-19", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Ramazan Temirov", "div": "Flyweight", "odds": -105, "modelP": 0.507, "mktP": 0.486, "edge": 0.021, "kind": "parlay leg", "result": null, "clv": null},
+    {"date": "2026-07-20", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Tyrell Fortune", "div": "Heavyweight", "odds": 215, "modelP": 0.424, "mktP": 0.302, "edge": 0.122, "kind": "parlay leg", "result": null, "clv": null},
+    {"date": "2026-07-20", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Thomas Petersen", "div": "Heavyweight (Prelim)", "odds": 170, "modelP": 0.406, "mktP": 0.35, "edge": 0.056, "kind": "parlay leg", "result": null, "clv": null}
   ]
 };
