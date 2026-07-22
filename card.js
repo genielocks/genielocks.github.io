@@ -247,3 +247,5 @@ window.CARD.photos = {
 "Nurullo Aliev": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-11/ALIEV_NURULLO_L_11-22.png?itok=hieYl7aP",
 "Mike Davis": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-07/DAVIS_MIKE_R_07-12.png?itok=rPmvuzCc"
 };
+
+window.CARD.kalshi = {"Magomed Ankalaev": 83, "Bogdan Guskov": 19, "Steve Erceg": 50, "Ramazan Temirov": 52, "Islam Dulatov": 88, "Wellington Turman": 12, "Magomed Zaynukov": 74, "Damian Rzepecki": 27, "Rizvan Kuniev": 74, "Tyrell Fortune": 27, "Valter Walker": 63, "Thomas Petersen": 38, "Sam Patterson": 78, "Santiago Ponzinibbio": 22, "Axel Sola": 64, "Ismael Bonfim": 37, "Nurullo Aliev": 66, "Mike Davis": 34};
