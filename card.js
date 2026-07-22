@@ -1,12 +1,12 @@
 window.CARD = {
   "event": "UFC Fight Night \u00b7 Ankalaev vs Guskov \u00b7 Etihad Arena, Abu Dhabi \u00b7 Jul 25, 2026",
-  "source": "trained Python model (8/10 bouts; baseline fallback for 2)",
+  "source": "trained Python model (8/9 bouts; baseline fallback for 1)",
   "fights": [
     {
       "div": "Light Heavyweight (Main Event)",
       "a": {
         "n": "Magomed Ankalaev",
-        "o": -530,
+        "o": -550,
         "w": 21,
         "l": 2,
         "fin": 11,
@@ -16,7 +16,7 @@ window.CARD = {
       },
       "b": {
         "n": "Bogdan Guskov",
-        "o": 400,
+        "o": 420,
         "w": 18,
         "l": 3,
         "fin": 17,
@@ -30,7 +30,7 @@ window.CARD = {
       "div": "Flyweight",
       "a": {
         "n": "Steve Erceg",
-        "o": -118,
+        "o": -108,
         "w": 14,
         "l": 4,
         "fin": 6,
@@ -40,7 +40,7 @@ window.CARD = {
       },
       "b": {
         "n": "Ramazan Temirov",
-        "o": -105,
+        "o": -112,
         "w": 19,
         "l": 2,
         "fin": 11,
@@ -54,7 +54,7 @@ window.CARD = {
       "div": "Welterweight",
       "a": {
         "n": "Islam Dulatov",
-        "o": -715,
+        "o": -900,
         "w": 12,
         "l": 1,
         "fin": 11,
@@ -64,7 +64,7 @@ window.CARD = {
       },
       "b": {
         "n": "Wellington Turman",
-        "o": 480,
+        "o": 600,
         "w": 18,
         "l": 8,
         "fin": 12,
@@ -78,7 +78,7 @@ window.CARD = {
       "div": "Lightweight",
       "a": {
         "n": "Magomed Zaynukov",
-        "o": -360,
+        "o": -325,
         "w": 8,
         "l": 0,
         "fin": 5,
@@ -89,7 +89,7 @@ window.CARD = {
       },
       "b": {
         "n": "Damian Rzepecki",
-        "o": 265,
+        "o": 260,
         "w": 10,
         "l": 0,
         "fin": 8,
@@ -103,7 +103,7 @@ window.CARD = {
       "div": "Heavyweight",
       "a": {
         "n": "Rizvan Kuniev",
-        "o": -278,
+        "o": -305,
         "w": 14,
         "l": 3,
         "fin": 9,
@@ -113,7 +113,7 @@ window.CARD = {
       },
       "b": {
         "n": "Tyrell Fortune",
-        "o": 215,
+        "o": 245,
         "w": 18,
         "l": 3,
         "fin": 10,
@@ -124,33 +124,10 @@ window.CARD = {
       "modelA": 0.5762
     },
     {
-      "div": "Welterweight",
-      "a": {
-        "n": "Abubakar Vagaev",
-        "o": -225,
-        "w": 24,
-        "l": 4,
-        "fin": 14,
-        "age": 33,
-        "reach": 75,
-        "rank": 0.1
-      },
-      "b": {
-        "n": "Saygid Izagakhmaev",
-        "o": 210,
-        "w": 22,
-        "l": 3,
-        "fin": 16,
-        "age": 31,
-        "reach": 73,
-        "rank": 0.1
-      }
-    },
-    {
       "div": "Heavyweight (Prelim)",
       "a": {
         "n": "Valter Walker",
-        "o": -220,
+        "o": -170,
         "w": 15,
         "l": 1,
         "fin": 12,
@@ -160,7 +137,7 @@ window.CARD = {
       },
       "b": {
         "n": "Thomas Petersen",
-        "o": 170,
+        "o": 140,
         "w": 11,
         "l": 4,
         "fin": 8,
@@ -174,7 +151,7 @@ window.CARD = {
       "div": "Welterweight (Prelim)",
       "a": {
         "n": "Sam Patterson",
-        "o": -420,
+        "o": -410,
         "w": 14,
         "l": 3,
         "fin": 11,
@@ -184,7 +161,7 @@ window.CARD = {
       },
       "b": {
         "n": "Santiago Ponzinibbio",
-        "o": 310,
+        "o": 320,
         "w": 30,
         "l": 9,
         "fin": 24,
@@ -198,7 +175,7 @@ window.CARD = {
       "div": "Lightweight (Prelim)",
       "a": {
         "n": "Axel Sola",
-        "o": -182,
+        "o": -185,
         "w": 11,
         "l": 1,
         "fin": 7,
@@ -208,7 +185,7 @@ window.CARD = {
       },
       "b": {
         "n": "Ismael Bonfim",
-        "o": 145,
+        "o": 155,
         "w": 20,
         "l": 6,
         "fin": 13,
@@ -222,7 +199,7 @@ window.CARD = {
       "div": "Lightweight (Prelim)",
       "a": {
         "n": "Nurullo Aliev",
-        "o": -195,
+        "o": -220,
         "w": 11,
         "l": 0,
         "fin": 4,
@@ -233,7 +210,7 @@ window.CARD = {
       },
       "b": {
         "n": "Mike Davis",
-        "o": 155,
+        "o": 180,
         "w": 12,
         "l": 3,
         "fin": 9,
@@ -244,11 +221,29 @@ window.CARD = {
       "modelA": 0.6362
     }
   ],
-  "updated": 1784600069112,
+  "updated": 1784682597739,
   "env": {
     "label": "Indoor \u00b7 climate-controlled (Etihad Arena, Abu Dhabi)",
     "heat": 0
   }
 };
-window.CARD.photos = {"Magomed Ankalaev":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2024-10/ANKALAEV_MAGOMED_L_10-26.png","Bogdan Guskov":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-12/GUSKOV_BOGDAN_R_12-06.png","Steve Erceg":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-08/ERCEG_STEVE_L_08-09.png","Ramazan Temirov":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-02/TEMIROV_RAMAZAN_R_03-01.png","Islam Dulatov":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-07/DULATOV_ISLAM_R_07-19.png","Wellington Turman":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2023-06/TURMAN_WELLINGTON_R_06-24.png","Magomed Zaynukov":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-10/ZAYNUKOV_MAGOMED_R_10-07.png","Rizvan Kuniev":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-06/KUNIEV_RIZVAN_R_06-21.png","Tyrell Fortune":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-03/FORTUNE_TYRELL_R_03-28.png","Saygid Izagakhmaev":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-11/IZAGAKHMAEV_SAYGID_R_11-22.png","Valter Walker":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-10/WALKER_VALTER_L_10-25.png","Thomas Petersen":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-04/PETERSEN_THOMAS_R_04-04.png","Sam Patterson":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-03/PATTERSON_SAM_R_03-21.png","Santiago Ponzinibbio":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-05/PONZINIBBIO_SANTIAGO_L_05-03.png","Axel Sola":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-03/SOLA_AXEL_R_03-21.png","Ismael Bonfim":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-02/BONFIM_ISMAEL_L_02-15.png","Nurullo Aliev":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-11/ALIEV_NURULLO_L_11-22.png","Mike Davis":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-07/DAVIS_MIKE_R_07-12.png"};
-window.CARD.kalshi = {"Magomed Ankalaev":83,"Bogdan Guskov":19,"Steve Erceg":50,"Ramazan Temirov":52,"Islam Dulatov":88,"Wellington Turman":13,"Magomed Zaynukov":76,"Damian Rzepecki":26,"Rizvan Kuniev":72,"Tyrell Fortune":30,"Abubakar Vagaev":70,"Saygid Izagakhmaev":33,"Valter Walker":64,"Thomas Petersen":37,"Sam Patterson":78,"Santiago Ponzinibbio":23,"Axel Sola":64,"Ismael Bonfim":37,"Nurullo Aliev":66,"Mike Davis":35};
+
+window.CARD.photos = {
+"Magomed Ankalaev": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2024-10/ANKALAEV_MAGOMED_L_10-26.png?itok=wQcWmzOW",
+"Bogdan Guskov": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-12/GUSKOV_BOGDAN_R_12-06.png?itok=Fo67VZtH",
+"Steve Erceg": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-08/ERCEG_STEVE_L_08-09.png?itok=sR4wmnK-",
+"Ramazan Temirov": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-02/TEMIROV_RAMAZAN_R_03-01.png?itok=D1-FIeCS",
+"Islam Dulatov": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-07/DULATOV_ISLAM_R_07-19.png?itok=I-VdUGuM",
+"Wellington Turman": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2023-06/TURMAN_WELLINGTON_R_06-24.png?itok=Bz9yXqUF",
+"Magomed Zaynukov": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-10/ZAYNUKOV_MAGOMED_R_10-07.png?itok=PpLzcRRK",
+"Rizvan Kuniev": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-06/KUNIEV_RIZVAN_R_06-21.png?itok=Rlqf6h4M",
+"Tyrell Fortune": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-03/FORTUNE_TYRELL_R_03-28.png?itok=4HR5PQ3I",
+"Valter Walker": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-10/WALKER_VALTER_L_10-25.png?itok=vc7nMoT2",
+"Thomas Petersen": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-04/PETERSEN_THOMAS_R_04-04.png?itok=jkrAJNjc",
+"Sam Patterson": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-03/PATTERSON_SAM_R_03-21.png?itok=F9UPSMmY",
+"Santiago Ponzinibbio": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-05/PONZINIBBIO_SANTIAGO_L_05-03.png?itok=11sMx2MX",
+"Axel Sola": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2026-03/SOLA_AXEL_R_03-21.png?itok=LCpoaB7t",
+"Ismael Bonfim": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-02/BONFIM_ISMAEL_L_02-15.png?itok=qJaFZotr",
+"Nurullo Aliev": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-11/ALIEV_NURULLO_L_11-22.png?itok=hieYl7aP",
+"Mike Davis": "https://ufc.com/images/styles/athlete_detail_stance_thumbnail_full_body/s3/2025-07/DAVIS_MIKE_R_07-12.png?itok=rPmvuzCc"
+};
