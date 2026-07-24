@@ -56,11 +56,11 @@
   .lp-nav{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:clamp(36px,7vw,76px)}
   .lp-brand{display:flex;align-items:center;gap:12px;font-family:var(--anton);font-size:20px;letter-spacing:.06em;color:var(--cream)}
   .lp-brand .g{font-size:24px;filter:drop-shadow(0 0 8px rgba(230,185,77,.6))}
-  .lp-hero{display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,64px);align-items:center}
-  .lp-left{flex:1 1 380px;min-width:300px}
-  .lp-eyebrow{font-family:var(--osw);font-size:12px;letter-spacing:.34em;color:var(--muted);text-transform:uppercase;margin-bottom:16px}
-  .lp-h{margin:0;font-family:var(--anton);font-weight:400;line-height:.86;font-size:clamp(60px,9vw,118px);color:var(--cream)}
-  .lp-pitch{margin:26px 0 0;font-family:var(--barlow);font-size:17px;line-height:1.55;color:var(--body);max-width:460px}
+  .lp-hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:clamp(10px,3vw,34px) 0 0}
+  .lp-left{display:flex;flex-direction:column;align-items:center;max-width:840px;margin:0 auto}
+  .lp-eyebrow{font-family:var(--osw);font-size:12px;letter-spacing:.34em;color:var(--muted);text-transform:uppercase;margin-bottom:20px}
+  .lp-h{margin:0;font-family:var(--anton);font-weight:400;line-height:.86;font-size:clamp(64px,10vw,132px);color:var(--cream)}
+  .lp-pitch{margin:32px 0 0;font-family:var(--barlow);font-size:clamp(17px,1.6vw,19px);line-height:1.62;color:var(--body);max-width:680px}
   .lp-pitch b{color:var(--gold)}
   .lp-pitch strong{color:var(--cream);font-weight:700}
   .lp-panel{flex:1 1 320px;min-width:280px;border:1px solid rgba(230,185,77,.25);border-radius:10px;background:linear-gradient(180deg,rgba(26,18,8,.6),rgba(8,6,3,.4));padding:30px;backdrop-filter:blur(4px)}
@@ -237,7 +237,7 @@
   .lk{font-family:var(--barlow);font-size:11px;color:#5fe6cf;margin-top:2px}
   .klive{display:inline-flex;align-items:center;gap:5px;font-family:var(--osw);font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:#46c98a;border:1px solid rgba(70,201,138,.45);border-radius:999px;padding:2px 8px;margin-right:7px;vertical-align:middle}
   .kdot{width:6px;height:6px;border-radius:50%;background:#46c98a;box-shadow:0 0 8px #46c98a;animation:pg-flicker 2s infinite}
-  .lp-kalshi{margin:18px 0 0;font-family:var(--barlow);font-size:14px;line-height:1.55;color:var(--body);max-width:470px}
+  .lp-kalshi{margin:22px 0 0;font-family:var(--barlow);font-size:14.5px;line-height:1.6;color:var(--body);max-width:620px}
   .lp-kalshi b{color:#5fe6cf}
   .lp-kalshi i{color:var(--cream);font-style:normal}
 
@@ -354,15 +354,6 @@
         <p class="lp-pitch">The Genie has studied <b>every UFC fight since 1994</b> &mdash; who won, how, and the stats behind it &mdash; and learned the patterns that actually predict winners. It builds its <b>own honest win probability</b> for every fighter, then stacks it against the betting odds. <strong>That gap is your edge.</strong></p>
         <div class="lp-kalshi"><span class="klive"><span class="kdot"></span>Live</span> Now wired to <b>Kalshi</b> &mdash; we read the real exchange price and show your <i>true edge after fees</i>, so the number you see is the number you can actually bet.</div>
         <button class="cta" onclick="enterApp()" style="display:inline-flex;align-items:center;gap:10px">Enter the Genie <span style="font-size:18px">&rarr;</span></button>
-      </div>
-      <div class="lp-panel">
-        <div class="lp-ptop"><span class="a">Top Bet Edge</span><span class="b">Example</span></div>
-        <div class="edge-fig"><span>+14.2</span><span class="pct">%</span></div>
-        <div class="lp-cap">Just an example &mdash; &ldquo;edge&rdquo; is how much better the Genie rates a fighter's chances than the betting odds do.</div>
-        <div class="lp-rows">
-          <div class="lp-row gold"><span class="l">Top Value Pick</span><span class="r">&#11088; ranked by edge</span></div>
-          <div class="lp-row red"><span class="l">Auto-Built Parlay</span><span class="r">&#129501; best value</span></div>
-        </div>
       </div>
     </div>
     <div class="lp-roster">
