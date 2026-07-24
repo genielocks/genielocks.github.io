@@ -229,24 +229,24 @@ window.CARD = {
 };
 
 window.CARD.photos = {
-"Magomed Ankalaev": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/ANKALAEV_MAGOMED_L_07-25.png",
-"Bogdan Guskov": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-12/GUSKOV_BOGDAN_R_12-06.png",
-"Steve Erceg": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/ERCEG_STEVE_L_07-25.png",
-"Ramazan Temirov": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/TEMIROV_RAMAZAN_R_07-25.png",
-"Islam Dulatov": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/DULATOV_ISLAM_L_07-25.png",
-"Wellington Turman": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/TURMAN_WELLINGTON_R_07-25.png",
-"Magomed Zaynukov": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/ZAYNUKOV_MAGOMED_L_07-25.png",
-"Damian Rzepecki": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/RZEPECKI_DAMIAN_R_07-25.png",
-"Rizvan Kuniev": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-06/KUNIEV_RIZVAN_R_06-21.png",
-"Tyrell Fortune": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/FORTUNE_TYRELL_R_07-25.png",
-"Valter Walker": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/WALKER_VALTER_L_07-25.png",
-"Thomas Petersen": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/PETERSEN_THOMAS_R_07-25.png",
-"Sam Patterson": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/PATTERSON_SAM_R_07-25.png",
-"Santiago Ponzinibbio": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/PONZINIBBIO_SANTIAGO_L_07-25.png",
-"Axel Sola": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/SOLA_AXEL_R_07-25.png",
-"Ismael Bonfim": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/BONFIM_ISMAEL_L_07-25.png",
-"Nurullo Aliev": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/ALIEV_NURULLO_L_07-25.png",
-"Mike Davis": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/DAVIS_MIKE_R_07-25.png"
+"Magomed Ankalaev": "https://www.ufc.com/images/styles/event_results_athlete_headshot/s3/2026-07/ANKALAEV_MAGOMED_07-25.png",
+"Bogdan Guskov": "https://www.ufc.com/images/styles/event_results_athlete_headshot/s3/2025-12/GUSKOV_BOGDAN_12-06.png",
+"Steve Erceg": "https://www.ufc.com/images/styles/event_results_athlete_headshot/s3/2026-07/ERCEG_STEVE_07-25.png",
+"Ramazan Temirov": "https://www.ufc.com/images/styles/event_results_athlete_headshot/s3/2026-07/TEMIROV_RAMAZAN_07-25.png",
+"Islam Dulatov": "https://www.ufc.com/images/styles/event_results_athlete_headshot/s3/2026-07/DULATOV_ISLAM_07-25.png",
+"Wellington Turman": "https://www.ufc.com/images/styles/event_results_athlete_headshot/s3/2026-07/TURMAN_WELLINGTON_07-25.png",
+"Magomed Zaynukov": "https://www.ufc.com/images/styles/event_results_athlete_headshot/s3/2026-07/ZAYNUKOV_MAGOMED_07-25.png",
+"Damian Rzepecki": "https://www.ufc.com/images/styles/event_results_athlete_headshot/s3/2026-07/RZEPECKI_DAMIAN_07-25.png",
+"Rizvan Kuniev": "https://www.ufc.com/images/styles/event_results_athlete_headshot/s3/2025-06/KUNIEV_RIZVAN_06-21.png",
+"Tyrell Fortune": "https://www.ufc.com/images/styles/event_results_athlete_headshot/s3/2026-07/FORTUNE_TYRELL_07-25.png",
+"Valter Walker": "https://www.ufc.com/images/styles/event_results_athlete_headshot/s3/2026-07/WALKER_VALTER_07-25.png",
+"Thomas Petersen": "https://www.ufc.com/images/styles/event_results_athlete_headshot/s3/2026-07/PETERSEN_THOMAS_07-25.png",
+"Sam Patterson": "https://www.ufc.com/images/styles/event_results_athlete_headshot/s3/2026-07/PATTERSON_SAM_07-25.png",
+"Santiago Ponzinibbio": "https://www.ufc.com/images/styles/event_results_athlete_headshot/s3/2026-07/PONZINIBBIO_SANTIAGO_07-25.png",
+"Axel Sola": "https://www.ufc.com/images/styles/event_results_athlete_headshot/s3/2026-07/SOLA_AXEL_07-25.png",
+"Ismael Bonfim": "https://www.ufc.com/images/styles/event_results_athlete_headshot/s3/2026-07/BONFIM_ISMAEL_07-25.png",
+"Nurullo Aliev": "https://www.ufc.com/images/styles/event_results_athlete_headshot/s3/2026-07/ALIEV_NURULLO_07-25.png",
+"Mike Davis": "https://www.ufc.com/images/styles/event_results_athlete_headshot/s3/2026-07/DAVIS_MIKE_07-25.png"
 };
 
 window.CARD.kalshi = {
