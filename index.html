@@ -220,6 +220,20 @@
   .kalshi-block .kalshi-row{margin-top:0}
   .kalshi-plain{font-family:var(--barlow);font-size:12.5px;line-height:1.55;color:var(--muted);margin-top:9px;padding:0 2px}
   .kalshi-plain b{color:var(--cream)}
+  .deal-h{font-family:var(--osw);font-size:12px;letter-spacing:.14em;color:var(--muted);margin:18px 0 2px}
+  .deal-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 14px;border-radius:8px;margin-top:8px;font-family:var(--osw);font-size:14px;border:1px solid rgba(230,185,77,.18)}
+  .deal-row.good{border-color:rgba(70,201,138,.5);background:rgba(70,201,138,.08)}
+  .deal-row.bad{border-color:rgba(224,90,90,.45);background:rgba(224,90,90,.07)}
+  .deal-row.mid{background:rgba(26,18,8,.4)}
+  .deal-row .dl{color:var(--cream);letter-spacing:.04em}
+  .deal-row .dl small{display:block;font-family:var(--barlow);font-size:11.5px;color:var(--muted);letter-spacing:.02em;margin-top:2px}
+  .chip{font-family:var(--osw);font-weight:700;font-size:11.5px;letter-spacing:.12em;padding:5px 11px;border-radius:999px;white-space:nowrap}
+  .chip.good{background:rgba(70,201,138,.18);color:#4fe6a0}
+  .chip.bad{background:rgba(224,90,90,.16);color:#ff8080}
+  .chip.mid{background:rgba(230,185,77,.14);color:#e6b94d}
+  .deal-take{font-family:var(--barlow);font-size:13px;line-height:1.55;color:var(--body);margin-top:10px;padding:0 2px}
+  .deal-take b{color:#4fe6a0}
+  .ps-n.pos{color:#4fe6a0}.ps-n.neg{color:#ff8080}
   .klive{display:inline-flex;align-items:center;gap:5px;font-family:var(--osw);font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:#46c98a;border:1px solid rgba(70,201,138,.45);border-radius:999px;padding:2px 8px;margin-right:7px;vertical-align:middle}
   .kdot{width:6px;height:6px;border-radius:50%;background:#46c98a;box-shadow:0 0 8px #46c98a;animation:pg-flicker 2s infinite}
   .lp-kalshi{margin:18px 0 0;font-family:var(--barlow);font-size:14px;line-height:1.55;color:var(--body);max-width:470px}
@@ -600,20 +614,36 @@ function pickCard(p){
   const e=(p.edge>=0?'+':'')+(p.edge*100).toFixed(1)+'%';
   const v=valueVerdict(p.edge);
   const k=kalshiInfo(p.fighter,p.p);
+  const last=p.fighter.split(' ').slice(-1)[0];
+  // Same bet, two stores: grade each place by ITS price vs the Genie's number.
+  const bd = p.edge>=VALUE_MIN?['good','GOOD DEAL']:(p.edge>0?['mid','SMALL EDGE']:['bad','NO VALUE']);
+  const kd = k ? (k.net>0.01?['good','GOOD DEAL']:(k.net>-0.005?['mid','ABOUT FAIR']:['bad','OVERPRICED'])) : null;
+  let take='';
+  if(k){
+    if(bd[0]==='good'&&kd[0]==='bad') take=`<div class="deal-take">&#128073; <b>Bet this one at the sportsbook.</b> Kalshi is charging ${k.cents}&cent; for a fighter the Genie values at ~${Math.round(p.p*100)}&cent; &mdash; same fighter, worse price there. Green = you're paying less than the Genie thinks it's worth. Red = you'd be overpaying.</div>`;
+    else if(kd[0]==='good'&&bd[0]!=='good') take=`<div class="deal-take">&#128073; <b>Kalshi has the better price on this one.</b> Green = you're paying less than the Genie thinks it's worth. Red = you'd be overpaying.</div>`;
+    else if(bd[0]==='good'&&kd[0]==='good') take=`<div class="deal-take">&#128073; <b>Both prices look good</b> &mdash; the sportsbook edge is ${e}, and Kalshi still clears its fee. Green = paying less than the Genie's number.</div>`;
+    else take=`<div class="deal-take">&#128073; No standout price today &mdash; green means you'd be paying less than the Genie's number, red means overpaying.</div>`;
+  }
+  const deals = `<div class="deal-h">WHERE'S THE DEAL? &middot; SAME BET, TWO STORES</div>
+    <div class="deal-row ${bd[0]}"><span class="dl">Sportsbook ${fmtO(p.odds)}<small>books charge ~${pc(p.mkt)} &middot; Genie's fair value ${pc(p.p)}</small></span><span class="chip ${bd[0]}">${bd[1]}</span></div>
+    ${k?`<div class="deal-row ${kd[0]}"><span class="dl">Kalshi ${k.cents}&cent;<small>Kalshi charges ${k.cents}&cent; &middot; Genie's fair value ~${Math.round(p.p*100)}&cent;</small></span><span class="chip ${kd[0]}">${kd[1]}</span></div>`:''}
+    ${take}`;
   const kb = k
-    ? `<div class="kalshi-block"><div class="kalshi-row"><span class="kl"><span class="klive"><span class="kdot"></span>Live</span>On Kalshi: <b>${k.cents}&cent;</b></span><span class="ke ${k.net>0.01?'pos':(k.net>-0.005?'mid':'neg')}">${(k.net>=0?'+':'')+(k.net*100).toFixed(1)}% net edge<span class="kf"> after fee</span></span></div><div class="kalshi-plain">In plain English: <b>${k.cents}&cent;</b> = the market giving ${p.fighter.split(' ').slice(-1)[0]} a ~${k.cents}% chance to win. The Genie says <b>${pc(p.p)}</b> &mdash; so the contract looks ${k.net>0.01?'underpriced':'about fair'}, and that gap (minus Kalshi's tiny fee) is your edge.</div></div>`
+    ? `<div class="kalshi-block"><div class="kalshi-row"><span class="kl"><span class="klive"><span class="kdot"></span>Live</span>On Kalshi: <b>${k.cents}&cent;</b></span><span class="ke ${k.net>0.01?'pos':(k.net>-0.005?'mid':'neg')}">${(k.net>=0?'+':'')+(k.net*100).toFixed(1)}% net edge<span class="kf"> after fee</span></span></div><div class="kalshi-plain">Heads up: Kalshi's price isn't a second opinion on who wins &mdash; it's just another store selling the same bet. <b>${k.cents}&cent;</b> is what Kalshi charges for ${last}; the Genie's fair value is <b>${pc(p.p)}</b>. So on Kalshi this contract looks ${k.net>0.01?'<b>underpriced &mdash; a bargain</b>':(k.net>-0.005?'about fair':'overpriced &mdash; skip Kalshi and take the sportsbook price instead')}.</div></div>`
     : `<div class="kalshi-row muted">Kalshi price not synced yet &mdash; it'll appear here once Kalshi lists this fight (prices refresh nightly).</div>`;
   return `<div class="pick-top"><div class="fimg pick-big" data-name="${p.fighter}">${initials(p.fighter)}</div>
     <div><div class="pick-name">${p.fighter}</div><div class="pick-div">${p.div}</div><div class="pick-odds">${fmtO(p.odds)}</div></div></div>
     <div class="pick-stats">
-      <div><div class="ps-n">${pc(p.p)}</div><div class="ps-l">Genie</div></div>
-      <div><div class="ps-n">${pc(p.mkt)}</div><div class="ps-l">Market</div></div>
-      <div><div class="ps-n gold">${e}</div><div class="ps-l">Edge</div></div>
+      <div><div class="ps-n">${pc(p.p)}</div><div class="ps-l">Genie says</div></div>
+      <div><div class="ps-n">${pc(p.mkt)}</div><div class="ps-l">Sportsbooks say</div></div>
+      <div><div class="ps-n ${p.edge>0?'pos':'neg'}">${e}</div><div class="ps-l">Your edge</div></div>
     </div>
     <div class="pick-verdict ${v.k}">${v.t}</div>
+    ${deals}
     ${kb}
     <div class="pick-why">${p.why}</div>
-    <div class="pfine">Quick decoder: <b>Genie</b> = the model's own estimate of this fighter's chance to win (it never looks at the odds). <b>Market</b> = the chance the betting odds imply, with the bookmaker's fee stripped out. <b>Edge</b> = the gap between the two &mdash; the bigger it is, the bigger the potential bargain. Odds of ${fmtO(p.odds)} mean ${p.odds>0?`a $100 bet profits $${p.odds} if your fighter wins`:`you risk $${-p.odds} to profit $100`}. On <b>Kalshi</b> you buy a &ldquo;Yes&rdquo; contract priced in cents &mdash; 33&cent; means the market gives that fighter a 33% chance, and each contract pays $1 if they win. Single bets like this work on Kalshi; parlays don't. One more thing: because the Genie hunts for <i>underpriced</i> fighters, its picks lean underdog &mdash; expect them to lose more often than they win, with the bigger payouts meant to make up for it over time.</div>`;
+    <div class="pfine">Quick decoder: <b>Genie says</b> = the model's own estimate of this fighter's chance to win (it never looks at the odds). <b>Sportsbooks say</b> = the chance the betting odds imply, with the bookmaker's fee (the &ldquo;vig&rdquo;) stripped out. <b>Your edge</b> = the gap between the two &mdash; green means the books are selling this fighter cheaper than the Genie thinks they're worth. Odds of ${fmtO(p.odds)} mean ${p.odds>0?`a $100 bet profits $${p.odds} if your fighter wins`:`you risk $${-p.odds} to profit $100`}. On <b>Kalshi</b> you buy a &ldquo;Yes&rdquo; contract priced in cents &mdash; 33&cent; means it costs 33&cent; and pays $1 if your fighter wins. Single bets like this work on Kalshi; parlays don't. One more thing: because the Genie hunts for <i>underpriced</i> fighters, its picks lean underdog &mdash; expect them to lose more often than they win, with the bigger payouts meant to make up for it over time.</div>`;
 }
 
 /* ---- fighter photos: live Wikipedia lookup by name (with disambiguation),
