@@ -33,6 +33,7 @@ window.TRACK = {
     {"date": "2026-07-20", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Tyrell Fortune", "div": "Heavyweight", "odds": 215, "modelP": 0.424, "mktP": 0.302, "edge": 0.122, "kind": "parlay leg", "result": null, "clv": null},
     {"date": "2026-07-20", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Thomas Petersen", "div": "Heavyweight (Prelim)", "odds": 170, "modelP": 0.406, "mktP": 0.35, "edge": 0.056, "kind": "parlay leg", "result": null, "clv": null},
     {"date": "2026-07-21", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Mike Davis", "div": "Lightweight (Prelim)", "odds": 180, "modelP": 0.364, "mktP": 0.342, "edge": 0.022, "kind": "parlay leg", "result": null, "clv": null},
-    {"date": "2026-07-21", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Damian Rzepecki", "div": "Lightweight", "odds": 260, "modelP": 0.55, "mktP": 0.271, "edge": 0.279, "kind": "value pick", "result": null, "clv": null}
+    {"date": "2026-07-21", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Damian Rzepecki", "div": "Lightweight", "odds": 260, "modelP": 0.55, "mktP": 0.271, "edge": 0.279, "kind": "value pick", "result": null, "clv": null},
+    {"date": "2026-07-23", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Santiago Ponzinibbio", "div": "Welterweight (Prelim)", "odds": 320, "modelP": 0.5, "mktP": 0.229, "edge": 0.27, "kind": "Kalshi value pick (19¢, long shot — below 55% bar)", "result": null, "clv": null}
   ]
 };

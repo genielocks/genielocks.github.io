@@ -234,6 +234,7 @@
   .deal-take{font-family:var(--barlow);font-size:13px;line-height:1.55;color:var(--body);margin-top:10px;padding:0 2px}
   .deal-take b{color:#4fe6a0}
   .ps-n.pos{color:#4fe6a0}.ps-n.neg{color:#ff8080}
+  .lk{font-family:var(--barlow);font-size:11px;color:#5fe6cf;margin-top:2px}
   .klive{display:inline-flex;align-items:center;gap:5px;font-family:var(--osw);font-size:10px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:#46c98a;border:1px solid rgba(70,201,138,.45);border-radius:999px;padding:2px 8px;margin-right:7px;vertical-align:middle}
   .kdot{width:6px;height:6px;border-radius:50%;background:#46c98a;box-shadow:0 0 8px #46c98a;animation:pg-flicker 2s infinite}
   .lp-kalshi{margin:18px 0 0;font-family:var(--barlow);font-size:14px;line-height:1.55;color:var(--body);max-width:470px}
@@ -464,7 +465,7 @@
     <span class="livepill"><span class="livedot"></span><span id="livelabel3">FIGHT NIGHT</span></span>
   </div>
   <section class="section" style="padding-top:18px">
-    <div class="sec-eyebrow">&#10022; Sharpest Edge &#10022;</div>
+    <div class="sec-eyebrow">&#10022; Best Kalshi Trade &#10022;</div>
     <h2 class="sec-h2">TOP VALUE PICK</h2>
     <div class="meta" id="pick-event" style="text-align:center;margin-top:12px"></div>
     <div class="subnav"><a onclick="goParlay()">Parlay</a><span class="cur">Top Pick</span><a onclick="goRecord()">Track Record</a></div>
@@ -603,47 +604,68 @@ function reason(fight,win,lose,edge){
 }
 
 function legRow(p){
-  return `<div class="leg"><div class="fimg lthumb" data-name="${p.fighter}">${initials(p.fighter)}</div><div class="lmain"><div class="ln">${p.fighter}</div><div class="lp">${p.div}</div></div><div class="lo">${fmtO(p.odds)}</div></div>`;
+  const kc=(window.CARD&&window.CARD.kalshi)?window.CARD.kalshi[p.fighter]:null;
+  const kl=(typeof kc==='number')?`<div class="lk">${kc}&cent; on Kalshi</div>`:'';
+  return `<div class="leg"><div class="fimg lthumb" data-name="${p.fighter}">${initials(p.fighter)}</div><div class="lmain"><div class="ln">${p.fighter}</div><div class="lp">${p.div}</div>${kl}</div><div class="lo">${fmtO(p.odds)}</div></div>`;
+}
+// Analyze one SPECIFIC side of a fight (Kalshi-first selection needs both sides, not just
+// the sportsbook-value side that analyze() returns).
+function sideView(fight, isA){
+  const A=fight.a,B=fight.b;
+  const mA=toProb(A.o),mB=toProb(B.o),s=mA+mB;
+  const pA=modelProbA(fight);
+  const side=isA?A:B, other=isA?B:A, p=isA?pA:1-pA, mkt=(isA?mA:mB)/s, edge=p-mkt;
+  return {div:fight.div, fighter:side.n, odds:side.o, p, mkt, edge, why:reason(fight,side,other,edge)};
 }
 function faceoffCard(f){
   const A=f.a,B=f.b;
   const side=s=>`<div class="mefo-side"><div class="fimg mefo-big" data-name="${s.n}">${initials(s.n)}</div><div class="mefo-name">${s.n}</div><div class="mefo-odds">${fmtO(s.o)}</div></div>`;
   return `<div class="mefo-div">${f.div}</div><div class="mefo">${side(A)}<div class="mefo-vs">VS</div>${side(B)}</div>`;
 }
+function kalshiVerdict(net){
+  if(net<=0.005) return {k:'flat', t:"No bargain at this price &mdash; Kalshi is charging at least what the Genie thinks this fighter is worth. Skipping is a perfectly good trade."};
+  if(net>=EDGE_SKEPTIC) return {k:'warn', t:"The Genie strongly disagrees with Kalshi's price. Exciting &mdash; but a gap this big is just as likely the Genie being wrong as the market being wrong. Not a lock."};
+  return {k:'good', t:"Looks like a genuine bargain &mdash; this contract costs less than the Genie thinks it's worth, even after Kalshi's fee."};
+}
 function pickCard(p){
-  const e=(p.edge>=0?'+':'')+(p.edge*100).toFixed(1)+'%';
-  const v=valueVerdict(p.edge);
-  const k=kalshiInfo(p.fighter,p.p);
-  const last=p.fighter.split(' ').slice(-1)[0];
-  // Same bet, two stores: grade each place by ITS price vs the Genie's number.
-  const bd = p.edge>=VALUE_MIN?['good','GOOD DEAL']:(p.edge>0?['mid','SMALL EDGE']:['bad','NO VALUE']);
-  const kd = k ? (k.net>0.01?['good','GOOD DEAL']:(k.net>-0.005?['mid','ABOUT FAIR']:['bad','OVERPRICED'])) : null;
-  let take='';
-  if(k){
-    if(bd[0]==='good'&&kd[0]==='bad') take=`<div class="deal-take">&#128073; <b>Bet this one at the sportsbook.</b> Kalshi is charging ${k.cents}&cent; for a fighter the Genie values at ~${Math.round(p.p*100)}&cent; &mdash; same fighter, worse price there. Green = you're paying less than the Genie thinks it's worth. Red = you'd be overpaying.</div>`;
-    else if(kd[0]==='good'&&bd[0]!=='good') take=`<div class="deal-take">&#128073; <b>Kalshi has the better price on this one.</b> Green = you're paying less than the Genie thinks it's worth. Red = you'd be overpaying.</div>`;
-    else if(bd[0]==='good'&&kd[0]==='good') take=`<div class="deal-take">&#128073; <b>Both prices look good</b> &mdash; the sportsbook edge is ${e}, and Kalshi still clears its fee. Green = paying less than the Genie's number.</div>`;
-    else take=`<div class="deal-take">&#128073; No standout price today &mdash; green means you'd be paying less than the Genie's number, red means overpaying.</div>`;
+  const k=p.k||kalshiInfo(p.fighter,p.p);
+  const fair=Math.round(p.p*100);
+  if(!k){
+    // Kalshi hasn't listed this card yet — old sportsbook view.
+    const e=(p.edge>=0?'+':'')+(p.edge*100).toFixed(1)+'%';
+    const v=valueVerdict(p.edge);
+    return `<div class="pick-top"><div class="fimg pick-big" data-name="${p.fighter}">${initials(p.fighter)}</div>
+      <div><div class="pick-name">${p.fighter}</div><div class="pick-div">${p.div}</div><div class="pick-odds">${fmtO(p.odds)}</div></div></div>
+      <div class="pick-stats">
+        <div><div class="ps-n">${pc(p.p)}</div><div class="ps-l">Genie says</div></div>
+        <div><div class="ps-n">${pc(p.mkt)}</div><div class="ps-l">Books say</div></div>
+        <div><div class="ps-n ${p.edge>0?'pos':'neg'}">${e}</div><div class="ps-l">Edge</div></div>
+      </div>
+      <div class="pick-verdict ${v.k}">${v.t}</div>
+      <div class="kalshi-row muted">Kalshi price not synced yet &mdash; the Kalshi trade view appears once Kalshi lists this fight (prices refresh nightly).</div>
+      <div class="pick-why">${p.why}</div>`;
   }
-  const deals = `<div class="deal-h">WHERE'S THE DEAL? &middot; SAME BET, TWO STORES</div>
-    <div class="deal-row ${bd[0]}"><span class="dl">Sportsbook ${fmtO(p.odds)}<small>books charge ~${pc(p.mkt)} &middot; Genie's fair value ${pc(p.p)}</small></span><span class="chip ${bd[0]}">${bd[1]}</span></div>
-    ${k?`<div class="deal-row ${kd[0]}"><span class="dl">Kalshi ${k.cents}&cent;<small>Kalshi charges ${k.cents}&cent; &middot; Genie's fair value ~${Math.round(p.p*100)}&cent;</small></span><span class="chip ${kd[0]}">${kd[1]}</span></div>`:''}
-    ${take}`;
-  const kb = k
-    ? `<div class="kalshi-block"><div class="kalshi-row"><span class="kl"><span class="klive"><span class="kdot"></span>Live</span>On Kalshi: <b>${k.cents}&cent;</b></span><span class="ke ${k.net>0.01?'pos':(k.net>-0.005?'mid':'neg')}">${(k.net>=0?'+':'')+(k.net*100).toFixed(1)}% net edge<span class="kf"> after fee</span></span></div><div class="kalshi-plain">Heads up: Kalshi's price isn't a second opinion on who wins &mdash; it's just another store selling the same bet. <b>${k.cents}&cent;</b> is what Kalshi charges for ${last}; the Genie's fair value is <b>${pc(p.p)}</b>. So on Kalshi this contract looks ${k.net>0.01?'<b>underpriced &mdash; a bargain</b>':(k.net>-0.005?'about fair':'overpriced &mdash; skip Kalshi and take the sportsbook price instead')}.</div></div>`
-    : `<div class="kalshi-row muted">Kalshi price not synced yet &mdash; it'll appear here once Kalshi lists this fight (prices refresh nightly).</div>`;
+  const net=(k.net>=0?'+':'')+(k.net*100).toFixed(1)+'%';
+  const v=kalshiVerdict(k.net);
+  const kd = k.net>0.01?['good','GOOD PRICE &mdash; BUY ZONE']:(k.net>-0.005?['mid','ABOUT FAIR']:['bad','OVERPRICED &mdash; SKIP']);
+  const bd = p.edge>=VALUE_MIN?['good','GOOD DEAL']:(p.edge>0?['mid','SMALL EDGE']:['bad','NO VALUE']);
+  const below = p.belowBar
+    ? `<div class="pick-verdict warn">&#9888;&#65039; <b>Long-shot alert:</b> nothing on the board clears the Genie's confidence bar today (a 55%+ favorite at a bargain price). This is the <i>best-priced</i> trade available, but the Genie only gives ${p.fighter.split(' ').slice(-1)[0]} a <b>${pc(p.p)}</b> chance to actually win &mdash; value and &ldquo;likely winner&rdquo; are not the same thing. Expect it to lose more often than it wins. Small stakes, or sitting today out is a winning move too.</div>`
+    : '';
   return `<div class="pick-top"><div class="fimg pick-big" data-name="${p.fighter}">${initials(p.fighter)}</div>
-    <div><div class="pick-name">${p.fighter}</div><div class="pick-div">${p.div}</div><div class="pick-odds">${fmtO(p.odds)}</div></div></div>
+    <div><div class="pick-name">${p.fighter}</div><div class="pick-div">${p.div}</div><div class="pick-odds" style="color:#5fe6cf">${k.cents}&cent; on Kalshi</div></div></div>
     <div class="pick-stats">
-      <div><div class="ps-n">${pc(p.p)}</div><div class="ps-l">Genie says</div></div>
-      <div><div class="ps-n">${pc(p.mkt)}</div><div class="ps-l">Sportsbooks say</div></div>
-      <div><div class="ps-n ${p.edge>0?'pos':'neg'}">${e}</div><div class="ps-l">Your edge</div></div>
+      <div><div class="ps-n">${k.cents}&cent;</div><div class="ps-l">Kalshi charges</div></div>
+      <div><div class="ps-n">${fair}&cent;</div><div class="ps-l">Genie's fair value</div></div>
+      <div><div class="ps-n ${k.net>0?'pos':'neg'}">${net}</div><div class="ps-l">Net edge after fee</div></div>
     </div>
     <div class="pick-verdict ${v.k}">${v.t}</div>
-    ${deals}
-    ${kb}
+    ${below}
+    <div class="deal-h">THE TRADE, IN PLAIN ENGLISH</div>
+    <div class="deal-row ${kd[0]}"><span class="dl">Kalshi: buy &ldquo;${p.fighter}&rdquo; at ${k.cents}&cent;<small>pays $1 if he wins &middot; Genie's fair value ~${fair}&cent; &middot; green = paying less than it's worth</small></span><span class="chip ${kd[0]}">${kd[1]}</span></div>
+    <div class="deal-row ${bd[0]}"><span class="dl">Sportsbooks (reference): ${fmtO(p.odds)}<small>books charge ~${pc(p.mkt)} for the same fighter &mdash; shown for comparison only</small></span><span class="chip ${bd[0]}">${bd[1]}</span></div>
     <div class="pick-why">${p.why}</div>
-    <div class="pfine">Quick decoder: <b>Genie says</b> = the model's own estimate of this fighter's chance to win (it never looks at the odds). <b>Sportsbooks say</b> = the chance the betting odds imply, with the bookmaker's fee (the &ldquo;vig&rdquo;) stripped out. <b>Your edge</b> = the gap between the two &mdash; green means the books are selling this fighter cheaper than the Genie thinks they're worth. Odds of ${fmtO(p.odds)} mean ${p.odds>0?`a $100 bet profits $${p.odds} if your fighter wins`:`you risk $${-p.odds} to profit $100`}. On <b>Kalshi</b> you buy a &ldquo;Yes&rdquo; contract priced in cents &mdash; 33&cent; means it costs 33&cent; and pays $1 if your fighter wins. Single bets like this work on Kalshi; parlays don't. One more thing: because the Genie hunts for <i>underpriced</i> fighters, its picks lean underdog &mdash; expect them to lose more often than they win, with the bigger payouts meant to make up for it over time.</div>`;
+    <div class="pfine">Quick decoder: on Kalshi a &ldquo;Yes&rdquo; contract costs its price in cents and pays <b>$1</b> if your fighter wins &mdash; so <b>${k.cents}&cent;</b> literally means the market gives ${p.fighter.split(' ').slice(-1)[0]} a ~${k.cents}% chance. <b>Genie's fair value</b> is what the model &mdash; which never looks at prices &mdash; thinks the contract is really worth. <b>Net edge</b> = fair value minus price minus Kalshi's small fee: <span style="color:#4fe6a0">green means underpriced (buy zone)</span>, <span style="color:#ff8080">red means overpaying</span>. There's no vig on Kalshi &mdash; the price IS the probability &mdash; so any green after the fee is real edge if the Genie is right. Singles only: Kalshi has no parlays (see the Parlay page for the sportsbook-style stack). And because the Genie hunts <i>underpriced</i> contracts, its picks lean underdog &mdash; they'll lose more often than they win, with the payouts meant to make up for it over time.</div>`;
 }
 
 /* ---- fighter photos: live Wikipedia lookup by name (with disambiguation),
@@ -780,11 +802,23 @@ function renderHome(){
   const __eb=document.getElementById('lp-eyebrow'); if(__eb) __eb.textContent=(__parts[0]+(__city?' · '+__city:'')).toUpperCase();
   // main-event face-off (home)
   const __fo=document.getElementById('faceoff'); if(__fo && FIGHTS[0]) __fo.innerHTML=faceoffCard(FIGHTS[0]);
-  // top value pick = CONFIDENT value: the model must actually favor the fighter (55%+ to win)
-  // AND see positive edge vs the de-vigged market. Best edge among those. Falls back gracefully
-  // so the page never renders empty, but big-underdog "edges" no longer headline the card.
-  const __sorted=[...all].sort((a,b)=>b.edge-a.edge);
-  const __top=__sorted.find(p=>p.p>=0.55 && p.edge>0) || __sorted.find(p=>p.p>=0.55) || __sorted[0];
+  // KALSHI-FIRST top pick: this site is for Kalshi trading, so the headline pick is chosen
+  // by the LIVE Kalshi price — the Genie's fair value minus what Kalshi charges, minus the fee.
+  // Confident bar: the Genie must actually favor the fighter (55%+ to win) AND the trade must
+  // clear the fee. If nothing clears the bar, we show the single best-priced trade on the
+  // board with a loud long-shot warning (Joe's call: always show the best available).
+  let __top=null;
+  const __kAll=[];
+  FIGHTS.forEach(f=>{[true,false].forEach(isA=>{const sv=sideView(f,isA); const kk=kalshiInfo(sv.fighter,sv.p); if(kk){sv.k=kk; __kAll.push(sv);}});});
+  if(__kAll.length){
+    __kAll.sort((a,b)=>b.k.net-a.k.net);
+    __top=__kAll.find(p=>p.p>=0.55 && p.k.net>0) || Object.assign({},__kAll[0],{belowBar:true});
+  }
+  if(!__top){
+    // no Kalshi prices synced — fall back to the old sportsbook-edge logic
+    const __sorted=[...all].sort((a,b)=>b.edge-a.edge);
+    __top=__sorted.find(p=>p.p>=0.55 && p.edge>0) || __sorted.find(p=>p.p>=0.55) || __sorted[0];
+  }
   const __pk=document.getElementById('pick'); if(__pk && __top) __pk.innerHTML=pickCard(__top);
   loadFighterPhotos();
   document.getElementById('srcmeta').textContent = "Model source: "+SRC + (ENV.heat? "  ·  "+ENV.label : "");
