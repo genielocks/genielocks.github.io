@@ -16,7 +16,10 @@ window.TRACK = {
     "caveat": "Honest caveat: when asked to just pick winners, the Genie usually picks the favorite — and favorites win a lot anyway. So this number looks better than it really is, and it is NOT proof of an edge. It's here for transparency, not bragging. The live pick log above is the real test."
   },
   "picks": [
-    {"date": "2026-07-23", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Santiago Ponzinibbio", "div": "Welterweight (Prelim)", "odds": 320, "modelP": 0.5, "mktP": 0.229, "edge": 0.27, "kind": "Kalshi value pick (19¢, long shot — below 55% bar)", "result": null, "clv": null}
+    {"date": "2026-07-23", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Santiago Ponzinibbio", "div": "Welterweight (Prelim)", "odds": 320, "modelP": 0.5, "mktP": 0.229, "edge": 0.27, "kind": "Kalshi value pick (19¢, long shot — below 55% bar)", "result": null, "clv": null},
+    {"date": "2026-07-24", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Ismael Bonfim", "div": "Lightweight (Prelim)", "odds": 160, "modelP": 0.481, "mktP": 0.369, "edge": 0.112, "kind": "parlay leg", "result": null, "clv": null},
+    {"date": "2026-07-24", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Mike Davis", "div": "Lightweight (Prelim)", "odds": 190, "modelP": 0.364, "mktP": 0.331, "edge": 0.033, "kind": "parlay leg", "result": null, "clv": null},
+    {"date": "2026-07-24", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Ramazan Temirov", "div": "Flyweight", "odds": -108, "modelP": 0.507, "mktP": 0.496, "edge": 0.012, "kind": "parlay leg", "result": null, "clv": null}
   ],
   "archive": {
     "label": "Old era (sportsbook-edge logic, retired 2026-07-23) — kept for transparency, not counted above",
