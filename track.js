@@ -16,10 +16,14 @@ window.TRACK = {
     "caveat": "Honest caveat: when asked to just pick winners, the Genie usually picks the favorite — and favorites win a lot anyway. So this number looks better than it really is, and it is NOT proof of an edge. It's here for transparency, not bragging. The live pick log above is the real test."
   },
   "picks": [
-    {"date": "2026-07-23", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Santiago Ponzinibbio", "div": "Welterweight (Prelim)", "odds": 320, "modelP": 0.5, "mktP": 0.229, "edge": 0.27, "kind": "Kalshi value pick (19¢, long shot — below 55% bar)", "result": null, "clv": null},
-    {"date": "2026-07-24", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Ismael Bonfim", "div": "Lightweight (Prelim)", "odds": 160, "modelP": 0.481, "mktP": 0.369, "edge": 0.112, "kind": "parlay leg", "result": null, "clv": null},
-    {"date": "2026-07-24", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Mike Davis", "div": "Lightweight (Prelim)", "odds": 190, "modelP": 0.364, "mktP": 0.331, "edge": 0.033, "kind": "parlay leg", "result": null, "clv": null},
-    {"date": "2026-07-24", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Ramazan Temirov", "div": "Flyweight", "odds": -108, "modelP": 0.507, "mktP": 0.496, "edge": 0.012, "kind": "parlay leg", "result": null, "clv": null}
+    {"date": "2026-07-23", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Santiago Ponzinibbio", "div": "Welterweight (Prelim)", "odds": 320, "modelP": 0.5, "mktP": 0.229, "edge": 0.27, "kind": "Kalshi value pick (19¢, long shot — below 55% bar)", "result": "loss", "clv": -10.6},
+    {"date": "2026-07-24", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Ismael Bonfim", "div": "Lightweight (Prelim)", "odds": 160, "modelP": 0.481, "mktP": 0.369, "edge": 0.112, "kind": "parlay leg", "result": "loss", "clv": 0.0},
+    {"date": "2026-07-24", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Mike Davis", "div": "Lightweight (Prelim)", "odds": 190, "modelP": 0.364, "mktP": 0.331, "edge": 0.033, "kind": "parlay leg", "result": "loss", "clv": 0.0},
+    {"date": "2026-07-24", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Ramazan Temirov", "div": "Flyweight", "odds": -108, "modelP": 0.507, "mktP": 0.496, "edge": 0.012, "kind": "parlay leg", "result": "win", "clv": 0.0},
+    {"date": "2026-07-25", "event": "UFC Fight Night: Medic vs Rodriguez", "fighter": "Ludovit Klein", "div": "Lightweight", "odds": -193, "modelP": 0.733, "mktP": 0.638, "edge": 0.095, "kind": "value pick + parlay leg (sportsbook edge — Kalshi not yet listed)", "result": null, "clv": null},
+    {"date": "2026-07-25", "event": "UFC Fight Night: Medic vs Rodriguez", "fighter": "Dennis Buzukja", "div": "Featherweight (Prelim)", "odds": 185, "modelP": 0.489, "mktP": 0.338, "edge": 0.151, "kind": "parlay leg", "result": null, "clv": null},
+    {"date": "2026-07-25", "event": "UFC Fight Night: Medic vs Rodriguez", "fighter": "Jan Blachowicz", "div": "Light Heavyweight", "odds": 225, "modelP": 0.425, "mktP": 0.298, "edge": 0.127, "kind": "parlay leg", "result": null, "clv": null}
+
   ],
   "archive": {
     "label": "Old era (sportsbook-edge logic, retired 2026-07-23) — kept for transparency, not counted above",
@@ -40,13 +44,13 @@ window.TRACK = {
       {"date": "2026-07-18", "event": "UFC Fight Night: Du Plessis vs. Usman", "fighter": "Stewart Nicoll", "div": "Flyweight (Prelim)", "odds": 700, "modelP": 0.358, "mktP": 0.12, "edge": 0.238, "kind": "value pick + parlay leg", "result": "loss", "clv": 0.0},
       {"date": "2026-07-18", "event": "UFC Fight Night: Du Plessis vs. Usman", "fighter": "Jean-Paul Lebosnoyani", "div": "Welterweight (Prelim)", "odds": 175, "modelP": 0.518, "mktP": 0.349, "edge": 0.169, "kind": "parlay leg", "result": "win", "clv": 10.9},
       {"date": "2026-07-18", "event": "UFC Fight Night: Du Plessis vs. Usman", "fighter": "Austin Bashi", "div": "Featherweight (Prelim)", "odds": -110, "modelP": 0.58, "mktP": 0.5, "edge": 0.08, "kind": "value pick + parlay leg", "result": "loss", "clv": 12.3},
-      {"date": "2026-07-19", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Nurullo Aliev", "div": "Lightweight (Prelim)", "odds": -159, "modelP": 0.636, "mktP": 0.583, "edge": 0.053, "kind": "value pick + parlay leg", "result": null, "clv": null},
-      {"date": "2026-07-19", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Ismael Bonfim", "div": "Lightweight", "odds": 145, "modelP": 0.481, "mktP": 0.387, "edge": 0.094, "kind": "parlay leg", "result": null, "clv": null},
-      {"date": "2026-07-19", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Ramazan Temirov", "div": "Flyweight", "odds": -105, "modelP": 0.507, "mktP": 0.486, "edge": 0.021, "kind": "parlay leg", "result": null, "clv": null},
-      {"date": "2026-07-20", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Tyrell Fortune", "div": "Heavyweight", "odds": 215, "modelP": 0.424, "mktP": 0.302, "edge": 0.122, "kind": "parlay leg", "result": null, "clv": null},
-      {"date": "2026-07-20", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Thomas Petersen", "div": "Heavyweight (Prelim)", "odds": 170, "modelP": 0.406, "mktP": 0.35, "edge": 0.056, "kind": "parlay leg", "result": null, "clv": null},
-      {"date": "2026-07-21", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Mike Davis", "div": "Lightweight (Prelim)", "odds": 180, "modelP": 0.364, "mktP": 0.342, "edge": 0.022, "kind": "parlay leg", "result": null, "clv": null},
-      {"date": "2026-07-21", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Damian Rzepecki", "div": "Lightweight", "odds": 260, "modelP": 0.55, "mktP": 0.271, "edge": 0.279, "kind": "value pick", "result": null, "clv": null}
+      {"date": "2026-07-19", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Nurullo Aliev", "div": "Lightweight (Prelim)", "odds": -159, "modelP": 0.636, "mktP": 0.583, "edge": 0.053, "kind": "value pick + parlay leg", "result": "win", "clv": 13.5},
+      {"date": "2026-07-19", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Ismael Bonfim", "div": "Lightweight", "odds": 145, "modelP": 0.481, "mktP": 0.387, "edge": 0.094, "kind": "parlay leg", "result": "loss", "clv": -5.8},
+      {"date": "2026-07-19", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Ramazan Temirov", "div": "Flyweight", "odds": -105, "modelP": 0.507, "mktP": 0.486, "edge": 0.021, "kind": "parlay leg", "result": "win", "clv": 1.4},
+      {"date": "2026-07-20", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Tyrell Fortune", "div": "Heavyweight", "odds": 215, "modelP": 0.424, "mktP": 0.302, "edge": 0.122, "kind": "parlay leg", "result": "loss", "clv": -14.9},
+      {"date": "2026-07-20", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Thomas Petersen", "div": "Heavyweight (Prelim)", "odds": 170, "modelP": 0.406, "mktP": 0.35, "edge": 0.056, "kind": "parlay leg", "result": "loss", "clv": 11.6},
+      {"date": "2026-07-21", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Mike Davis", "div": "Lightweight (Prelim)", "odds": 180, "modelP": 0.364, "mktP": 0.342, "edge": 0.022, "kind": "parlay leg", "result": "loss", "clv": -3.4},
+      {"date": "2026-07-21", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Damian Rzepecki", "div": "Lightweight", "odds": 260, "modelP": 0.55, "mktP": 0.271, "edge": 0.279, "kind": "value pick", "result": "loss", "clv": 4.3}
     ]
   }
 };

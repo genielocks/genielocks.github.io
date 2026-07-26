@@ -1,254 +1,222 @@
 window.CARD = {
-  "event": "UFC Fight Night \u00b7 Ankalaev vs Guskov \u00b7 Etihad Arena, Abu Dhabi \u00b7 Jul 25, 2026",
-  "source": "trained Python model (8/10 bouts; baseline fallback for 2)",
+  "event": "UFC Fight Night \u00b7 Medic vs Rodriguez \u00b7 Belgrade Arena, Serbia \u00b7 Aug 1, 2026",
+  "source": "trained Python model (7/8 bouts; baseline fallback for 1)",
   "fights": [
     {
-      "div": "Light Heavyweight (Main Event)",
+      "div": "Welterweight (Main Event)",
       "a": {
-        "n": "Magomed Ankalaev",
-        "o": -535,
-        "w": 21,
-        "l": 2,
-        "fin": 11,
-        "age": 34,
-        "reach": 75,
-        "rank": 0.9
-      },
-      "b": {
-        "n": "Bogdan Guskov",
-        "o": 400,
-        "w": 18,
+        "n": "Uros Medic",
+        "o": -315,
+        "w": 13,
         "l": 3,
-        "fin": 17,
-        "age": 33,
-        "reach": 76,
-        "rank": 0.55
-      },
-      "modelA": 0.7929
-    },
-    {
-      "div": "Flyweight",
-      "a": {
-        "n": "Steve Erceg",
-        "o": -112,
-        "w": 14,
-        "l": 4,
-        "fin": 6,
-        "age": 30,
-        "reach": 68,
-        "rank": 0.6
-      },
-      "b": {
-        "n": "Ramazan Temirov",
-        "o": -108,
-        "w": 19,
-        "l": 2,
-        "fin": 11,
-        "age": 29,
-        "reach": 63,
-        "rank": 0.35
-      },
-      "modelA": 0.4926
-    },
-    {
-      "div": "Welterweight",
-      "a": {
-        "n": "Islam Dulatov",
-        "o": -1000,
-        "w": 12,
-        "l": 1,
-        "fin": 11,
-        "age": 27,
-        "reach": 75,
-        "rank": 0.2
-      },
-      "b": {
-        "n": "Wellington Turman",
-        "o": 650,
-        "w": 18,
-        "l": 8,
         "fin": 12,
-        "age": 30,
-        "reach": 72,
+        "age": 33,
+        "reach": 71,
+        "rank": 0.15
+      },
+      "b": {
+        "n": "Daniel Rodriguez",
+        "o": 265,
+        "w": 20,
+        "l": 5,
+        "fin": 11,
+        "age": 39,
+        "reach": 74,
         "rank": 0.1
       },
-      "modelA": 0.651
+      "modelA": 0.761
     },
     {
-      "div": "Lightweight",
+      "div": "Light Heavyweight",
       "a": {
-        "n": "Magomed Zaynukov",
-        "o": -305,
-        "w": 8,
+        "n": "Navajo Stirling",
+        "o": -265,
+        "w": 10,
         "l": 0,
-        "fin": 5,
-        "age": 26,
-        "reach": 71,
-        "rank": 0.1,
+        "fin": 6,
+        "age": 28,
+        "reach": 79,
+        "rank": 0.3,
         "undef": 1
       },
       "b": {
-        "n": "Damian Rzepecki",
-        "o": 245,
-        "w": 10,
-        "l": 0,
-        "fin": 8,
-        "age": 26,
-        "reach": 74,
-        "rank": 0.1,
-        "undef": 1
-      }
+        "n": "Jan Blachowicz",
+        "o": 225,
+        "w": 29,
+        "l": 11,
+        "fin": 19,
+        "age": 43,
+        "reach": 78,
+        "rank": 0.55
+      },
+      "modelA": 0.5752
     },
     {
       "div": "Heavyweight",
       "a": {
-        "n": "Rizvan Kuniev",
-        "o": -340,
+        "n": "Aleksandar Rakic",
+        "o": -300,
         "w": 14,
-        "l": 3,
+        "l": 6,
         "fin": 9,
-        "age": 33,
-        "reach": 76,
-        "rank": 0.6
+        "age": 34,
+        "reach": 78,
+        "rank": 0.15,
+        "moveup": 1
       },
       "b": {
-        "n": "Tyrell Fortune",
-        "o": 270,
-        "w": 18,
-        "l": 3,
-        "fin": 10,
-        "age": 35,
-        "reach": 75,
-        "rank": 0.55
-      },
-      "modelA": 0.5762
-    },
-    {
-      "div": "Welterweight",
-      "a": {
-        "n": "Abubakar Vagaev",
-        "o": -250,
-        "w": 24,
-        "l": 4,
-        "fin": 13,
-        "age": 32,
-        "reach": 75,
-        "rank": 0.15
-      },
-      "b": {
-        "n": "Saygid Izagakhmaev",
-        "o": 205,
-        "w": 22,
-        "l": 3,
-        "fin": 12,
-        "age": 31,
-        "reach": 74,
-        "rank": 0.15
-      }
-    },
-    {
-      "div": "Heavyweight (Prelim)",
-      "a": {
-        "n": "Valter Walker",
-        "o": -170,
-        "w": 15,
-        "l": 1,
-        "fin": 12,
-        "age": 28,
+        "n": "Marcin Tybura",
+        "o": 250,
+        "w": 27,
+        "l": 11,
+        "fin": 15,
+        "age": 40,
         "reach": 78,
         "rank": 0.3
       },
+      "modelA": 0.6395
+    },
+    {
+      "div": "Lightweight",
+      "a": {
+        "n": "Ludovit Klein",
+        "o": -193,
+        "w": 24,
+        "l": 5,
+        "fin": 14,
+        "age": 31,
+        "reach": 72,
+        "rank": 0.2
+      },
       "b": {
-        "n": "Thomas Petersen",
-        "o": 142,
+        "n": "Tofiq Musayev",
+        "o": 168,
+        "w": 23,
+        "l": 6,
+        "fin": 15,
+        "age": 36,
+        "reach": 69,
+        "rank": 0.1
+      },
+      "modelA": 0.7332
+    },
+    {
+      "div": "Middleweight",
+      "a": {
+        "n": "Robert Valentin",
+        "o": -148,
         "w": 11,
-        "l": 4,
+        "l": 6,
         "fin": 8,
         "age": 31,
+        "reach": 77,
+        "rank": 0.1
+      },
+      "b": {
+        "n": "Dusko Todorovic",
+        "o": 128,
+        "w": 13,
+        "l": 6,
+        "fin": 9,
+        "age": 32,
         "reach": 74,
         "rank": 0.1
       },
-      "modelA": 0.5937
+      "modelA": 0.5103
     },
     {
-      "div": "Welterweight (Prelim)",
+      "div": "Middleweight",
       "a": {
-        "n": "Sam Patterson",
-        "o": -485,
+        "n": "Vlasto Cepo",
+        "o": -340,
         "w": 14,
         "l": 3,
-        "fin": 11,
-        "age": 30,
-        "reach": 78,
+        "fin": 14,
+        "age": 31,
+        "reach": 75,
         "rank": 0.1
       },
       "b": {
-        "n": "Santiago Ponzinibbio",
-        "o": 370,
-        "w": 30,
-        "l": 9,
-        "fin": 24,
-        "age": 39,
-        "reach": 73,
+        "n": "Gilbert Urbina",
+        "o": 280,
+        "w": 7,
+        "l": 4,
+        "fin": 5,
+        "age": 30,
+        "reach": 75,
         "rank": 0.1
-      },
-      "modelA": 0.5002
+      }
     },
     {
-      "div": "Lightweight (Prelim)",
+      "div": "Featherweight (Prelim)",
       "a": {
-        "n": "Axel Sola",
-        "o": -192,
-        "w": 11,
-        "l": 1,
-        "fin": 7,
-        "age": 28,
-        "reach": 74,
+        "n": "Bogdan Grad",
+        "o": -220,
+        "w": 15,
+        "l": 4,
+        "fin": 10,
+        "age": 31,
+        "reach": 70,
         "rank": 0.1
       },
       "b": {
-        "n": "Ismael Bonfim",
-        "o": 160,
-        "w": 20,
-        "l": 6,
-        "fin": 13,
-        "age": 30,
-        "reach": 71,
-        "rank": 0.1
-      },
-      "modelA": 0.5189
-    },
-    {
-      "div": "Lightweight (Prelim)",
-      "a": {
-        "n": "Nurullo Aliev",
-        "o": -230,
-        "w": 11,
-        "l": 0,
-        "fin": 4,
-        "age": 25,
-        "reach": 72,
-        "rank": 0.1,
-        "undef": 1
-      },
-      "b": {
-        "n": "Mike Davis",
-        "o": 190,
+        "n": "Dennis Buzukja",
+        "o": 185,
         "w": 12,
-        "l": 3,
-        "fin": 9,
-        "age": 33,
-        "reach": 72,
+        "l": 6,
+        "fin": 6,
+        "age": 28,
+        "reach": 70,
         "rank": 0.1
       },
-      "modelA": 0.6362
+      "modelA": 0.5106
+    },
+    {
+      "div": "Lightweight (Prelim)",
+      "a": {
+        "n": "Mateusz Rebecki",
+        "o": -335,
+        "w": 20,
+        "l": 5,
+        "fin": 15,
+        "age": 34,
+        "reach": 66,
+        "rank": 0.1
+      },
+      "b": {
+        "n": "Kyle Prepolec",
+        "o": 275,
+        "w": 18,
+        "l": 10,
+        "fin": 12,
+        "age": 37,
+        "reach": 70,
+        "rank": 0.1
+      },
+      "modelA": 0.7722
     }
   ],
-  "updated": 1784941732835,
+  "updated": 1785028321210,
   "env": {
-    "label": "Indoor \u00b7 climate-controlled (Etihad Arena, Abu Dhabi)",
+    "label": "Indoor \u00b7 climate-controlled (Belgrade Arena, Serbia)",
     "heat": 0
   }
 };
-window.CARD.photos = {"Magomed Ankalaev":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/ANKALAEV_MAGOMED_L_07-25.png?itok=q5y2MMAv","Bogdan Guskov":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-12/GUSKOV_BOGDAN_R_12-06.png?itok=3X0UiSUD","Steve Erceg":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/ERCEG_STEVE_L_07-25.png?itok=cpVJwroy","Ramazan Temirov":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/TEMIROV_RAMAZAN_R_07-25.png?itok=mTV8xLSo","Islam Dulatov":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/DULATOV_ISLAM_L_07-25.png?itok=kFwwVeAI","Wellington Turman":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/TURMAN_WELLINGTON_R_07-25.png?itok=edl-tevT","Magomed Zaynukov":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/ZAYNUKOV_MAGOMED_L_07-25.png?itok=jpaCrWn8","Damian Rzepecki":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/RZEPECKI_DAMIAN_R_07-25.png?itok=WG17pnCh","Rizvan Kuniev":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-06/KUNIEV_RIZVAN_R_06-21.png?itok=aSj1SbWM","Tyrell Fortune":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/FORTUNE_TYRELL_R_07-25.png?itok=KQxOynQi","Abubakar Vagaev":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/VAGAEV_ABUBAKAR_L_07-25.png?itok=zGrbs9xS","Saygid Izagakhmaev":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-11/IZAGAKHMAEV_SAYGID_R_11-22.png?itok=px3Vp5AN","Valter Walker":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/WALKER_VALTER_L_07-25.png?itok=h9pdGA5X","Thomas Petersen":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/PETERSEN_THOMAS_R_07-25.png?itok=uZQNgORk","Sam Patterson":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/PATTERSON_SAM_R_07-25.png?itok=bXYil1gO","Santiago Ponzinibbio":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/PONZINIBBIO_SANTIAGO_L_07-25.png?itok=n8qqa8jR","Axel Sola":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/SOLA_AXEL_R_07-25.png?itok=oHaeNIVN","Ismael Bonfim":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/BONFIM_ISMAEL_L_07-25.png?itok=5QAQsQrs","Nurullo Aliev":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/ALIEV_NURULLO_L_07-25.png?itok=qP1ATjKp","Mike Davis":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-07/DAVIS_MIKE_R_07-25.png?itok=Dt5JpabV"};
-window.CARD.kalshi = {"Magomed Ankalaev":82,"Bogdan Guskov":19,"Steve Erceg":49,"Ramazan Temirov":52,"Islam Dulatov":90,"Wellington Turman":12,"Magomed Zaynukov":72,"Damian Rzepecki":29,"Rizvan Kuniev":75,"Tyrell Fortune":26,"Abubakar Vagaev":70,"Saygid Izagakhmaev":32,"Valter Walker":63,"Thomas Petersen":38,"Sam Patterson":82,"Santiago Ponzinibbio":19,"Axel Sola":65,"Ismael Bonfim":36,"Nurullo Aliev":69,"Mike Davis":33};
+
+window.CARD.photos = {
+ "Uros Medic": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-08/MEDIC_UROS_L_08-09.png",
+ "Daniel Rodriguez": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-07/RODRIGUEZ_DANIEL_R_07-19.png",
+ "Navajo Stirling": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-06/STIRLING_NAVAJO_R_06-20.png",
+ "Jan Blachowicz": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-12/BLACHOWICZ_JAN_L_12-06.png",
+ "Aleksandar Rakic": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-10/RAKIC_ALEKSANDAR_L_10-25.png",
+ "Marcin Tybura": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-01/5/TYBURA_MARCIN_R_08-10.png",
+ "Ludovit Klein": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-10/KLEIN_LUDOVIT_L_10-25.png",
+ "Tofiq Musayev": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-03/MUSAYEV_TOFIQ_R_03-28.png",
+ "Robert Valentin": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-04/VALENTIN_ROBERT_R_04-18.png",
+ "Dusko Todorovic": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2022-08/4526cb41-c0d2-423a-ad18-d8efe88477f3%252FTODOROVIC_DUSKO_L_05-21.png",
+ "Gilbert Urbina": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-08/URBINA_GILBERT_R_08-09.png",
+ "Bogdan Grad": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-06/GRAD_BOGDAN_R_06-21.png",
+ "Dennis Buzukja": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-04/BUZUKJA_DENNIS_L_04-18.png",
+ "Mateusz Rebecki": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-07/REBECKI_MATEUSZ_L_08-02.png",
+ "Kyle Prepolec": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-05/PREPOLEC_KYLE_R_05-10.png"
+};
