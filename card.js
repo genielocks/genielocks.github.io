@@ -77,35 +77,11 @@ window.CARD = {
       "modelA": 0.6395
     },
     {
-      "div": "Lightweight",
-      "a": {
-        "n": "Ludovit Klein",
-        "o": -193,
-        "w": 24,
-        "l": 5,
-        "fin": 14,
-        "age": 31,
-        "reach": 72,
-        "rank": 0.2
-      },
-      "b": {
-        "n": "Tofiq Musayev",
-        "o": 168,
-        "w": 23,
-        "l": 6,
-        "fin": 15,
-        "age": 36,
-        "reach": 69,
-        "rank": 0.1
-      },
-      "modelA": 0.7332
-    },
-    {
       "div": "Middleweight",
       "a": {
         "n": "Robert Valentin",
         "o": -148,
-        "w": 11,
+        "w": 12,
         "l": 6,
         "fin": 8,
         "age": 31,
@@ -140,12 +116,36 @@ window.CARD = {
         "n": "Gilbert Urbina",
         "o": 280,
         "w": 7,
-        "l": 4,
+        "l": 5,
         "fin": 5,
         "age": 30,
         "reach": 75,
         "rank": 0.1
       }
+    },
+    {
+      "div": "Lightweight (Prelim)",
+      "a": {
+        "n": "Ludovit Klein",
+        "o": -193,
+        "w": 24,
+        "l": 5,
+        "fin": 14,
+        "age": 31,
+        "reach": 72,
+        "rank": 0.2
+      },
+      "b": {
+        "n": "Tofiq Musayev",
+        "o": 168,
+        "w": 23,
+        "l": 6,
+        "fin": 15,
+        "age": 36,
+        "reach": 69,
+        "rank": 0.1
+      },
+      "modelA": 0.7332
     },
     {
       "div": "Featherweight (Prelim)",
@@ -196,13 +196,12 @@ window.CARD = {
       "modelA": 0.7722
     }
   ],
-  "updated": 1785028321210,
+  "updated": 1785114518327,
   "env": {
     "label": "Indoor \u00b7 climate-controlled (Belgrade Arena, Serbia)",
     "heat": 0
   }
 };
-
 window.CARD.photos = {
  "Uros Medic": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-08/MEDIC_UROS_L_08-09.png",
  "Daniel Rodriguez": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-07/RODRIGUEZ_DANIEL_R_07-19.png",
@@ -219,4 +218,14 @@ window.CARD.photos = {
  "Dennis Buzukja": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-04/BUZUKJA_DENNIS_L_04-18.png",
  "Mateusz Rebecki": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-07/REBECKI_MATEUSZ_L_08-02.png",
  "Kyle Prepolec": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-05/PREPOLEC_KYLE_R_05-10.png"
+};
+window.CARD.kalshi = {
+ "Uros Medic": 77, "Daniel Rodriguez": 24,
+ "Navajo Stirling": 75, "Jan Blachowicz": 27,
+ "Aleksandar Rakic": 77, "Marcin Tybura": 25,
+ "Robert Valentin": 60, "Dusko Todorovic": 41,
+ "Vlasto Cepo": 75, "Gilbert Urbina": 26,
+ "Ludovit Klein": 68, "Tofiq Musayev": 32,
+ "Bogdan Grad": 64, "Dennis Buzukja": 37,
+ "Mateusz Rebecki": 82, "Kyle Prepolec": 19
 };
