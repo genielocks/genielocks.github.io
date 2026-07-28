@@ -22,7 +22,8 @@ window.TRACK = {
     {"date": "2026-07-24", "event": "UFC Fight Night: Ankalaev vs Guskov", "fighter": "Ramazan Temirov", "div": "Flyweight", "odds": -108, "modelP": 0.507, "mktP": 0.496, "edge": 0.012, "kind": "parlay leg", "result": "win", "clv": 0.0},
     {"date": "2026-07-25", "event": "UFC Fight Night: Medic vs Rodriguez", "fighter": "Ludovit Klein", "div": "Lightweight", "odds": -193, "modelP": 0.733, "mktP": 0.638, "edge": 0.095, "kind": "value pick + parlay leg (sportsbook edge — Kalshi not yet listed)", "result": null, "clv": null},
     {"date": "2026-07-25", "event": "UFC Fight Night: Medic vs Rodriguez", "fighter": "Dusko Todorovic", "div": "Middleweight", "odds": 128, "modelP": 0.49, "mktP": 0.424, "edge": 0.066, "kind": "parlay leg", "result": null, "clv": null},
-    {"date": "2026-07-25", "event": "UFC Fight Night: Medic vs Rodriguez", "fighter": "Mateusz Rebecki", "div": "Lightweight (Prelim)", "odds": -335, "modelP": 0.772, "mktP": 0.743, "edge": 0.029, "kind": "parlay leg", "result": null, "clv": null}
+    {"date": "2026-07-25", "event": "UFC Fight Night: Medic vs Rodriguez", "fighter": "Mateusz Rebecki", "div": "Lightweight (Prelim)", "odds": -335, "modelP": 0.772, "mktP": 0.743, "edge": 0.029, "kind": "parlay leg", "result": null, "clv": null},
+      {"date": "2026-07-27", "event": "UFC Fight Night: Medic vs Rodriguez", "fighter": "Dennis Buzukja", "div": "Featherweight (Prelim)", "odds": 165, "modelP": 0.489, "mktP": 0.361, "edge": 0.128, "kind": "parlay leg", "result": null, "clv": null}
 
   ],
   "archive": {
