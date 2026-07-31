@@ -219,13 +219,12 @@ window.CARD = {
       "modelA": 0.7722
     }
   ],
-  "updated": 1785373950991,
+  "updated": 1785460134688,
   "env": {
     "label": "Indoor \u00b7 climate-controlled (Belgrade Arena, Serbia)",
     "heat": 0
   }
 };
-
 window.CARD.photos = {
  "Uros Medic": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-08/MEDIC_UROS_L_08-09.png",
  "Daniel Rodriguez": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-07/RODRIGUEZ_DANIEL_R_07-19.png",
@@ -244,22 +243,13 @@ window.CARD.photos = {
  "Kyle Prepolec": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-05/PREPOLEC_KYLE_R_05-10.png"
 };
 window.CARD.kalshi = {
- "Uros Medic": 78,
- "Daniel Rodriguez": 23,
- "Navajo Stirling": 74,
- "Jan Blachowicz": 27,
- "Aleksandar Rakic": 78,
- "Marcin Tybura": 23,
- "Robert Valentin": 62,
- "Dusko Todorovic": 40,
- "Vlasto Cepo": 76,
- "Gilbert Urbina": 25,
- "Milos Janicic": 49,
- "Noah Gugnon": 52,
- "Ludovit Klein": 68,
- "Tofiq Musayev": 32,
- "Bogdan Grad": 67,
- "Dennis Buzukja": 36,
- "Mateusz Rebecki": 85,
- "Kyle Prepolec": 15
+ "Uros Medic": 78, "Daniel Rodriguez": 23,
+ "Navajo Stirling": 75, "Jan Blachowicz": 26,
+ "Aleksandar Rakic": 77, "Marcin Tybura": 24,
+ "Robert Valentin": 61, "Dusko Todorovic": 40,
+ "Vlasto Cepo": 76, "Gilbert Urbina": 25,
+ "Milos Janicic": 49, "Noah Gugnon": 52,
+ "Ludovit Klein": 69, "Tofiq Musayev": 32,
+ "Bogdan Grad": 66, "Dennis Buzukja": 35,
+ "Mateusz Rebecki": 85, "Kyle Prepolec": 15
 };
