@@ -6,7 +6,7 @@ window.CARD = {
       "div": "Welterweight (Main Event)",
       "a": {
         "n": "Uros Medic",
-        "o": -315,
+        "o": -375,
         "w": 13,
         "l": 3,
         "fin": 12,
@@ -16,7 +16,7 @@ window.CARD = {
       },
       "b": {
         "n": "Daniel Rodriguez",
-        "o": 300,
+        "o": 299,
         "w": 20,
         "l": 5,
         "fin": 11,
@@ -30,7 +30,7 @@ window.CARD = {
       "div": "Light Heavyweight",
       "a": {
         "n": "Navajo Stirling",
-        "o": -305,
+        "o": -335,
         "w": 10,
         "l": 0,
         "fin": 6,
@@ -41,7 +41,7 @@ window.CARD = {
       },
       "b": {
         "n": "Jan Blachowicz",
-        "o": 260,
+        "o": 270,
         "w": 29,
         "l": 11,
         "fin": 19,
@@ -55,7 +55,7 @@ window.CARD = {
       "div": "Heavyweight",
       "a": {
         "n": "Aleksandar Rakic",
-        "o": -300,
+        "o": -360,
         "w": 14,
         "l": 6,
         "fin": 9,
@@ -66,7 +66,7 @@ window.CARD = {
       },
       "b": {
         "n": "Marcin Tybura",
-        "o": 285,
+        "o": 289,
         "w": 27,
         "l": 11,
         "fin": 15,
@@ -80,7 +80,7 @@ window.CARD = {
       "div": "Middleweight",
       "a": {
         "n": "Robert Valentin",
-        "o": -156,
+        "o": -150,
         "w": 12,
         "l": 6,
         "fin": 8,
@@ -90,7 +90,7 @@ window.CARD = {
       },
       "b": {
         "n": "Dusko Todorovic",
-        "o": 150,
+        "o": 130,
         "w": 13,
         "l": 6,
         "fin": 9,
@@ -104,7 +104,7 @@ window.CARD = {
       "div": "Middleweight",
       "a": {
         "n": "Vlasto Cepo",
-        "o": -270,
+        "o": -360,
         "w": 14,
         "l": 3,
         "fin": 14,
@@ -114,7 +114,7 @@ window.CARD = {
       },
       "b": {
         "n": "Gilbert Urbina",
-        "o": 257,
+        "o": 289,
         "w": 7,
         "l": 5,
         "fin": 5,
@@ -127,7 +127,7 @@ window.CARD = {
       "div": "Lightweight",
       "a": {
         "n": "Milos Janicic",
-        "o": -143,
+        "o": -120,
         "w": 19,
         "l": 3,
         "fin": 18,
@@ -137,7 +137,7 @@ window.CARD = {
       },
       "b": {
         "n": "Noah Gugnon",
-        "o": 116,
+        "o": 100,
         "w": 9,
         "l": 2,
         "fin": 9,
@@ -150,7 +150,7 @@ window.CARD = {
       "div": "Lightweight (Prelim)",
       "a": {
         "n": "Ludovit Klein",
-        "o": -213,
+        "o": -270,
         "w": 24,
         "l": 5,
         "fin": 14,
@@ -160,7 +160,7 @@ window.CARD = {
       },
       "b": {
         "n": "Tofiq Musayev",
-        "o": 203,
+        "o": 220,
         "w": 23,
         "l": 6,
         "fin": 15,
@@ -174,7 +174,7 @@ window.CARD = {
       "div": "Featherweight (Prelim)",
       "a": {
         "n": "Bogdan Grad",
-        "o": -170,
+        "o": -192,
         "w": 15,
         "l": 4,
         "fin": 10,
@@ -184,7 +184,7 @@ window.CARD = {
       },
       "b": {
         "n": "Dennis Buzukja",
-        "o": 163,
+        "o": 160,
         "w": 12,
         "l": 6,
         "fin": 6,
@@ -198,7 +198,7 @@ window.CARD = {
       "div": "Lightweight (Prelim)",
       "a": {
         "n": "Mateusz Rebecki",
-        "o": -355,
+        "o": -700,
         "w": 20,
         "l": 5,
         "fin": 15,
@@ -208,7 +208,7 @@ window.CARD = {
       },
       "b": {
         "n": "Kyle Prepolec",
-        "o": 335,
+        "o": 500,
         "w": 18,
         "l": 10,
         "fin": 12,
@@ -219,12 +219,13 @@ window.CARD = {
       "modelA": 0.7722
     }
   ],
-  "updated": 1785460134688,
+  "updated": 1785562136781,
   "env": {
     "label": "Indoor \u00b7 climate-controlled (Belgrade Arena, Serbia)",
     "heat": 0
   }
 };
+
 window.CARD.photos = {
  "Uros Medic": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-08/MEDIC_UROS_L_08-09.png",
  "Daniel Rodriguez": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-07/RODRIGUEZ_DANIEL_R_07-19.png",
@@ -243,13 +244,22 @@ window.CARD.photos = {
  "Kyle Prepolec": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-05/PREPOLEC_KYLE_R_05-10.png"
 };
 window.CARD.kalshi = {
- "Uros Medic": 78, "Daniel Rodriguez": 23,
- "Navajo Stirling": 75, "Jan Blachowicz": 26,
- "Aleksandar Rakic": 77, "Marcin Tybura": 24,
- "Robert Valentin": 61, "Dusko Todorovic": 40,
- "Vlasto Cepo": 76, "Gilbert Urbina": 25,
- "Milos Janicic": 49, "Noah Gugnon": 52,
- "Ludovit Klein": 69, "Tofiq Musayev": 32,
- "Bogdan Grad": 66, "Dennis Buzukja": 35,
- "Mateusz Rebecki": 85, "Kyle Prepolec": 15
+ "Uros Medic": 77,
+ "Daniel Rodriguez": 24,
+ "Navajo Stirling": 76,
+ "Jan Blachowicz": 25,
+ "Aleksandar Rakic": 78,
+ "Marcin Tybura": 23,
+ "Robert Valentin": 61,
+ "Dusko Todorovic": 41,
+ "Vlasto Cepo": 76,
+ "Gilbert Urbina": 26,
+ "Milos Janicic": 48,
+ "Noah Gugnon": 52,
+ "Ludovit Klein": 70,
+ "Tofiq Musayev": 31,
+ "Bogdan Grad": 66,
+ "Dennis Buzukja": 35,
+ "Mateusz Rebecki": 86,
+ "Kyle Prepolec": 15
 };
