@@ -1,265 +1,232 @@
 window.CARD = {
-  "event": "UFC Fight Night \u00b7 Medic vs Rodriguez \u00b7 Belgrade Arena, Serbia \u00b7 Aug 1, 2026",
-  "source": "trained Python model (7/9 bouts; baseline fallback for 2)",
+  "event": "UFC Fight Night \u00b7 Gamrot vs Salkilld \u00b7 Meta APEX, Las Vegas \u00b7 Aug 8, 2026",
+  "source": "trained Python model (8/8 bouts; baseline fallback for 0)",
   "fights": [
     {
-      "div": "Welterweight (Main Event)",
+      "div": "Lightweight (Main Event)",
       "a": {
-        "n": "Uros Medic",
-        "o": -375,
-        "w": 13,
-        "l": 3,
-        "fin": 12,
-        "age": 33,
-        "reach": 71,
-        "rank": 0.15
-      },
-      "b": {
-        "n": "Daniel Rodriguez",
-        "o": 299,
-        "w": 20,
-        "l": 5,
-        "fin": 11,
-        "age": 39,
-        "reach": 74,
-        "rank": 0.1
-      },
-      "modelA": 0.761
-    },
-    {
-      "div": "Light Heavyweight",
-      "a": {
-        "n": "Navajo Stirling",
-        "o": -335,
-        "w": 10,
-        "l": 0,
-        "fin": 6,
-        "age": 28,
-        "reach": 79,
-        "rank": 0.3,
-        "undef": 1
-      },
-      "b": {
-        "n": "Jan Blachowicz",
-        "o": 270,
-        "w": 29,
-        "l": 11,
-        "fin": 19,
-        "age": 43,
-        "reach": 78,
-        "rank": 0.55
-      },
-      "modelA": 0.5752
-    },
-    {
-      "div": "Heavyweight",
-      "a": {
-        "n": "Aleksandar Rakic",
-        "o": -360,
-        "w": 14,
-        "l": 6,
-        "fin": 9,
-        "age": 34,
-        "reach": 78,
-        "rank": 0.15,
-        "moveup": 1
-      },
-      "b": {
-        "n": "Marcin Tybura",
-        "o": 289,
-        "w": 27,
-        "l": 11,
-        "fin": 15,
-        "age": 40,
-        "reach": 78,
-        "rank": 0.3
-      },
-      "modelA": 0.6395
-    },
-    {
-      "div": "Middleweight",
-      "a": {
-        "n": "Robert Valentin",
-        "o": -150,
+        "n": "Quillan Salkilld",
+        "o": -145,
         "w": 12,
-        "l": 6,
-        "fin": 8,
-        "age": 31,
-        "reach": 77,
-        "rank": 0.1
-      },
-      "b": {
-        "n": "Dusko Todorovic",
-        "o": 130,
-        "w": 13,
-        "l": 6,
+        "l": 1,
         "fin": 9,
-        "age": 32,
-        "reach": 74,
-        "rank": 0.1
-      },
-      "modelA": 0.5103
-    },
-    {
-      "div": "Middleweight",
-      "a": {
-        "n": "Vlasto Cepo",
-        "o": -360,
-        "w": 14,
-        "l": 3,
-        "fin": 14,
-        "age": 31,
+        "age": 26,
         "reach": 75,
-        "rank": 0.1
+        "rank": 0.45
       },
       "b": {
-        "n": "Gilbert Urbina",
-        "o": 289,
-        "w": 7,
-        "l": 5,
-        "fin": 5,
-        "age": 30,
-        "reach": 75,
-        "rank": 0.1
-      }
+        "n": "Mateusz Gamrot",
+        "o": 120,
+        "w": 26,
+        "l": 4,
+        "fin": 13,
+        "age": 35,
+        "reach": 70,
+        "rank": 0.6
+      },
+      "modelA": 0.5454
     },
     {
       "div": "Lightweight",
       "a": {
-        "n": "Milos Janicic",
-        "o": -120,
+        "n": "Diego Ferreira",
+        "o": -170,
         "w": 19,
-        "l": 3,
-        "fin": 18,
+        "l": 7,
+        "fin": 13,
+        "age": 41,
+        "reach": 74,
+        "rank": 0.15
+      },
+      "b": {
+        "n": "Billy Quarantillo",
+        "o": 135,
+        "w": 18,
+        "l": 7,
+        "fin": 13,
+        "age": 37,
+        "reach": 70,
+        "rank": 0.15
+      },
+      "modelA": 0.4739
+    },
+    {
+      "div": "Women's Strawweight",
+      "a": {
+        "n": "Alexia Thainara",
+        "o": -255,
+        "w": 14,
+        "l": 1,
+        "fin": 7,
+        "age": 30,
+        "reach": 67,
+        "rank": 0.45
+      },
+      "b": {
+        "n": "Amanda Lemos",
+        "o": 200,
+        "w": 15,
+        "l": 6,
+        "fin": 11,
+        "age": 39,
+        "reach": 65,
+        "rank": 0.55
+      },
+      "modelA": 0.4907
+    },
+    {
+      "div": "Featherweight",
+      "a": {
+        "n": "Yadier del Valle",
+        "o": -715,
+        "w": 10,
+        "l": 1,
+        "fin": 8,
         "age": 29,
-        "reach": 73,
+        "reach": 69,
+        "rank": 0.15
+      },
+      "b": {
+        "n": "Darren Elkins",
+        "o": 475,
+        "w": 29,
+        "l": 12,
+        "fin": 13,
+        "age": 42,
+        "reach": 71,
+        "rank": 0.1
+      },
+      "modelA": 0.7005
+    },
+    {
+      "div": "Welterweight",
+      "a": {
+        "n": "Ty Miller",
+        "o": -305,
+        "w": 7,
+        "l": 0,
+        "fin": 6,
+        "age": 25,
+        "reach": 77,
+        "rank": 0.15,
+        "undef": 1
+      },
+      "b": {
+        "n": "Billy Ray Goff",
+        "o": 235,
+        "w": 9,
+        "l": 4,
+        "fin": 8,
+        "age": 28,
+        "reach": 72,
+        "rank": 0.1
+      },
+      "modelA": 0.4923
+    },
+    {
+      "div": "Heavyweight",
+      "a": {
+        "n": "Steven Asplund",
+        "o": -250,
+        "w": 7,
+        "l": 2,
+        "fin": 7,
+        "age": 28,
+        "reach": 78,
         "rank": 0.1
       },
       "b": {
-        "n": "Noah Gugnon",
-        "o": 100,
-        "w": 9,
+        "n": "Guilherme Pat",
+        "o": 190,
+        "w": 6,
+        "l": 1,
+        "fin": 6,
+        "age": 31,
+        "reach": 81,
+        "rank": 0.1
+      },
+      "modelA": 0.6626
+    },
+    {
+      "div": "Light Heavyweight (Prelim)",
+      "a": {
+        "n": "Diyar Nurgozhay",
+        "o": -160,
+        "w": 11,
         "l": 2,
         "fin": 9,
-        "age": 25,
-        "reach": 69,
-        "rank": 0.1
-      }
-    },
-    {
-      "div": "Lightweight (Prelim)",
-      "a": {
-        "n": "Ludovit Klein",
-        "o": -270,
-        "w": 24,
-        "l": 5,
-        "fin": 14,
-        "age": 31,
-        "reach": 72,
-        "rank": 0.2
-      },
-      "b": {
-        "n": "Tofiq Musayev",
-        "o": 220,
-        "w": 23,
-        "l": 6,
-        "fin": 15,
-        "age": 36,
-        "reach": 69,
-        "rank": 0.1
-      },
-      "modelA": 0.7332
-    },
-    {
-      "div": "Featherweight (Prelim)",
-      "a": {
-        "n": "Bogdan Grad",
-        "o": -192,
-        "w": 15,
-        "l": 4,
-        "fin": 10,
-        "age": 31,
-        "reach": 70,
-        "rank": 0.1
-      },
-      "b": {
-        "n": "Dennis Buzukja",
-        "o": 160,
-        "w": 12,
-        "l": 6,
-        "fin": 6,
         "age": 28,
-        "reach": 70,
+        "reach": 74,
         "rank": 0.1
       },
-      "modelA": 0.5106
+      "b": {
+        "n": "Bruno Lopes",
+        "o": 130,
+        "w": 14,
+        "l": 3,
+        "fin": 11,
+        "age": 32,
+        "reach": 74,
+        "rank": 0.1
+      },
+      "modelA": 0.6815
     },
     {
-      "div": "Lightweight (Prelim)",
+      "div": "Women's Flyweight (Prelim)",
       "a": {
-        "n": "Mateusz Rebecki",
-        "o": -700,
-        "w": 20,
-        "l": 5,
-        "fin": 15,
-        "age": 34,
+        "n": "Juliana Miller",
+        "o": -245,
+        "w": 5,
+        "l": 4,
+        "fin": 3,
+        "age": 30,
         "reach": 66,
         "rank": 0.1
       },
       "b": {
-        "n": "Kyle Prepolec",
-        "o": 500,
-        "w": 18,
-        "l": 10,
-        "fin": 12,
-        "age": 37,
-        "reach": 70,
+        "n": "Ravena Oliveira",
+        "o": 195,
+        "w": 7,
+        "l": 4,
+        "fin": 4,
+        "age": 29,
+        "reach": 65,
         "rank": 0.1
       },
-      "modelA": 0.7722
+      "modelA": 0.6424
     }
   ],
-  "updated": 1785562136781,
+  "updated": 1785699974395,
   "env": {
-    "label": "Indoor \u00b7 climate-controlled (Belgrade Arena, Serbia)",
+    "label": "Indoor \u00b7 climate-controlled (Meta APEX, Las Vegas)",
     "heat": 0
   }
 };
-
 window.CARD.photos = {
- "Uros Medic": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-08/MEDIC_UROS_L_08-09.png",
- "Daniel Rodriguez": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-07/RODRIGUEZ_DANIEL_R_07-19.png",
- "Navajo Stirling": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-06/STIRLING_NAVAJO_R_06-20.png",
- "Jan Blachowicz": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-12/BLACHOWICZ_JAN_L_12-06.png",
- "Aleksandar Rakic": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-10/RAKIC_ALEKSANDAR_L_10-25.png",
- "Marcin Tybura": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-01/5/TYBURA_MARCIN_R_08-10.png",
- "Robert Valentin": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-04/VALENTIN_ROBERT_R_04-18.png",
- "Dusko Todorovic": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2022-08/4526cb41-c0d2-423a-ad18-d8efe88477f3%252FTODOROVIC_DUSKO_L_05-21.png",
- "Gilbert Urbina": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-08/URBINA_GILBERT_R_08-09.png",
- "Ludovit Klein": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-10/KLEIN_LUDOVIT_L_10-25.png",
- "Tofiq Musayev": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-03/MUSAYEV_TOFIQ_R_03-28.png",
- "Bogdan Grad": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-06/GRAD_BOGDAN_R_06-21.png",
- "Dennis Buzukja": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-04/BUZUKJA_DENNIS_L_04-18.png",
- "Mateusz Rebecki": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-07/REBECKI_MATEUSZ_L_08-02.png",
- "Kyle Prepolec": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-05/PREPOLEC_KYLE_R_05-10.png"
+  "Mateusz Gamrot":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-04/GAMROT_MATEUSZ_L_04-11.png?itok=6zp9jfGV",
+  "Quillan Salkilld":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-04/SALKILLD_QUILLAN_R_05-02.png?itok=RarJXbX_",
+  "Diego Ferreira":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-01/FERREIRA_DIEGO_L_01-18.png?itok=cbqI_nYf",
+  "Billy Quarantillo":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2024-12/QUARANTILLO_BILLY_R_12-14.png?itok=D6yCYJSx",
+  "Darren Elkins":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-04/ELKINS_DARREN_L_04-12.png?itok=I0giHzCr",
+  "Yadier del Valle":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-02/DEL_VALLE_YADIER_R_02-21.png?itok=M3qIMnRe",
+  "Ty Miller":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-01/MILLER_TY_R_01-24.png?itok=O7wIIK-q",
+  "Billy Ray Goff":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2024-05/GOFF_BILLY_R_08-26.png?itok=SIkC8Ao-",
+  "Diyar Nurgozhay":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-03/NURGOZHAY_DIYAR_L_03-15.png?itok=VOFZ_UQQ",
+  "Bruno Lopes":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-03/LOPES_BRUNO_R_03-28.png?itok=pyLB3kwB",
+  "Steven Asplund":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-03/ASPLUND_STEVE_R_03-14.png?itok=UneDVg5y",
+  "Guilherme Pat":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-12/PAT_GUILHERME_R_12-13.png?itok=MWnJZ49U",
+  "Amanda Lemos":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-03/LEMOS_AMANDA_L_03-14.png?itok=1K3ICQYI",
+  "Alexia Thainara":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-09/THAINARA_ALEXIA_R_09-27.png?itok=MRMpoOC9",
+  "Juliana Miller":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-02/MILLER_JULIANA_L_02-21.png?itok=-WJqvCyE",
+  "Ravena Oliveira":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-03/OLIVEIRA_RAVENA_R_03-21.png?itok=RQ5xF-sC"
 };
 window.CARD.kalshi = {
- "Uros Medic": 77,
- "Daniel Rodriguez": 24,
- "Navajo Stirling": 76,
- "Jan Blachowicz": 25,
- "Aleksandar Rakic": 78,
- "Marcin Tybura": 23,
- "Robert Valentin": 61,
- "Dusko Todorovic": 41,
- "Vlasto Cepo": 76,
- "Gilbert Urbina": 26,
- "Milos Janicic": 48,
- "Noah Gugnon": 52,
- "Ludovit Klein": 70,
- "Tofiq Musayev": 31,
- "Bogdan Grad": 66,
- "Dennis Buzukja": 35,
- "Mateusz Rebecki": 86,
- "Kyle Prepolec": 15
+  "Quillan Salkilld":58, "Mateusz Gamrot":43,
+  "Diego Ferreira":62, "Billy Quarantillo":40,
+  "Alexia Thainara":71, "Amanda Lemos":29,
+  "Yadier del Valle":88, "Darren Elkins":13,
+  "Ty Miller":75, "Billy Ray Goff":27,
+  "Steven Asplund":70, "Guilherme Pat":31,
+  "Diyar Nurgozhay":60, "Bruno Lopes":42,
+  "Juliana Miller":69, "Ravena Oliveira":32
 };
