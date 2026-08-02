@@ -24,10 +24,9 @@ window.TRACK = {
     {"date": "2026-07-25", "event": "UFC Fight Night: Medic vs Rodriguez", "fighter": "Dusko Todorovic", "div": "Middleweight", "odds": 128, "modelP": 0.49, "mktP": 0.424, "edge": 0.066, "kind": "parlay leg", "result": "loss", "clv": -0.9},
     {"date": "2026-07-25", "event": "UFC Fight Night: Medic vs Rodriguez", "fighter": "Mateusz Rebecki", "div": "Lightweight (Prelim)", "odds": -335, "modelP": 0.772, "mktP": 0.743, "edge": 0.029, "kind": "parlay leg", "result": "win", "clv": 13.6},
     {"date": "2026-07-27", "event": "UFC Fight Night: Medic vs Rodriguez", "fighter": "Dennis Buzukja", "div": "Featherweight (Prelim)", "odds": 165, "modelP": 0.489, "mktP": 0.361, "edge": 0.128, "kind": "parlay leg", "result": "loss", "clv": 1.9},
-    {"date": "2026-08-02", "event": "UFC Fight Night: Gamrot vs Salkilld", "fighter": "Diyar Nurgozhay", "div": "Light Heavyweight (Prelim)", "odds": -160, "modelP": 0.682, "mktP": 0.586, "edge": 0.096, "kind": "value pick (Kalshi 60¢, net edge ≈ +7 after fees)", "result": null, "clv": null},
-    {"date": "2026-08-02", "event": "UFC Fight Night: Gamrot vs Salkilld", "fighter": "Billy Ray Goff", "div": "Welterweight", "odds": 235, "modelP": 0.508, "mktP": 0.284, "edge": 0.224, "kind": "parlay leg", "result": null, "clv": null},
-    {"date": "2026-08-02", "event": "UFC Fight Night: Gamrot vs Salkilld", "fighter": "Amanda Lemos", "div": "Women's Strawweight", "odds": 200, "modelP": 0.509, "mktP": 0.317, "edge": 0.192, "kind": "parlay leg", "result": null, "clv": null},
-    {"date": "2026-08-02", "event": "UFC Fight Night: Gamrot vs Salkilld", "fighter": "Billy Quarantillo", "div": "Lightweight", "odds": 135, "modelP": 0.526, "mktP": 0.403, "edge": 0.123, "kind": "parlay leg", "result": null, "clv": null}
+    {"date": "2026-08-02", "event": "UFC Fight Night: Gamrot vs Salkilld", "fighter": "Diyar Nurgozhay", "div": "Light Heavyweight (Prelim)", "odds": -160, "modelP": 0.682, "mktP": 0.586, "edge": 0.096, "kind": "value pick + parlay leg (Kalshi 60¢, net edge ≈ +6.5 after fees)", "result": null, "clv": null},
+    {"date": "2026-08-02", "event": "UFC Fight Night: Gamrot vs Salkilld", "fighter": "Billy Quarantillo", "div": "Lightweight", "odds": 135, "modelP": 0.526, "mktP": 0.403, "edge": 0.123, "kind": "parlay leg (Kalshi 40¢)", "result": null, "clv": null},
+    {"date": "2026-08-02", "event": "UFC Fight Night: Gamrot vs Salkilld", "fighter": "Mateusz Gamrot", "div": "Lightweight (Main Event)", "odds": 120, "modelP": 0.455, "mktP": 0.434, "edge": 0.021, "kind": "parlay leg (Kalshi 43¢)", "result": null, "clv": null}
   ],
   "archive": {
     "label": "Old era (sportsbook-edge logic, retired 2026-07-23) — kept for transparency, not counted above",
