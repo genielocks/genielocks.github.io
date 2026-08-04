@@ -6,7 +6,7 @@ window.CARD = {
       "div": "Lightweight (Main Event)",
       "a": {
         "n": "Quillan Salkilld",
-        "o": -145,
+        "o": -142,
         "w": 12,
         "l": 1,
         "fin": 9,
@@ -30,7 +30,7 @@ window.CARD = {
       "div": "Lightweight",
       "a": {
         "n": "Diego Ferreira",
-        "o": -170,
+        "o": -166,
         "w": 19,
         "l": 7,
         "fin": 13,
@@ -40,7 +40,7 @@ window.CARD = {
       },
       "b": {
         "n": "Billy Quarantillo",
-        "o": 135,
+        "o": 140,
         "w": 18,
         "l": 7,
         "fin": 13,
@@ -54,7 +54,7 @@ window.CARD = {
       "div": "Women's Strawweight",
       "a": {
         "n": "Alexia Thainara",
-        "o": -255,
+        "o": -238,
         "w": 14,
         "l": 1,
         "fin": 7,
@@ -64,7 +64,7 @@ window.CARD = {
       },
       "b": {
         "n": "Amanda Lemos",
-        "o": 200,
+        "o": 195,
         "w": 15,
         "l": 6,
         "fin": 11,
@@ -78,7 +78,7 @@ window.CARD = {
       "div": "Featherweight",
       "a": {
         "n": "Yadier del Valle",
-        "o": -715,
+        "o": -675,
         "w": 10,
         "l": 1,
         "fin": 8,
@@ -88,7 +88,7 @@ window.CARD = {
       },
       "b": {
         "n": "Darren Elkins",
-        "o": 475,
+        "o": 490,
         "w": 29,
         "l": 12,
         "fin": 13,
@@ -102,7 +102,7 @@ window.CARD = {
       "div": "Welterweight",
       "a": {
         "n": "Ty Miller",
-        "o": -305,
+        "o": -345,
         "w": 7,
         "l": 0,
         "fin": 6,
@@ -113,7 +113,7 @@ window.CARD = {
       },
       "b": {
         "n": "Billy Ray Goff",
-        "o": 235,
+        "o": 275,
         "w": 9,
         "l": 4,
         "fin": 8,
@@ -127,7 +127,7 @@ window.CARD = {
       "div": "Heavyweight",
       "a": {
         "n": "Steven Asplund",
-        "o": -250,
+        "o": -270,
         "w": 7,
         "l": 2,
         "fin": 7,
@@ -137,7 +137,7 @@ window.CARD = {
       },
       "b": {
         "n": "Guilherme Pat",
-        "o": 190,
+        "o": 220,
         "w": 6,
         "l": 1,
         "fin": 6,
@@ -151,7 +151,7 @@ window.CARD = {
       "div": "Light Heavyweight (Prelim)",
       "a": {
         "n": "Diyar Nurgozhay",
-        "o": -160,
+        "o": -142,
         "w": 11,
         "l": 2,
         "fin": 9,
@@ -161,7 +161,7 @@ window.CARD = {
       },
       "b": {
         "n": "Bruno Lopes",
-        "o": 130,
+        "o": 120,
         "w": 14,
         "l": 3,
         "fin": 11,
@@ -175,7 +175,7 @@ window.CARD = {
       "div": "Women's Flyweight (Prelim)",
       "a": {
         "n": "Juliana Miller",
-        "o": -245,
+        "o": -258,
         "w": 5,
         "l": 4,
         "fin": 3,
@@ -185,7 +185,7 @@ window.CARD = {
       },
       "b": {
         "n": "Ravena Oliveira",
-        "o": 195,
+        "o": 210,
         "w": 7,
         "l": 4,
         "fin": 4,
@@ -196,7 +196,7 @@ window.CARD = {
       "modelA": 0.6424
     }
   ],
-  "updated": 1785699974395,
+  "updated": 1785813044534,
   "env": {
     "label": "Indoor \u00b7 climate-controlled (Meta APEX, Las Vegas)",
     "heat": 0
@@ -221,12 +221,12 @@ window.CARD.photos = {
   "Ravena Oliveira":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-03/OLIVEIRA_RAVENA_R_03-21.png?itok=RQ5xF-sC"
 };
 window.CARD.kalshi = {
-  "Quillan Salkilld":58, "Mateusz Gamrot":43,
-  "Diego Ferreira":62, "Billy Quarantillo":40,
-  "Alexia Thainara":71, "Amanda Lemos":29,
-  "Yadier del Valle":88, "Darren Elkins":13,
-  "Ty Miller":75, "Billy Ray Goff":27,
-  "Steven Asplund":70, "Guilherme Pat":31,
-  "Diyar Nurgozhay":60, "Bruno Lopes":42,
-  "Juliana Miller":69, "Ravena Oliveira":32
+  "Quillan Salkilld":59, "Mateusz Gamrot":43,
+  "Diego Ferreira":64, "Billy Quarantillo":37,
+  "Alexia Thainara":70, "Amanda Lemos":30,
+  "Yadier del Valle":87, "Darren Elkins":13,
+  "Ty Miller":79, "Billy Ray Goff":22,
+  "Steven Asplund":72, "Guilherme Pat":29,
+  "Diyar Nurgozhay":61, "Bruno Lopes":42,
+  "Juliana Miller":71, "Ravena Oliveira":31
 };
