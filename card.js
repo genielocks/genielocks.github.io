@@ -30,7 +30,7 @@ window.CARD = {
       "div": "Lightweight",
       "a": {
         "n": "Diego Ferreira",
-        "o": -166,
+        "o": -170,
         "w": 19,
         "l": 7,
         "fin": 13,
@@ -40,7 +40,7 @@ window.CARD = {
       },
       "b": {
         "n": "Billy Quarantillo",
-        "o": 140,
+        "o": 142,
         "w": 18,
         "l": 7,
         "fin": 13,
@@ -102,7 +102,7 @@ window.CARD = {
       "div": "Welterweight",
       "a": {
         "n": "Ty Miller",
-        "o": -345,
+        "o": -400,
         "w": 7,
         "l": 0,
         "fin": 6,
@@ -113,7 +113,7 @@ window.CARD = {
       },
       "b": {
         "n": "Billy Ray Goff",
-        "o": 275,
+        "o": 285,
         "w": 9,
         "l": 4,
         "fin": 8,
@@ -124,10 +124,10 @@ window.CARD = {
       "modelA": 0.4923
     },
     {
-      "div": "Heavyweight",
+      "div": "Heavyweight (Prelim)",
       "a": {
         "n": "Steven Asplund",
-        "o": -270,
+        "o": -295,
         "w": 7,
         "l": 2,
         "fin": 7,
@@ -137,7 +137,7 @@ window.CARD = {
       },
       "b": {
         "n": "Guilherme Pat",
-        "o": 220,
+        "o": 230,
         "w": 6,
         "l": 1,
         "fin": 6,
@@ -151,7 +151,7 @@ window.CARD = {
       "div": "Light Heavyweight (Prelim)",
       "a": {
         "n": "Diyar Nurgozhay",
-        "o": -142,
+        "o": -155,
         "w": 11,
         "l": 2,
         "fin": 9,
@@ -161,7 +161,7 @@ window.CARD = {
       },
       "b": {
         "n": "Bruno Lopes",
-        "o": 120,
+        "o": 123,
         "w": 14,
         "l": 3,
         "fin": 11,
@@ -175,7 +175,7 @@ window.CARD = {
       "div": "Women's Flyweight (Prelim)",
       "a": {
         "n": "Juliana Miller",
-        "o": -258,
+        "o": -319,
         "w": 5,
         "l": 4,
         "fin": 3,
@@ -185,7 +185,7 @@ window.CARD = {
       },
       "b": {
         "n": "Ravena Oliveira",
-        "o": 210,
+        "o": 234,
         "w": 7,
         "l": 4,
         "fin": 4,
@@ -196,37 +196,29 @@ window.CARD = {
       "modelA": 0.6424
     }
   ],
-  "updated": 1785813044534,
+  "updated": 1786151481184,
   "env": {
     "label": "Indoor \u00b7 climate-controlled (Meta APEX, Las Vegas)",
     "heat": 0
   }
 };
+
 window.CARD.photos = {
-  "Mateusz Gamrot":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-04/GAMROT_MATEUSZ_L_04-11.png?itok=6zp9jfGV",
-  "Quillan Salkilld":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-04/SALKILLD_QUILLAN_R_05-02.png?itok=RarJXbX_",
-  "Diego Ferreira":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-01/FERREIRA_DIEGO_L_01-18.png?itok=cbqI_nYf",
-  "Billy Quarantillo":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2024-12/QUARANTILLO_BILLY_R_12-14.png?itok=D6yCYJSx",
-  "Darren Elkins":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-04/ELKINS_DARREN_L_04-12.png?itok=I0giHzCr",
-  "Yadier del Valle":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-02/DEL_VALLE_YADIER_R_02-21.png?itok=M3qIMnRe",
-  "Ty Miller":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-01/MILLER_TY_R_01-24.png?itok=O7wIIK-q",
-  "Billy Ray Goff":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2024-05/GOFF_BILLY_R_08-26.png?itok=SIkC8Ao-",
-  "Diyar Nurgozhay":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-03/NURGOZHAY_DIYAR_L_03-15.png?itok=VOFZ_UQQ",
-  "Bruno Lopes":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-03/LOPES_BRUNO_R_03-28.png?itok=pyLB3kwB",
-  "Steven Asplund":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-03/ASPLUND_STEVE_R_03-14.png?itok=UneDVg5y",
-  "Guilherme Pat":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-12/PAT_GUILHERME_R_12-13.png?itok=MWnJZ49U",
-  "Amanda Lemos":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-03/LEMOS_AMANDA_L_03-14.png?itok=1K3ICQYI",
-  "Alexia Thainara":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2025-09/THAINARA_ALEXIA_R_09-27.png?itok=MRMpoOC9",
-  "Juliana Miller":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-02/MILLER_JULIANA_L_02-21.png?itok=-WJqvCyE",
-  "Ravena Oliveira":"https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-03/OLIVEIRA_RAVENA_R_03-21.png?itok=RQ5xF-sC"
+"Mateusz Gamrot": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-08/GAMROT_MATEUSZ_L_08-08.png?itok=lpCsKoCU",
+"Quillan Salkilld": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-08/SALKILLD_QUILLAN_R_08-08.png?itok=R8qsiDx9",
+"Diego Ferreira": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-08/FERREIRA_DIEGO_L_08-08.png?itok=VaC_3lFI",
+"Billy Quarantillo": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-08/QUARANTILLO_BILLY_R_08-08.png?itok=XgyzU_wo",
+"Darren Elkins": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-08/ELKINS_DARREN_L_08-08.png?itok=wP896uGl",
+"Yadier del Valle": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-08/DEL_VALLE_YADIER_R_08-08.png?itok=WSC_Fp-a",
+"Amanda Lemos": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-08/LEMOS_AMANDA_L_08-08.png?itok=DZUqZ51f",
+"Alexia Thainara": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-08/THAINARA_ALEXIA_R_08-08.png?itok=4a7Raend",
+"Ty Miller": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-01/MILLER_TY_R_01-24.png?itok=O7wIIK-q",
+"Billy Ray Goff": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-08/GOFF_BILLY_L_08-08.png?itok=1Lbwb1l7",
+"Steven Asplund": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-08/ASPLUND_STEVE_L_08-08.png?itok=zYc1_Vel",
+"Guilherme Pat": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-08/PAT_GUILHERME_R_08-08.png?itok=fw16IGvM",
+"Diyar Nurgozhay": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-08/NURGOZHAY_DIYAR_L_08-08.png?itok=R2RuQE17",
+"Bruno Lopes": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-08/LOPES_BRUNO_R_08-08.png?itok=xz3ohYzl",
+"Juliana Miller": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-08/MILLER_JULIANA_L_08-08.png?itok=KYvAvxtb",
+"Ravena Oliveira": "https://ufc.com/images/styles/event_fight_card_upper_body_of_standing_athlete/s3/2026-08/OLIVEIRA_RAVENA_R_08-08.png?itok=XLrrnJyQ"
 };
-window.CARD.kalshi = {
-  "Quillan Salkilld":59, "Mateusz Gamrot":43,
-  "Diego Ferreira":64, "Billy Quarantillo":37,
-  "Alexia Thainara":70, "Amanda Lemos":30,
-  "Yadier del Valle":87, "Darren Elkins":13,
-  "Ty Miller":79, "Billy Ray Goff":22,
-  "Steven Asplund":72, "Guilherme Pat":29,
-  "Diyar Nurgozhay":61, "Bruno Lopes":42,
-  "Juliana Miller":71, "Ravena Oliveira":31
-};
+window.CARD.kalshi = {"Quillan Salkilld": 58, "Mateusz Gamrot": 44, "Diego Ferreira": 62, "Billy Quarantillo": 40, "Alexia Thainara": 71, "Amanda Lemos": 30, "Yadier del Valle": 87, "Darren Elkins": 14, "Ty Miller": 80, "Billy Ray Goff": 21, "Steven Asplund": 74, "Guilherme Pat": 27, "Diyar Nurgozhay": 61, "Bruno Lopes": 41, "Juliana Miller": 75, "Ravena Oliveira": 26};
